@@ -9,12 +9,12 @@
 		</style>
 		<script type="text/javascript" src="scripts/kissy.js"></script>
 		<script type="text/javascript">
-			(function(S){
+			(function(S){						  //创建一个匿名函数，接下来给这个匿名函数传递KISSY变量函数。这是一个闭包，这样就可以再闭包内使用S变量来代替KISSY，保证简洁的同时，保护了S这个变量，这与jQuery源码中的类似
 				var hellokissy="Hello Kissy!";
 				alert(hellokissy);
 
-				S.use('core',function(){
-					S.DOM.html('body',hellokissy);
+				S.use('core',function(){		  //KISSY.use()有两个参数，第一个参数为模块名，第二个参数为模块加载结束后的回调函数。
+					S.DOM.html('body',hellokissy);//向body中插入"Hello Kissy!"
 				});
 			})(KISSY);
 		</script>
