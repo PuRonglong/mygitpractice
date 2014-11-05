@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src="scripts/kissy/seed.js"></script>
+		<script type="text/javascript">
+			(function(S){
+				S.use('core',function(){
+					var Event=S.Event;
+					Event.add('#demo6','click',function(ev){
+					alert(S.DOM.text(ev.currentTarget));
+					alert(S.DOM.text(ev.target));
+					})
+				})				
+			})(KISSY)//currentTarget永远指向监听事件的目标对象，实例中指向id为demo6的对象，而target是指向触发事件的对象，实例中是id为demo6的ul下的li。原因在于javascript事件的冒泡机制
+		</script>
+	<head>
+	<body>
+		<ul id="demo6">
+			<li>测试1</li>
+			<li>测试2</li>
+			<li>测试3</li>
+			<li>测试4</li>
+		</ul>
+	</body>
+</html>

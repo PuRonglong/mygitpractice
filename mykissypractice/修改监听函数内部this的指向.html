@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src="scripts/kissy/seed.js"></script>
+		<script type="text/javascript">
+			(function(S){
+				S.use('core',function(){
+					var Event=S.Event;
+				Event.add('#demo5','click',function(ev){
+					alert('你触发了'+ev.type+'事件,目标对象id为'+ev.target.id+'，但是this指向id为'+this.id+'的对象');
+				},S.DOM.get('#demo4'))//不加第四个参数前，this指向ev.target即id为demo5的对象，所以this.id的值应该为demo5；加了第四个参数，实例中将this指向S.DOM.get('#demo4')即id为demo4的对象，所以this.id最后是demo4，与ev.target的指向出现不一致。
+			})
+		})(KISSY);
+		</script>
+	<head>
+	<body>
+		<input type="button" id="demo5" value="点击">
+		<div id="demo4"></div>
+	</body>
+</html>
