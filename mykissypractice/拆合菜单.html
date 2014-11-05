@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			a{
+				text-decoration: none;
+			}
+			ul{
+				list-style-type: none;
+			}
+		</style>
+		<script type="text/javascript" src="scripts/kissy.js"></script>
+		<script type="text/javascript">
+			(function(S){
+				S.use('core',function(){
+					var DOM=S.DOM;
+					var Event=S.Event;
+					var menuItem = S.query("#menu .menu-item");
+					Event.on(S.get('#demo1-1'),'click',function(){
+						alert(menuItem.length);
+					})
+				});
+			})(KISSY);
+		</script>
+	<head>
+	<body>
+		<ul id="menu" class="mar-t-10">
+			<li class="menu-item" id="li">
+				<div>
+					<a href="###" onclick="return false;">jquery</a>
+				</div>
+				<ul>
+					<li>
+						<a href="###" target="_blank">jquery插件</a>
+					</li>
+					<li>
+						<a href="###" target="_blank">jquery教程</a>
+					</li>
+					<li>
+						<a href="###" target="_blank">jquery与ajax</a>
+					</li>
+				</ul>
+			</li>
+			<li class="menu-item">
+				<div>
+					<a href="###" onclick="return false;">flex</a>
+				</div>
+				<ul>
+					<li>
+						<a href="###" target="_blank">flex实例</a>
+					</li>
+					<li>
+						<a href="###" target="_blank">flex教程</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<input type="button" id="demo1-1" value="1">
+	</body>
+</html>

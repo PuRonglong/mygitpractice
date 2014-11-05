@@ -1,0 +1,11 @@
+/*
+Copyright 2013, KISSY UI Library v1.20
+MIT Licensed
+build time: Apr 15 11:52
+*/
+KISSY.add("ua/base",function(){function i(a){var b;return(b=a.match(/MSIE\s([^;]*)/))&&b[1]?f(b[1]):0}var c=navigator.userAgent,e="",d="",a,g=[6,9],h=document.createElement("div"),j,b={},f=function(a){var b=0;return parseFloat(a.replace(/\./g,function(){return 0===b++?".":""}))};h.innerHTML="<\!--[if IE {{version}}]><s></s><![endif]--\>".replace("{{version}}","");j=h.getElementsByTagName("s");if(0<j.length){d="ie";b[e="trident"]=0.1;if((a=c.match(/Trident\/([\d.]*)/))&&a[1])b[e]=f(a[1]);a=g[0];for(g=
+g[1];a<=g;a++)if(h.innerHTML="<\!--[if IE {{version}}]><s></s><![endif]--\>".replace("{{version}}",a),0<j.length){b[d]=a;break}var k;if(!b.ie&&(k=i(c)))b[d="ie"]=k}else if((a=c.match(/AppleWebKit\/([\d.]*)/))&&a[1]){b[e="webkit"]=f(a[1]);if((a=c.match(/Chrome\/([\d.]*)/))&&a[1])b[d="chrome"]=f(a[1]);else if((a=c.match(/\/([\d.]*) Safari/))&&a[1])b[d="safari"]=f(a[1]);if(/ Mobile\//.test(c))b.mobile="apple";else if(a=c.match(/NokiaN[^\/]*|Android \d\.\d|webOS\/\d\.\d/))b.mobile=a[0].toLowerCase()}else if((a=
+c.match(/Presto\/([\d.]*)/))&&a[1]){if(b[e="presto"]=f(a[1]),(a=c.match(/Opera\/([\d.]*)/))&&a[1]){b[d="opera"]=f(a[1]);if((a=c.match(/Opera\/.* Version\/([\d.]*)/))&&a[1])b[d]=f(a[1]);if((a=c.match(/Opera Mini[^;]*/))&&a)b.mobile=a[0].toLowerCase();else if((a=c.match(/Opera Mobi[^;]*/))&&a)b.mobile=a[0]}}else if((a=c.match(/MSIE\s([^;]*)/))&&a[1]){if(b[e="trident"]=0.1,b[d="ie"]=f(a[1]),(a=c.match(/Trident\/([\d.]*)/))&&a[1])b[e]=f(a[1])}else if(a=c.match(/Gecko/)){b[e="gecko"]=0.1;if((a=c.match(/rv:([\d.]*)/))&&
+a[1])b[e]=f(a[1]);if((a=c.match(/Firefox\/([\d.]*)/))&&a[1])b[d="firefox"]=f(a[1])}b.core=e;b.shell=d;b._numberify=f;return b});
+KISSY.add("ua/extra",function(i,c){var e=navigator.userAgent,d,a,g={},h=c._numberify;if(e.match(/360SE/))g[a="se360"]=3;else if(e.match(/Maxthon/)&&(d=window.external)){a="maxthon";try{g[a]=h(d.max_version)}catch(j){g[a]=0.1}}else if(d=e.match(/TencentTraveler\s([\d.]*)/))g[a="tt"]=d[1]?h(d[1]):0.1;else if(e.match(/TheWorld/))g[a="theworld"]=3;else if(d=e.match(/SE\s([\d.]*)/))g[a="sougou"]=d[1]?h(d[1]):0.1;a&&(g.shell=a);i.mix(c,g);return c},{requires:["ua/base"]});
+KISSY.add("ua",function(i,c){return c},{requires:["ua/extra"]});

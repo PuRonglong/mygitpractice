@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src="scripts/kissy/seed.js"></script>
+		<script type="text/javascript">
+		(function(S){
+				/*S.use('DOM',function(S, Event, DOM){
+					var on=Event.on;
+					on('#demo1','click',function(ev){
+						alert('你触发了'+ev.type+'事件，目标对象id为'+ev.target.id);
+					});
+				});*/
+				S.use('core',function(){
+					var Event=S.Event;
+					Event.on('#demo1','click',function(ev){
+						alert('你触发了'+ev.type+'事件，目标对象id为'+ev.target.id);
+					});
+				});			
+			})(KISSY);//这里用了两种写法，前者主要用来说明这里引用DOM的话就可以了的
+		</script>
+	<head>
+	<body>
+		<input type="button" id="demo1" value="监听事件">
+	</body>
+</html>

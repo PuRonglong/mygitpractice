@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			.demo3-over{
+				background: #09f;
+				color: #000;
+			}
+			div{
+				width: 200px;
+				height: 100px;
+				background: red;
+			}
+		</style>
+		<script type="text/javascript" src="scripts/kissy/seed.js"></script>
+		<script type="text/javascript">
+		(function(S){
+				S.use('core',function(){
+					var Event=S.Event;
+					Event.add('#demo3','mouseover mouseout',function(ev){
+						if (ev.type=='mouseover') {
+							S.DOM.addClass('#demo3','demo3-over');
+						}else if (ev.type=='mouseout') {
+							S.DOM.removeClass('#demo3','demo3-over');
+						}
+					})
+					/*Event.on('#demo3','mouseover mouseout',function(ev){
+						S.DOM[ev.type == 'mouseover' && 'addClass' || ev.type == 'mouseout' && 'removeClass']('#demo3','demo3-over');
+					})*/
+				});
+			})(KISSY);
+		</script>
+	<head>
+	<body>
+		<div id="demo3">鼠标滑过变色</div>
+	</body>
+</html>

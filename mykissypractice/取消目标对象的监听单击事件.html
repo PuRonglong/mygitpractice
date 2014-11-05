@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src="scripts/kissy/seed.js"></script>
+		<script type="text/javascript">
+		(function(S){
+				S.use('core',function(){
+					var Event=S.Event;
+					Event.add('#demo1','click',function(ev){
+						alert('你触发了'+ev.type+'事件，目标对象id为'+ev.target.id);
+					});
+					Event.on('#demo2','click',function(ev) {
+						Event.remove('#demo1','click');
+					});
+				});//这里的add和on用来给目标对象指定类型的事件添加监听函数
+			})(KISSY);
+		</script>
+	<head>
+	<body>
+		<input type="button" id="demo1" value="监听事件">
+		<input type="button" id="demo2" value="取消监听">
+	</body>
+</html>
