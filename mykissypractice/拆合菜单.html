@@ -18,7 +18,6 @@
 				S.use('core',function(){
 					var DOM=S.DOM;
 					var Event=S.Event;
-
 					var menuItem = S.query("#menu .menu-item");//返回多个DOM节点要用query
 					//获取class为"menu-item"的li的个数
 					Event.on(S.get('#demo1'),'click',function(){
@@ -32,12 +31,15 @@
 						Event.on(S.get("#demo3"),'click',function(){
 							DOM.show(childrenMenus);
 						});
-					var menuItemHeader = S.query("#menu div");	
-						Event.on(menuItemHeader,'click',function(ev){
-							var nextMenu = DOM.next(ev.target);
-							DOM.show(nextMenu);
-							return false;
-						})   
+						Event.on(".as",'click',function(ev){
+							var nextMenu = DOM.next(DOM.parent(ev.target,'div'));//这里犯了几次错误，一次是以为ev.target是div，通过在控制台打印出来才发现时a，还有就是用parent时没在前面加ＤＯＭ或者去掉ｄｉｖ直接对ａ进行操作.kissy中的parent是返回所有的父节点
+							var display = DOM.css(nextMenu,'display');
+							if (display=="none") {
+								DOM.show(nextMenu);
+							}else{
+								DOM.hide(nextMenu);
+							};
+						})
 				});
 			})(KISSY);
 		</script>
@@ -45,10 +47,10 @@
 	<body>
 		<ul id="menu" class="mar-t-10">
 			<li class="menu-item" id="li">
-				<div>
-					<a href="###" onclick="return false;">jquery</a>
+				<div class="as">
+					<a href="###" onclick="return false;" class="a">jquery</a>
 				</div>
-				<ul>
+				<ul class="down">
 					<li>
 						<a href="###" target="_blank">jquery插件</a>
 					</li>
