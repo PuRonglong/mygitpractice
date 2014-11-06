@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			div{
+				left: 0px;
+				top: 0px;
+				display: none;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				background: gray;
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+				function submitForm(){
+				var doing = document.getElementById('doing');
+				doing.style.display="block";
+				setTimeout("self.location.reload()",3000);//原书这里是直接reload()一遍，速度太快效果不好，自己在加上一个定时器，这样效果好一些，不会闪的感觉
+				}
+		</script>
+	<head>
+	<body>
+		<div id="doing" style="z-index:99";>
+			<br/><br/><br/>载入中，请等待...
+		</div>
+		<p>
+			<input type="button" value="提交表单" onclick="submitForm()" />
+		</p>
+	</body>
+</html>
