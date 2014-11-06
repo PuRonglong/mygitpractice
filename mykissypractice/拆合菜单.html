@@ -12,16 +12,32 @@
 				list-style-type: none;
 			}
 		</style>
-		<script type="text/javascript" src="scripts/kissy.js"></script>
+		<script type="text/javascript" src="scripts/kissy/seed.js"></script>
 		<script type="text/javascript">
 			(function(S){
 				S.use('core',function(){
 					var DOM=S.DOM;
 					var Event=S.Event;
-					var menuItem = S.query("#menu .menu-item");
-					Event.on(S.get('#demo1-1'),'click',function(){
+
+					var menuItem = S.query("#menu .menu-item");//返回多个DOM节点要用query
+					//获取class为"menu-item"的li的个数
+					Event.on(S.get('#demo1'),'click',function(){
 						alert(menuItem.length);
 					})
+					//隐藏class为"menu-item"的li下的ul,即子菜单列表
+					var childrenMenus = S.query("#menu ul");
+						Event.on(S.get("#demo2"),'click',function(){
+							DOM.hide(childrenMenus);
+						});
+						Event.on(S.get("#demo3"),'click',function(){
+							DOM.show(childrenMenus);
+						});
+					var menuItemHeader = S.query("#menu div");	
+						Event.on(menuItemHeader,'click',function(ev){
+							var nextMenu = DOM.next(ev.target);
+							DOM.show(nextMenu);
+							return false;
+						})   
 				});
 			})(KISSY);
 		</script>
@@ -58,6 +74,8 @@
 				</ul>
 			</li>
 		</ul>
-		<input type="button" id="demo1-1" value="1">
+		<input type="button" id="demo1" value="获取个数">
+		<input type="button" id="demo2" value="隐藏子菜单列表">
+		<input type="button" id="demo3" value="显示子菜单列表">
 	</body>
 </html>
