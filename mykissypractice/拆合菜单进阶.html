@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			a{
+				text-decoration: none;
+			}
+			ul{
+				list-style-type: none;
+			}
+		</style>
+		<script type="text/javascript" src="scripts/kissy/seed.js"></script>
+		<script type="text/javascript">
+			(function(S){
+				S.use('core',function(){
+					var DOM=S.DOM;
+					var Event=S.Event;
+
+					Event.on('#demo1','click',function(){
+						var menuParent = DOM.parent(menu);
+						alert(menuParent.id);
+					})
+
+					Event.on('#demo2','click',function(){
+						var length = DOM.children(menu).length;
+						alert(length);
+					})
+
+					Event.on('#demo3','click',function(){
+						var menuChildrens = DOM.children(menu);
+						var prevItem = DOM.prev(menuChildrens[1]);//上一个节点
+						var prevItemText = DOM.children(prevItem,'div');//第二个参数是一个过滤器，表示选取div
+						var nextItem = DOM.next(menuChildrens[1]);//下一个节点
+						var nextItemText = DOM.children(nextItem,'div');
+						alert('上一个菜单项的标题为：'+DOM.text(prevItemText)+'下一个菜单项的标题为：'+DOM.text(nextItemText));
+					})
+
+					Event.on('#demo4','click',function(){
+						var menuChildrens = DOM.children(menu);
+						var sibItems = DOM.siblings(menuChildrens[1]);
+						//遍历同级节点并隐藏其子菜单
+						S.each(sibItems,function(v){
+							DOM.hide(DOM.children(v,'ul'));
+						});
+					})
+
+					Event.on('#demo5','click',function(){
+						var menuChildrens = DOM.children(menu);//li
+						var secondUl = DOM.children(menuChildrens[1],'ul');//过滤，选择ul
+						var newLi = DOM.create('<li class=new><a href="###">新建的li</a></li>');
+						secondUl[0].appendChild(newLi);//注意是secondUl[0],而不是secondUl
+					})
+
+					Event.on('#demo6','click',function(e){
+					    var menuChildrens = DOM.children(menu);
+					    var secondUl = DOM.children(menuChildrens[1],'ul');
+					    var newLi = DOM.children(secondUl,'.new');
+					    //删除样式名为new的菜单项
+					    DOM.remove(newLi);
+					})
+
+					Event.on('#demo7','click',function(e){
+					    var menuChildrens = DOM.children(menu);
+					    var secondUl = DOM.children(menuChildrens[1],'ul');
+					    DOM.html(secondUl,'<li class="new"><a href="###" target="_blank">替换的li</a></li>');//当html()无第二个参数时，为获取节点下的html代码 
+					    alert(DOM.html(secondUl));
+					})
+				});
+			})(KISSY);
+		</script>
+	<head>
+	<body id="body">
+		<ul id="menu" class="mar-t-10">
+			<li class="menu-item" id="li">
+				<div class="as">
+					<a href="###" onclick="return false;" class="a">jquery</a>
+				</div>
+				<ul class="down">
+					<li>
+						<a href="###" target="_blank">jquery插件</a>
+					</li>
+					<li>
+						<a href="###" target="_blank">jquery教程</a>
+					</li>
+					<li>
+						<a href="###" target="_blank">jquery与ajax</a>
+					</li>
+				</ul>
+			</li>
+			<li class="menu-item">
+				<div>
+					<a href="###" onclick="return false;">flex</a>
+				</div>
+				<ul>
+					<li>
+						<a href="###" target="_blank">flex实例</a>
+					</li>
+					<li>
+						<a href="###" target="_blank">flex教程</a>
+					</li>
+				</ul>
+			</li>
+			<li class="menu-item">
+				<div>
+					<a href="###" onclick="return false;">javascript</a>
+				</div>
+				<ul>
+					<li>
+						<a href="###" target="_blank">javascript资源</a>
+					</li>
+					<li>
+						<a href="###" target="_blank">javascript教程</a>
+					</li>
+					<li>
+						<a href="###" target="_blank">浏览器</a>
+					</li>
+				</ul>
+			</li> 
+		</ul>
+		<input type="button" id="demo1" value="获取拆合菜单的父节点的id">
+		<input type="button" id="demo2" value="获取拆合菜单的子元素li的个数">
+		<input type="button" id="demo3" value="获取拆合菜单下第二个子节点的前一个和后一个节点的文本值">
+		<input type="button" id="demo4" value="隐藏除了第二个子菜单外的子菜单">
+		<input type="button" id="demo5" value="向第二个子菜单添加新的菜单项">
+		<input type="button" id="demo6" value="删除新加入的菜单项">
+		<input type="button" id="demo7" value="替换第二个子菜单的菜单项">
+	</body>
+</html>
