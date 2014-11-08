@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			var willClose=true;//定义一个是否单击过的变量
+			function clickBody(){
+				willClose=false;
+			}
+			setInterval(function(){
+				if (willClose) {//如果没有单击过，10秒后关闭窗口
+					window.close();
+				}else{
+					willClose=true;
+				}
+			},10000)
+		</script>
+	<head>
+	<body style="text-align:center" onclick="clickBody()">
+		
+	</body>
+</html>

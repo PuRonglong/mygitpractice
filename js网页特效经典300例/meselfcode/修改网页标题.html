@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function changeTitle(){
+				var newTitle=document.getElementById('newTitle').value;//获取到输入框的value
+				document.title=newTitle;
+			}
+		</script>
+	<head>
+	<body style="text-align:center">
+		<p>
+			<input type="text" name="newTitle" id="newTitle" value="" />
+			<input type="button" value="修改标题" onclick="changeTitle()" />
+		</p>
+	</body>
+</html>
