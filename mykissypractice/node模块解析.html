@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			a{
+				text-decoration: none;
+			}
+			ul{
+				list-style-type: none;
+			}
+		</style>
+		<script type="text/javascript" src="scripts/kissy/seed.js"></script>
+		<script type="text/javascript">
+			(function(S){
+				S.use('core',function(){
+					var DOM=S.DOM;
+					var Event=S.Event;
+					Event.on('#demo1','click',function(event){
+						var menu = S.one("#menu");
+						alert(menu);
+					})
+					Event.on('#demo2','click',function(){
+						var menu = S.get('#menu');
+						alert(menu);
+					})
+					Event.on('#demo3','click',function(event){
+						var len=S.one('#menu').children(),length;
+						alert(len);
+					})
+					Event.on('#demo5','click',function(){
+						S.one('#menu').children().item(1).children('ul').append('<li class="new"><a href="###">新添加的li</a></li>');//一行代码搞定，很好的体现的one的链式调用,类似于jQuery
+					})
+					Event.on('#demo4','click',function(){
+						var lis = S.all('#menu li');
+						alert(lis.length);//all遍历出了遍历菜单下的所有li,包括二级菜单的li
+					})
+					Event.on('#demo6','click',function(){
+						alert(S.one('#menu').children('li') instanceof KISSY.Node);
+					})
+					Event.on('#demo7','click',function(event){
+						S.all('#menu div').each(function(o,i){//遍历#menu下的div，each的参数为一个函数，该函数带有2个参数，一个是元素(KISSY)
+							var txt = o.text();
+							if (txt='flex') {alert(i)};//开始这里写的txt=='flex',结果导致点击没有反应。
+						})
+					})
+				})
+			})(KISSY);
+		</script>
+	<head>
+	<body id="body">
+		<ul id="menu" class="mar-t-10">
+			<li class="menu-item" id="li">
+				<div class="as">
+					<a href="###" onclick="return false;" class="a">jquery</a>
+				</div>
+				<ul class="down">
+					<li>
+						<a href="###" target="_blank">jquery插件</a>
+					</li>
+					<li>
+						<a href="###" target="_blank">jquery教程</a>
+					</li>
+					<li>
+						<a href="###" target="_blank">jquery与ajax</a>
+					</li>
+				</ul>
+			</li>
+			<li class="menu-item">
+				<div>
+					<a href="###" onclick="return false;">flex</a>
+				</div>
+				<ul>
+					<li>
+						<a href="###" target="_blank">flex实例</a>
+					</li>
+					<li>
+						<a href="###" target="_blank">flex教程</a>
+					</li>
+				</ul>
+			</li>
+			<li class="menu-item">
+				<div>
+					<a href="###" onclick="return false;">javascript</a>
+				</div>
+				<ul>
+					<li>
+						<a href="###" target="_blank">javascript资源</a>
+					</li>
+					<li>
+						<a href="###" target="_blank">javascript教程</a>
+					</li>
+					<li>
+						<a href="###" target="_blank">浏览器</a>
+					</li>
+				</ul>
+			</li> 
+		</ul>
+		<input type="button" id="demo1" value="使用one">
+		<input type="button" id="demo2" value="使用get">
+		<input type="button" id="demo3" value="使用one获取拆合菜单的子节点，并返回子节点数量">
+		<input type="button" id="demo4" value="获取拆合菜单下所有li的个数">
+		<input type="button" id="demo5" value="向第二个子菜单添加新的菜单项">
+		<input type="button" id="demo6" value="children()返回的实例判断">
+		<input type="button" id="demo7" value="获取一级菜单标题文本值为'flex'的菜单项索引值">
+	</body>
+</html>
