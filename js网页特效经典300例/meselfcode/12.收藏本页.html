@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function addFav(){
+				if (window.external.AddFavorite) {//AddFavorite函数为ie特有的加入收藏夹的函数
+					window.external.AddFavorite('./单击加入收藏夹.html','JavaScript300实例');
+				}else{//使用sidebar的addPanel函数加入收藏夹
+					window.sidebar.addPanel('JavaScript300实例','http://www.baidu.com',"";)
+				}
+			}
+		</script>
+	<head>
+	<body>
+		<a href="javascript:addFav();">单击加入收藏夹</a>
+	</body>
+</html>

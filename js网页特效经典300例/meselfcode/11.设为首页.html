@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function setMyHomePage(){//判断是否为ie浏览器
+				if (document.all) {//设置body的style.behavior
+					document.body.style.behavior='url(#default#homepage)';
+					document.body.setHomePage('http://www.myhomepage.com');//设置首页地址
+				}else if(window.sidebar){
+					var thePrefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components. interfaces.nsIPrefBranch);
+					thePrefs.setCharPref('browser.startup.homepage','http://www.baidu.com');
+				}
+			}
+		</script>
+	<head>
+	<body>
+		<p><a href="###" onClick="setMyHomePage()">设为首页</a></p>
+	</body>
+</html>
