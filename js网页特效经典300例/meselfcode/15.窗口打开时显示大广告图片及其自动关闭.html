@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function showAdpic(){
+				var ad = document.getElementById('ad');								  //获得广告的DOM
+				ad.innerHTML = '<img src="images/ab.gif" width:300px height:125px />';//直接在DOM中添加HTML源码来添加一个图片的DOM
+				setTimeout(function(){
+					var ad = document.getElementById('ad');
+					ad.style.display='none';										  //隐藏图片
+				},5000);
+			}
+			window.onload=showAdpic;
+		</script>
+	<head>
+	<body>
+		<p>网页内容上部</p>
+		<p id="ad"></p>
+		<p>网页内容上部</p>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function myOnload(){
+				var links=document.getElementsByTagName('a');
+				for (var i = 0; i < links.length; i++) {
+					var link = links[i];					//得到当前链接的DOM
+					var href = link.href;					//链接的地址
+					if (href.indexOf('?')>-1) {				//地址中是否已经包含了参数
+						href+='&time='+new Date().getTime();//修改链接的地址，加上一个参数：当前时间的毫秒数
+					}else{
+						href+='?time='+new Date().getTime();
+					}
+					link.href = href;
+				};
+			}
+			window.onload = myOnLoad;						//使用window的onload元素进行回调
+		</script>
+	<head>
+	<body>
+		<p>
+			<a href="a.html">链接一</a>
+			<a href="b.html">链接二</a>
+		</p>
+	</body>
+</html>
