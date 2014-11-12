@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background: red;
+			}
+		</style>
+		<script type="text/javascript" src="scripts/kissy/seed.js"></script>
+		<script type="text/javascript">
+			(function(S){
+				S.use('core',function(){
+					var DOM = S.DOM,Event=S.Event;
+					Event.on('#demo1','click',function(){
+						var anim = new S.Anim('#div1','width:200px',0.5);//前两个参数是必须的，第三个参数为动画时长
+						anim.run();//在实例化S.Anim后，run方法是必不可少的
+					});
+					Event.on('#demo2','click',function(){
+						var anim = new S.Anim('#div1',{'width':'200px','height':'200px'},0.5);//第二个参数是多个,用大括号括起来
+						anim.run();
+					});
+					Event.on('#demo3','click',function(){
+						var anim = new S.Anim('#div1',{'width':'200px','height':'50px'},1,S.Easing.bounceOut);//第四个参数是缓动函数
+						anim.run();
+					});
+					Event.on('#demo4','click',function(){
+						var anim = new S.Anim('#div1','width:200px',1,S.Easing.easeNone,function(){
+							var anim2 = new S.Anim('#div1','width:50px',1)
+							anim2.run();
+						});
+						anim.run();
+					})//这里要注意一点，当我们只需要回调函数而不需要缓动效果时，第四个参数也必须设置
+					var anim = new S.Anim('#div1','width:400px',3,S.Easing.bounceOut);
+					Event.on('#demo5','click',function(){
+						anim.run();
+					})
+					Event.on('#demo6','click',function(){
+						anim.stop();
+					})
+					Event.on('#demo7','click',function(){
+						anim.stop(true);//体会stop方法有无参数的区别。
+					})
+				})
+			})(KISSY)//刚才不小心写成小写导致报错
+		</script>
+	<head>
+	<body>
+		<input id="demo1" type="button" value="点击改变下面层的宽度">
+		<input id="demo2" type="button" value="点击改变下面层的宽度和高度">
+		<input id="demo3" type="button" value="使用缓动效果">
+		<input id="demo4" type="button" value="层的宽度先到200px再到50px">
+		<input id="demo5" type="button" value="运行动画">
+		<input id="demo6" type="button" value="终止动画">
+		<input id="demo7" type="button" value="终止动画，并直接跳到最后一帧">
+		<div id="div1"></div>
+	</body>
+</html>

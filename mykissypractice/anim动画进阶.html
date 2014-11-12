@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background: red;
+			}
+		</style>
+		<script type="text/javascript" src="scripts/kissy/seed.js"></script>
+		<script type="text/javascript">
+			(function(S){
+				S.use('core',function(){
+					var DOM=S.DOM,Event=S.Event;
+					Event.on('#demo1','click',function(){
+						var $div = S.one('#div1');
+						console.log($div);
+						$div.show(0.5);
+					})
+				})
+			})(KISSY)
+		</script>
+	<head>
+	<body>
+		<input id="demo1" type="button" value="显示/隐藏下面的层" />
+		<div id="div1"></div>
+	</body>
+</html>
