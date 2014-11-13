@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			div{
+				width: 200px;
+			}
+			/* span{
+				display: block;
+				width: 200px;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow:ellipsis;
+			} */
+			span{
+				display: block;
+				width: 200px;
+				overflow: hidden;
+				white-space: nowrap;
+			}
+			p{
+				clear: both;
+			}
+			p span{
+				float: left;
+				max-width: 175px;
+			}
+			p:after{
+				content: "...";
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			
+		</script>
+	<head>
+	<body>
+		<div>
+			<!-- <span>css实现文字超出宽度显示省略号</span> -->
+			<p><span>css实现文字超出宽度显示省略号</span></p>
+		</div>
+	</body>
+</html>
