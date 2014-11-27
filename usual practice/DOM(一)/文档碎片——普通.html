@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oBtn = document.getElementById('btn1');
+				var oUl = document.getElementById('ul1');
+
+				oBtn.onclick=function(){
+					var iStart = new Date().getTime();
+
+					for (var i = 0; i < 100000; i++) {
+						var oLi = document.createElement('li');//js操作dom是一个很耗性能的过程：每次对dom的操作都会触发“重排”，影响能耗
+
+						oUl.appendChild(oLi);
+					};
+
+					alert(new Date().getTime()-iStart);//弹出用时
+				}
+			}
+		</script>
+	<head>
+	<body>
+		<input id="btn1" type="button" value="普通">
+		<ul id="ul1">
+			
+		</ul>
+	</body>
+</html>

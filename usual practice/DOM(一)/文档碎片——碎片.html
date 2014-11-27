@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oBtn = document.getElementById('btn1');
+				var oUl = document.getElementById('ul1');
+
+				oBtn.onclick=function(){
+					var iStart = new Date().getTime();
+					var oFrag = document.createDocumentFragment();
+
+					for (var i = 0; i < 100000; i++) {
+						var oLi = document.createElement('li');
+						oFrag.appendChild(oLi);
+					};
+					oUl.appendChild(oFrag);//使用文档碎片可有效减少操作dom的次数,在某些情况下可以提高页面效率
+					alert(new Date().getTime()-iStart);//弹出用时
+				}
+			}
+		</script>
+	<head>
+	<body>
+		<input id="btn1" type="button" value="碎片" />
+		<ul id="ul1">
+			
+		</ul>
+	</body>
+</html>

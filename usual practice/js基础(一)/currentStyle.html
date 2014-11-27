@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background: red;
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oDiv = document.getElementById('div1');
+				// alert(oDiv.currentStyle.width);//IE下弹出，火狐和chrome下报错
+				alert(getComputedStyle(oDiv,false).width);//IE,火狐，chrome下都能弹出，其中false可以为别的如123这样的都可以，文档的解释是虚元素，理解为填别的如字符串，数字什么的都可以
+			}
+		</script>
+	<head>
+	<body>
+		<div id="div1"></div>
+	</body>
+</html>

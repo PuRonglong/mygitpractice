@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			
+		</script>
+	<head>
+	<body>
+		<div id="div1" style="width:100px; height:100px; background:red; position:relative;">
+			<div onclick="alert(this.offsetParent.id)" id="div2" style="width:100px; height:100px; background:yellow; position:absolute; left:100px; top:100px;"></div>
+			<!-- 寻找当前元素用来定位的父级 如果父级没有定位会一直往上寻找到HTML-->
+		</div>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			#div1{
+				width: 200px;
+				height: 200px;
+				background: red;
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			//哪个元素,这个元素的哪个样式
+			function getStyle(obj,attr){
+				if (obj.currentStyle) {
+					return obj.currentStyle[attr];//用于IE
+				}
+				else{
+					return getComputedStyle(obj,false)[attr];
+				}
+			}
+			window.onload=function(){
+				var oDiv = document.getElementById('div1');
+				alert(getStyle(oDiv,'width'));//可以取默认值，比如字体大小fontSize,但是想background这样的复合样式获取不到，只能这样写backgroundColor
+			}
+		</script>
+	<head>
+	<body>
+		<div id="div1"></div>
+	</body>
+</html>

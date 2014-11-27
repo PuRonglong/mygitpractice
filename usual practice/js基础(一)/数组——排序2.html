@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			var arr=[98,8,12,72,33,118];
+			arr.sort(function(num1,num2){//如果没有用这个比较函数，直接是对这个函数排序的话，会发现它是以数字的第一个数字排序，sort方法是以字符串的ASII来判断的，任何非字符串都将会先转换为字符串
+				return num1-num2;//反过来就是从大到小
+			});
+			alert(arr);
+		</script>
+	<head>
+	<body>
+		
+	</body>
+</html>

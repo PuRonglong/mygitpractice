@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#div1").ajaxSend(function(){
+			    alert(123);
+			  });
+			  	$("button").click(function(){
+			    	$("#div1").load("here.html");
+			  });
+			});//上面定义$("#div1").ajaxSend(function(){});事件不在任何一下onClick事件中。如果发生了全局事件的重复定义，在本例中也就是每一个onClick事件中都定义一次全局事件$("#div1").ajaxSend(function(){});的话，那么，该全局事件会增加执行次数，而不是覆盖前面的定义http://zhina123.blog.163.com/blog/static/41789578201211931319529/
+		</script>
+	<head>
+	<body>
+		<div id="div1"><h2>通过 AJAX 改变文本</h2></div>
+		<button>改变内容</button>
+	</body>
+</html>

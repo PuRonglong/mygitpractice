@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oUl = document.getElementById('ul1');
+				var aA = document.getElementsByTagName('a');
+				var i=0;
+				for ( i = 0; i < aA.length; i++) {
+					aA[i].onclick=function(){
+						oUl.removeChild(this.parentNode);//removeChild()方法用来移除指定元素的某个指定的子节点。本例中移除ul下的子节点，而这个节点同时又是a的父节点
+					}
+				}
+			}
+		</script>
+	<head>
+	<body>
+		<ul id="ul1">
+			<li>sdfsdf<a href="javascript:;">删除</a></li>
+			<li>3432f<a href="javascript:;">删除</a></li>
+			<li>tttt<a href="javascript:;">删除</a></li>
+			<li>ww<a href="javascript:;">删除</a></li>
+		</ul>
+	</body>
+</html>

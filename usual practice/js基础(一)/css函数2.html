@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			#div1{
+				width: 200px;
+				height: 200px;
+				background: red;
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function getStyle(obj,attr){
+				if (obj.currentStyle) {
+					return obj.currentStyle[attr];//用于IE
+				}
+				else{
+					return getComputedStyle(obj,false)[attr];
+				}
+			}
+			function css(obj,attr,value){
+				if (arguments.length==2) {//两个是获取
+					return getStyle(obj,attr);
+				}
+				else if (arguments.length==3) {//三个是设置
+					obj.style[attr]=value;
+				};
+			}
+			window.onload=function(){
+				var oBtn = document.getElementById('btn1');
+				var oDiv = document.getElementById('div1');
+				oBtn.onclick=function(){
+					css(oDiv,'background','green');
+					alert(css(oDiv,'width'));
+				}
+			}
+		</script>
+	<head>
+	<body>
+		<input id="btn1" type="button" value="样式">
+		<div id="div1"></div>
+	</body>
+</html>

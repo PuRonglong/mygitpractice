@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oBtn = document.getElementById('btn1');
+				var oUl = document.getElementById('ul1');
+				var oTxt = document.getElementById('txt1');
+
+				oBtn.onclick=function(){
+					var oLi = document.createElement('li');
+
+					oLi.innerHTML=oTxt.value;//如果把这一行放到oUl.appendChild(oLi)的后面，加载的时候页面会先渲染一下，因为多了一个点，给li加了文字后，li又变了，页面又会加载一次，若是像这样放在前面，先给li加innerHTML，这个时候li还没有进到页面，页面不会渲染，第二次appendChild插到ul中去才会渲染一次。
+
+					//appendChild在一个父节点上插入一个子节点
+					oUl.appendChild(oLi);
+				}
+			}
+		</script>
+	<head>
+	<body>
+		<input id="txt1" type="text" />
+		<input id="btn1" type="button" value="创建Li" />
+		<ul id="ul1">
+			<li>aaa</li>
+		</ul>
+	</body>
+</html>

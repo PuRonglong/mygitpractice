@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				//父节点
+				//子节点 只有一层
+
+				var oUl =document.getElementById('ul1');
+				// oUl.childNodes[0].style.background='red';
+				alert(oUl.childNodes.length);//childNodes有兼容性问题，在IE下会弹出三个，在chrome下回弹出七个，因为把空格也算作节点了
+			}
+		</script>
+	<head>
+	<body>
+		<ul id="ul1">
+			<li>111</li>
+			<li>222</li>
+			<li>333</li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		<script type="text/javascript">
+				$(function(){
+					$.get('test.txt', function(data,status) {
+						alert("数据："+data+"\n状态："+status);
+					}); //$.get() 的第一个参数是我们希望请求的 URL。
+						// 第二个参数是回调函数。第一个回调参数存有被请求页面的内容，第二个回调参数存有请求的状态。而且回调函数只有在数据成功返回(success)后才被调用，这点与load()方法不一样。
+				})
+		</script>
+	<head>
+	<body>
+		<button>向页面发送 HTTP GET 请求，然后获得返回的结果</button>
+	</body>
+</html>

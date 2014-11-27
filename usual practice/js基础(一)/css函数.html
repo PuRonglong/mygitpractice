@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			#div1{
+				width: 200px;
+				height: 200px;
+				background: red;
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function css(){
+				if (arguments.length==2) {//两个是获取
+					return (arguments[0].style[arguments[1]]);//因为style不在行间样式，获取不到，所以弹出的是个空,如果用currentStyle就可以获取到。
+				}
+				else if (arguments.length==3) {//三个是设置
+					arguments[0].style[arguments[1]]=arguments[2];
+				};
+			}
+			window.onload=function(){
+				var oBtn = document.getElementById('btn1');
+				var oDiv = document.getElementById('div1');
+				oBtn.onclick=function(){
+					css(oDiv,'background','green');
+					alert(css(oDiv,'width'));
+				}
+			}
+		</script>
+	<head>
+	<body>
+		<input id="btn1" type="button" value="样式">
+		<div id="div1"></div>
+	</body>
+</html>

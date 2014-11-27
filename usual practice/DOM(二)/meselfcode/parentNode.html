@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var aA = document.getElementsByTagName('a');
+				for (var i = 0; i < aA.length; i++) {
+					aA[i].onclick=function(){
+						this.parentNode.style.display='none';//用parentNode来获取父节点
+					}
+				};
+			}
+		</script>
+	<head>
+	<body>
+		<ul>
+			<li>aass<a href="javascript:;">隐藏</a></li>
+			<li>as<a href="javascript:;">隐藏</a></li>
+			<li>afdass<a href="javascript:;">隐藏</a></li>
+			<li>aadf<a href="javascript:;">隐藏</a></li>
+		</ul>
+	</body>
+</html>
