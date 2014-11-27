@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function getDomValues(){
+				var myLink = document.getElementById('myLink');
+				var str = '';//结果拼接
+				for(var prop in myLink){//循环遍历myLink的所有属性key
+					//拼接到str,key和value，用冒号隔开
+					str += prop + ":" + myLink[prop] + '<br/>';
+				}
+				//打印到网页里
+				document.getElementById('valuesP').innerHTML = str;
+			}
+		</script>
+	<head>
+	<body>
+		<p>
+			<a href="###" id="myLink">链接</a>
+			<br/>
+			<input type="button" value="获取链接DOM的属性" onclick="getDomValues();" />
+		</p>
+		<p id="valuesP" style="text-align: left;"></p>
+	</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			div{
+				border: 1px solid black;
+				z-index: 99999;
+				width: 180px;
+				height: 116px;
+				position: absolute;
+				background: rgb(201,211,243);
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			//定位层的函数
+			function posRightCorner(){
+				//top放到高度-120的位置，120大概就是div的高度
+				ad.style.top = document.body.scrollTop + document.body.clientHeight-120;
+				ad.style.left = document.body.scrollLeft + document.body.clientWidth-200;
+				setTimeout('posRightCorner();',100);//用定时器检查和定位div的位置
+				console.log(ad.style.left);
+			}
+			//关闭函数
+			function closeAD(){
+				ad.style.display='none';//隐藏div
+			}
+			//窗口加载完成以后定位
+			window.onload = function(){
+				var ad = document.getElementById('ad');//得到div的DOM对象
+				posRightCorner();//调用定位函数
+			}
+		</script>
+	<head>
+	<body style="margin 0px; text-align:center">
+		<div id="ad">
+			<table width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#cfdef4">
+				<tbody>
+					<tr>
+						<td width="90%" valign="middle" height="24"></td>
+						<td width="" valign="middle" align="right">
+							<a href="###" title="关闭" onclick="closeAD()" style="cursor:pointer;">X</a>
+						</td>
+					</tr>
+					<tr>
+						<td height="90" colspan="3">
+							Hello My AD!
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>

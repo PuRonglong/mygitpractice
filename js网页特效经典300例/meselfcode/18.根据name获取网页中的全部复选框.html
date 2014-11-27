@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+		//获取多个DOM
+			function getDomsByName(){
+				var doms = document.getElementsByName('myName');
+				var str = '';//定义拼接字符变量
+				for (var i = 0; i < doms.length; i++) {
+					str += doms[i].tagName;//拼接标签的名字
+					str += ',';//分隔符
+				};
+				alert('两个DOM的标签是：' + str);//提示
+			}
+		</script>
+	<head>
+	<body>
+		<p>
+			<a href="###" name="myName">链接</a>
+			<span name='myName'>文字</span>
+			<br/>
+			<input type="button" value="获取" onclick="getDomsByName();">
+		</p>
+	</body>
+</html>

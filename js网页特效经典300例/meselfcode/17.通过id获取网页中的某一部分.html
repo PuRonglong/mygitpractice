@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function getDomText(){
+				var myLink = document.getElementById('myLink');
+				var mySpan = document.getElementById('mySpan');
+				var str = '';
+				str += myLink.innerHTML;
+				str += mySpan.innerHTML;
+				alert('两个DOM的内容是'+str);
+			}
+		</script>
+	<head>
+	<body>
+		<p>
+			<a href="###" id="myLink">链接</a>
+			<span id='mySpan'>文字</span>
+			<br/>
+			<input type="button" value="获取" onclick="getDomText();" />
+		</p>
+	</body>
+</html>

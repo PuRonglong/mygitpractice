@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function getDomTree(){
+				alert(text(document.body));//用提示框显示树内容
+			}
+			function text(elem){
+				var t='';//定义文字字符串
+				//获取该节点的所有子节点
+				var elemelem = elem.childNodes;
+				//遍历所有子节点
+				for (var i = 0; i < elemelem.length; i++) {
+					//当前节点
+					var e = elemelem[i];
+					//文本，注释节点不被遍历，并判断其是否为直接父节点
+					if (e.parentNode == elem && e.nodeType == 1) {
+						t += e.tagName + '';//把标签名添加到文本内容里
+						//循环子节点
+						if (e.childNodes.length>0) {
+							//如果子节点只有一个文本子节点，则跳过
+							if (e.childNodes.length == 1) {
+								var fe = e.childNodes[0];
+								if (fe.nodeType == 3) //是否为文本子节点
+									continue;//跳过
+							}
+							t += '\nt';//子节点分隔符
+							t += text(e);//递归其他子元素的子节点
+						};
+					};
+				};
+				return t;//返回得到的文本
+			}
+		</script>
+	<head>
+	<body>
+		<p>
+			<a href="###" id="myLink">链接</a>
+			<br/>
+			<input type="button" value="遍历文档树" onclick="getDomTree();" />
+		</p>
+	</body>
+</html>
