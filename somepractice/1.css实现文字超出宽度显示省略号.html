@@ -8,13 +8,13 @@
 			div{
 				width: 200px;
 			}
-			/* span{
-				display: block;
-				width: 200px;
-				overflow: hidden;
-				white-space: nowrap;
-				text-overflow:ellipsis;
-			} */
+			 /* span{
+			 				display: block;
+			 				width: 200px;
+			 				overflow: hidden;
+			 				white-space: nowrap;
+			 				text-overflow:ellipsis;
+			 			}  */
 			span{
 				display: block;
 				width: 200px;
@@ -30,7 +30,9 @@
 			}
 			p:after{
 				content: "...";
-			}
+			} 
+			/*非常规的方法实现的文本超出宽度显示省略号
+			注释掉的方法的详解可参考我这篇http://www.cnblogs.com/purl135/p/4118712.html*/
 		</style>
 		<script type="text/javascript" src=""></script>
 		<script type="text/javascript">
@@ -39,8 +41,8 @@
 	<head>
 	<body>
 		<div>
-			<!-- <span>css实现文字超出宽度显示省略号</span> -->
 			<p><span>css实现文字超出宽度显示省略号</span></p>
+			<!-- <p><span>用css来实现当文字超出宽度时显示省略号的效果</span></p> -->
 		</div>
 	</body>
 </html>

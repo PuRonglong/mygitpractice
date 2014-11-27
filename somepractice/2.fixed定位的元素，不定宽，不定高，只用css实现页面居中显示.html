@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			html{
+				min-height: 200%;
+				font-size: 1em;
+			}
+			.f-tac{text-align: center;}
+			.f-tar{text-align: right;}
+			.demo{height: 100px;background: red;max-width: 60%;margin: 20px auto;}
+			.fixed{position: fixed;display: inline-block;}
+			.fixed span{display: block;position: relative;background: green;color: blue;}
+			.fixed-left span{left: -100%;} 
+			.fixed-center span{left: -50%;margin-left: -8px;}
+			.fixed-right2 span{left: -10%;margin-left: -8px;} 
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			
+		</script>
+	<head>
+	<body>
+		<div class="demo">
+			<div class="fixed fixed-left">
+				<span>定位左外侧示例</span>
+			</div>
+		</div>
+		<div class="demo">
+			<div class="fixed fixed-left2">
+				<span>定位左内侧示例</span>
+			</div>
+		</div>
+		<div class="demo f-tac">
+			&nbsp;<div class="fixed fixed-center">
+				<span>定位居中示例</span>
+			</div>
+		</div>
+		<div class="demo f-tar">
+			&nbsp;<div class="fixed fixed-right">
+				<span>定位右外侧示例</span>
+			</div>
+		</div>
+		<div class="demo f-tar">
+			&nbsp;<div class="fixed fixed-right2">
+				<span>定位右内侧示例</span>
+			</div>
+		</div>
+	</body>
+</html>
