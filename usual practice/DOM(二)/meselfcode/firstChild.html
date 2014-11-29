@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oUl = document.getElementById('ul1');
+
+				//在IE下经过自己机器测试，IE5,7,8都有效，在IE9,10,11下就会报错了
+				// oUl.firstChild.style.background='red';//要兼容IE8的话得用此方法
+
+				
+				// oUl.firstElementChild.style.background='red';//不仅适用于chrome，也适用于IE9,10,11和火狐
+
+				var oFirst = oUl.firstElementChild||oUl.firstChild;
+				oFirst.style.background='red';//经过测试能够兼容低版本IE和火狐，chrome，但是若将oUl.firstElementChild和oUl.firstChild的位置进行调换的话，在三个浏览器下都会报错
+			}
+		</script>
+	<head>
+	<body>
+		<ul id="ul1">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</body>
+</html>
