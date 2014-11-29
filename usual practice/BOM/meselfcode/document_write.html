@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oBtn = document.getElementById('btn1');
+
+				oBtn.onclick=function(){
+					document.write('sdf');//清空当前页面，并输出东西。查看源码可以看到源码变成这个样子了：<body>sdf</body>
+				}
+			}
+		</script>
+	<head>
+	<body>
+		<input id="btn1" type="button" value="write" />
+	</body>
+</html>
