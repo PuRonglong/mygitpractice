@@ -10,19 +10,14 @@
 		<script type="text/javascript" src=""></script>
 		<script type="text/javascript">
 			window.onload=function(){
-				var oTxt = document.getElementById('txt1');
 				var oBtn = document.getElementById('btn1');
-
 				oBtn.onclick=function(){
-					var oNewWin = window.open('about:blank');//在新窗口中打开
-					oNewWin.document.write(oTxt.value);//往新打开的窗口中写textarea标签汇总的内容
+					window.close();//在IE下会弹出一个对话框提醒你是否要关闭，在火狐下没有反应，在chrome下回直接关闭当前窗口没有提示
 				}
 			}
 		</script>
 	<head>
 	<body>
-		<textarea id="txt1" rows="10" cols="40"></textarea>
-		<br/>
-		<input id="btn1" type="button" value="运行" />
+		<input type="button" id="btn1" value="关闭">
 	</body>
 </html>
