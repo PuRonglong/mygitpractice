@@ -10,22 +10,28 @@
 		<script type="text/javascript" src=""></script>
 		<script type="text/javascript">
 			/*document.onclick=function(){
-				alert(event.clientX + ', ' + event.clientY);//在火狐中点击时会报错误,说event没有定义
-			}
-*/			/*
-			document.onclick=function(event){
-				alert(event.clientX + ', ' + event.clientY);//在IE下没有效果
+				alert(event.clientX + ', ' + event.clientY);//在火狐中点击时会报错误,说event没有定义.因为event在IE中是一个全局变量,在FF中是局部变量,所以在FF中使用event对象必须通过参数传递的方式把它传入过程中.
 			}*/
-
-			document.onclick=function(event){
-					if (event) {
-					alert(event.clientX + ', ' + event.clientY);
-				}
-				else{
-					alert(event.clientX + ', ' + event.clientY);
-				}
-			}
 			
+			// document.onclick=function(event){
+			// 	alert(event.clientX + ', ' + event.clientY);//火狐中可行了，因为火狐中需要事件函数传递事件对象
+			// }
+
+			// document.onclick=function(event){
+			// 		if (event) {
+			// 		alert(event.clientX + ', ' + event.clientY);
+			// 	}
+			// 	else{
+			// 		alert(event.clientX + ', ' + event.clientY);
+			// 	}
+			// }
+			//还可以再化简如下
+			document.onclick=function(ev){
+				var oEvent = ev||event;
+
+				alert(oEvent.clientX+','+oEvent.clientY);
+			}
+			//clientX/Y事件发生时鼠标在浏览器内容区域的X/Y坐标（不包含滚动条）。浏览器内容区域即浏览器窗口中用来显示网页的可视区域，注意这个可视，也就是说需要拖动滚动条才能看到的区域不算。当你将浏览器窗口缩小时，clientX/clientY的最大值也会缩小，但始终，它们的最大值不会超过你浏览器可视区域。可以参考这篇博文：http://kangzye.blog.163.com/blog/static/36819223200962310338194/
 		</script>
 	</head>
 	<body>
