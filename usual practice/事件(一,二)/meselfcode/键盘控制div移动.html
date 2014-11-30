@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			#div1{
+				width: 100px;
+				height: 100px;
+				background: #ccc;
+				position: absolute;
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			document.onkeydown=function(ev){
+				var oEvent = ev||event;
+				var oDiv = document.getElementById('div1');
+				//左  37
+				//右  39
+				if (oEvent.keyCode==37) {
+					oDiv.style.left=oDiv.offsetLeft-10+'px';//offsetLeft：物体现在的一个左边距
+				}
+				else if (oEvent.keyCode==39) {
+					oDiv.style.left=oDiv.offsetLeft+10+'px';
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1"></div>
+	</body>
+</html>
