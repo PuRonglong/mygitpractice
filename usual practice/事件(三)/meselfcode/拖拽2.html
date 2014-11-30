@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			#div1{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				background: red;
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oDiv = document.getElementById('div1');
+				var disX = 0;
+				var disY = 0;//鼠标距离物体左边和上边的距离
+
+				oDiv.onmousedown=function(ev){
+					var oEvent = ev||event;
+
+					disX = oEvent.clientX-oDiv.offsetLeft;
+					disY = oEvent.clientY-oDiv.offsetTop;
+
+
+					oDiv.onmousemove=function(ev){
+					var oEvent = ev||event;
+
+					oDiv.style.left=oEvent.clientX-disX+'px';
+					oDiv.style.top=oEvent.clientY-disY+'px';
+					};
+
+					oDiv.onmouseup=function(){
+					oDiv.onmousemove=null;
+					oDiv.onmouseup=null;
+					};//onmouseup事件也要放在nomousedown事件里，刚才放在外面了，导致第一次拖拽正常，然后拖拽就不正常了
+				};
+
+
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			
+		</div>
+	</body>
+</html>
