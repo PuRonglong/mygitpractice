@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			var oDate = new Date();
+
+			oDate.setDate(oDate.getDate()+30);
+			document.cookie='user=blue;expirse='+oDate;//expirse这个过期时间并不会打出来
+			document.cookie="pass=123";
+
+			alert(document.cookie);//从弹出可以看出cookie这个变量有些特殊，它不会覆盖而像是添加；若是将其注释掉，还是会弹出原来的值，这就是cookie。但是关闭浏览器再重新打开就没有了，因为cookie有一个过期时间，如果不指定时间，就是浏览器关闭为止。
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

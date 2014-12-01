@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function setCookie(name,value,iDay){
+				var oDate = new Date();
+				oDate.setDate(oDate.getDate()+iDay);
+				document.cookie=name+'='+value+';expirse='+oDate;
+			}
+
+			function getCookie(name){
+				var arr = document.cookie.split(';');//arr->['username=abc','password=123456']
+				for (var i = 0; i < arr.length; i++) {
+					var arr2 = arr[i].split('=');//arr2->['username','abc'];
+					if (arr2[0]==name) {
+						return arr2[1];
+					};
+				};
+				return '';//如果没有匹配的name，就返回空值
+			}
+			// setCookie('username','abc');
+			function removeCookie(name){
+				setCookie(name,'',-1);
+			}
+			alert(getCookie('username'));
+			removeCookie('username');
+			alert(getCookie('username'));
+/*
+			setCookie('username','abc',30);
+			setCookie('password','123456',300)*/
+			/*var oDate = new Date();
+
+			oDate.setDate(oDate.getDate()+30);
+			document.cookie='user=blue;expirse='+oDate;//expirse这个过期时间并不会打出来
+			document.cookie="pass=123";
+*/
+			// alert(document.cookie);
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
