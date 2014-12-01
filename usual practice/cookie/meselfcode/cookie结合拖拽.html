@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			#div1{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				background: red;
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function setCookie(name, value, iDay)
+				{
+					var oDate=new Date();
+					
+					oDate.setDate(oDate.getDate()+iDay);
+					
+					document.cookie=name+'='+value+';expires='+oDate;
+				}
+
+			function getCookie(name){
+				var arr = document.cookie.split('; ');//例如：arr->['username=abc','password=123456']，但是刚才自己做的时候没有在;后面加空格找了好久也没找到原因，后来判断拖拽没有错就挨着从这三个函数里找才发现是这里的错。如果用alert弹出document.cookie就能看到是一串字符串并且中间是用分号加空格隔开的。
+
+				for (var i = 0; i < arr.length; i++) {
+					var arr2 = arr[i].split('=');//例如：arr2->['username','abc'];
+					if (arr2[0]==name) {
+						return arr2[1];
+					};
+				};
+				return '';//如果没有匹配的name，就返回空值
+			}
+
+			function removeCookie(name){
+				setCookie(name,'',-1);
+			}
+
+			window.onload=function(){
+				var oDiv = document.getElementById('div1');
+				var disX = 0;
+				var disY = 0;//鼠标距离物体左边和上边的距离
+
+				var x=getCookie('x');
+				var y=getCookie('y');
+				alert(document.cookie);
+
+				if (x) {//x,y要么都有要么都没有所以检测一个就行
+					oDiv.style.left=x+'px';
+					oDiv.style.top=y+'px';
+				};
+				
+				oDiv.onmousedown=function(ev){
+					var oEvent = ev||event;
+
+					disX = oEvent.clientX-oDiv.offsetLeft;
+					disY = oEvent.clientY-oDiv.offsetTop;
+
+					document.onmousemove=function(ev){
+						var oEvent = ev||event;
+						var l=oEvent.clientX-disX;
+						var t=oEvent.clientY-disY;
+						//让div不会超出可视区域
+						if (l<0) {
+							l=0;
+						}
+						else if (l>document.documentElement.clientWidth-oDiv.offsetWidth) {
+							l=document.documentElement.clientWidth-oDiv.offsetWidth;
+						}
+
+						if (t<0) {
+							t=0;
+						}
+						else if(t>document.documentElement.clientHeight-oDiv.offsetHeight){
+							t=document.documentElement.clientHeight-oDiv.offsetHeight;
+						}
+
+						oDiv.style.left=l+'px';
+						oDiv.style.top=t+'px';
+					};
+
+					document.onmouseup=function(){
+						document.onmousemove=null;//不用的时候要记得清除
+						document.onmouseup=null;
+
+						setCookie('x',oDiv.offsetLeft,5);//mouseup的时候将此时的oDiv.offsetLeft和oDiv.offsetTop以cookie的形式存入x/y
+						setCookie('y',oDiv.offsetTop,5);
+					};
+
+					return false;//解决火狐低版本上的一个bug：当div为空是拖拽会出现问题
+				};
+
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			
+		</div>
+	</body>
+</html>
