@@ -1,4 +1,3 @@
-mygitpractice
+我的web前端之路
 =============
-this is a test!
-practice
+The best way to predict future is to create it. 
