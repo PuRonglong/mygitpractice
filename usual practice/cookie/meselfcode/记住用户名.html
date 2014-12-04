@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function setCookie(name, value, iDay)
+				{
+					var oDate=new Date();					
+					oDate.setDate(oDate.getDate()+iDay);
+					document.cookie=name+'='+value+';expires='+oDate;
+				}
+
+			function getCookie(name){
+				var arr = document.cookie.split('; ');
+
+				for (var i = 0; i < arr.length; i++) {
+					var arr2 = arr[i].split('=');//例如：arr2->['username','abc'];
+					if (arr2[0]==name) {
+						return arr2[1];
+					};
+				};
+				return '';//如果没有匹配的name，就返回空值
+			}
+
+			function removeCookie(name){
+				setCookie(name,'',-1);
+			}
+
+			window.onload=function(){
+				var oForm = document.getElementById('form1');
+				var oUser = document.getElementsByName('user')[0];
+				var oBtnClear=document.getElementsByTagName('a')[0];
+
+				oForm.onsubmit=function(){
+					setCookie("user",oUser.value,30);
+				}
+				oUser.value=getCookie("user");//从cookie中获取值
+
+				oBtnClear.onclick=function(){
+					removeCookie('user');//清除cookie
+					oUser.value='';//清空输入框
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form id="form1" action="http://www.baidu.com/">
+			用户名：<input type="text" name="user" />
+			密码：<input type="password" name="pass" />
+			<input type="submit" value="登录" />
+			<a href="javascript:;">清除记录</a>
+		</form>
+	</body>
+</html>

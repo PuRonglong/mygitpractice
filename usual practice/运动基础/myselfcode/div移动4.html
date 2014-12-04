@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			#div1{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				background: red;
+				left: 0px;
+				top: 50px;
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function startMove(){
+				var timer = null;
+				var oDiv = document.getElementById('div1');
+				timer=setInterval(function(){
+					var iSpeed = 7;
+					if(oDiv.offsetLeft>=300){//是否到达终点
+						clearInterval(timer);//到达终点
+					}//若速度为7时,oDiv.offsetLeft不可能为300，即不可能停下来所以改为>=300
+					else{
+						oDiv.style.left=oDiv.offsetLeft+iSpeed+'px';//到达终点之前。关于详细的offset参考这篇博文：http://www.cnblogs.com/jscode/archive/2012/09/03/2669299.html
+					}//放到else中避免每点击一次都会执行一次此式子
+				},30);
+			}
+
+		</script>
+	</head>
+	<body>
+		<input type="button" value="开始运动" onclick="startMove()" />
+		<div id="div1"></div>
+	</body>
+</html>
