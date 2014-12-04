@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			#img1{
+				filter:alpha(opacity:30);
+				opacity: 0.3;
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+		var timer = null;
+
+		var alpha=30;//用这个变量来存透明度
+		function startMove(iTarget){
+			var oImg = document.getElementById('img1');
+
+			clearInterval(timer);
+			timer=setInterval(function(){
+				var iSpeed=0;
+				if (alpha<iTarget) {
+					iSpeed=10;
+				}
+				else{
+					iSpeed=-10;
+				}
+				if (alpha==iTarget) {
+					clearInterval(timer);
+				}
+				else{
+					alpha+=iSpeed;
+					oImg.style.filter='alpha(opacity:'+alpha+')';
+					oImg.style.opacity=alpha/100;//为了兼容性
+
+					document.title=alpha;
+				}
+			},30)
+		}
+			window.onload=function(){
+				var oImg = document.getElementById('img1');
+				oImg.onmouseover=function(){
+					startMove(100);
+				}
+				oImg.onmouseout=function(){
+					startMove(30);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<img id="img1" src="images/kid.PNG" />
+	</body>
+</html>
