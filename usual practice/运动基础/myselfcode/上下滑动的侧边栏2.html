@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			#div1{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				right: 0px;
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			window.onscroll=function(){
+				var oDiv = document.getElementById('div1');
+				var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+
+				// oDiv.style.top=scrollTop+(document.documentElement.clientHeight-oDiv.offsetHeight)/2+'px';
+				var t=scrollTop+(document.documentElement.clientHeight-oDiv.offsetHeight)/2;
+				startMove(parseInt(t));//潜在的问题：目标点可能不是整数，会导致一直来回跳动，所以要取整
+			}
+
+			var timer = null;
+
+			function startMove(iTarget){
+				var oDiv=document.getElementById('div1');
+
+				clearInterval(timer);
+				timer=setInterval(function(){
+					var iSpeed = (iTarget-oDiv.offsetTop)/8;
+					iSpeed=iSpeed>0?Math.ceil(iSpeed):Math.floor(iSpeed);
+
+					if (oDiv.offsetTop==iTarget) {
+						clearInterval(timer);
+					}
+					else{
+						oDiv.style.top=oDiv.offsetTop+iSpeed+'px';
+					}
+				},30)
+			}
+		</script>
+	</head>
+	<body style="height:2000px;">
+		<div id="div1"></div>
+	</body>
+</html>

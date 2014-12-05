@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			#div1{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				background: red;
+				left: 500px;
+				top: 50px;
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			var timer = null;
+			function startMove(iTarget){
+				var oDiv = document.getElementById('div1');
+				clearInterval(timer);
+				timer=setInterval(function(){
+					var iSpeed = (iTarget-oDiv.offsetLeft)/8;
+					iSpeed=iSpeed>0?Math.ceil(iSpeed):Math.floor(iSpeed);
+					/*if (iSpeed>0) {
+						iSpeed=Math.ceil(iSpeed);//向上取整
+					}
+					else{
+						iSpeed=Math.floor(iSpeed);//向下取整
+					}*/
+					
+
+					if(oDiv.offsetLeft==iTarget){
+						clearInterval(timer);
+					}
+					else{
+						oDiv.style.left=oDiv.offsetLeft+iSpeed+'px';
+					}
+					document.title=oDiv.offsetLeft;
+				},30);
+				
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="开始运动" onclick="startMove(300)" />
+		<div id="div1"></div>
+		<span style='width:1px; height:300px; background: black;position: absolute;left:300px;top:0px;'></span>
+	</body>
+</html>
