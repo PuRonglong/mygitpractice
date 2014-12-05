@@ -30,7 +30,7 @@
 					else{
 						iSpeed=-7;
 					}
-					if(Math.abs(oDiv.offsetLeft-iTarget)<7){//是否到达终点
+					if(Math.abs(oDiv.offsetLeft-iTarget)<7){//求绝对值
 						clearInterval(timer);//到达终点
 						oDiv.style.left=iTarget+'px';//当距离足够近的时候直接到达目标点
 					}
