@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 50px;
+				background: red;
+				margin-top: 50px;
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var aDiv = document.getElementsByTagName('div');
+
+				for (var i = 0; i < aDiv.length; i++) {
+					aDiv[i].timer=null;//让每一个div都有一个定时器
+					aDiv[i].onmouseover=function(){
+						startMove(this,300);//让当前的这个div的宽度变化
+					}
+					aDiv[i].onmouseout=function(){
+						startMove(this,100);
+					}
+				};
+			};
+
+			function startMove(obj,iTarget){
+				clearInterval(obj.timer);//每次开启都会清除div自己的定时器
+				obj.timer=setInterval(function(){
+					var iSpeed = (iTarget-obj.offsetWidth)/8;
+					iSpeed=iSpeed>0?Math.ceil(iSpeed):Math.floor(iSpeed);
+
+					if (obj.offsetWidth==iTarget) {
+						clearInterval(obj.timer);//当宽度等于目标宽度时停止计时器
+					}
+					else{
+						obj.style.width=obj.offsetWidth+iSpeed+'px';
+					}
+				},30)
+			}
+		</script>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+	</body>
+</html>

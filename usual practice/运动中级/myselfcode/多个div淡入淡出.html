@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background: red;
+				margin: 10px;
+				filter:alpha(opacity:30);/*在IE9中还有用，IE10就没效果了，改成了opacity*/
+				opacity: 0.3;
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			//多物体运动中所有东西都不能公用
+			window.onload=function(){
+				var aDiv = document.getElementsByTagName('div');
+
+				for (var i = 0; i < aDiv.length; i++) {
+					aDiv[i].alpha=30;//alpha作为物体的属性,把属性与运动对象绑定
+					aDiv[i].onmouseover=function(){
+						startMove(this,100);
+					}
+					aDiv[i].onmouseout=function(){
+						startMove(this,30);
+					}
+				};
+			}
+
+			function startMove(obj,iTarget){
+				clearInterval(obj.timer);
+				obj.timer=setInterval(function(){
+					var iSpeed = (iTarget-obj.alpha)/8;
+					iSpeed=iSpeed>0?Math.ceil(iSpeed):Math.floor(iSpeed);
+
+					if (obj.alpha==iTarget) {
+						clearInterval(obj.timer);
+					}
+					else{
+						obj.alpha+=iSpeed;
+
+						obj.style.filter='alpha(opacity:'+obj.alpha+')';
+						obj.style.opacity=obj.alpha/100;
+					}
+				},30);
+			}
+		</script>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</body>
+</html>

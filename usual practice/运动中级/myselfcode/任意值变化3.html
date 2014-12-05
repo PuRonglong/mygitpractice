@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			#div1{
+				width: 200px;
+				height: 200px;
+				background: red;
+				filter:alpha(apacity:30);
+				opacity: 0.3;
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oDiv = document.getElementById('div1');
+				oDiv.onmouseover=function(){
+					startMove(oDiv,'opacity',100);
+				}
+				oDiv.onmouseout=function(){
+					startMove(oDiv,'opacity',30);
+				}
+			}
+
+			function startMove(obj,attr,iTarget){
+				clearInterval(obj.timer);//每次开启都会清除div自己的定时器
+				obj.timer=setInterval(function(){
+					var iCur=0;
+
+					if (attr=='opacity') {
+						iCur=parseInt(parseFloat(getStyle(obj,attr)*100));//因为透明度的值可能是小数，所以不能用parseInt取透明度.用parseInt处理结构，避免小数引起的bug
+					}
+					else{
+						iCur=parseInt(getStyle(obj,attr));
+					}
+
+					var iSpeed = (iTarget-iCur)/8;
+					iSpeed=iSpeed>0?Math.ceil(iSpeed):Math.floor(iSpeed);
+
+					if (iCur==iTarget) {
+						clearInterval(obj.timer);//当宽度等于目标宽度时停止计时器
+					}
+					else{
+						if (attr=='opacity') {
+							obj.style.filter='alpha(opacity:'+(iCur+iSpeed)+')';//字符串连接有个先后顺序所以要加括号
+							obj.style.opacity=(iCur+iSpeed)/100;
+							document.getElementById('txt1').value=obj.style.opacity
+						}
+						else{
+							obj.style[attr]=iCur+iSpeed+'px';
+						}
+					}
+				},30)
+			}
+
+			function getStyle(obj,attr){
+				if (obj.currentStyle) {
+					return obj.currentStyle[attr];
+				}
+				else{
+					return getComputedStyle(obj,false)[attr];
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input id="txt1" type="text" />
+		<div id="div1"></div>
+	</body>
+</html>

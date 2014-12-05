@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			#div1{
+				width: 100px;
+				height: 50px;
+				background: red;
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oDiv = document.getElementById('div1');
+
+				oDiv.onmouseover=function(){
+					startMove(300);
+				}
+				oDiv.onmouseout=function(){
+					startMove(100);
+				}
+			};
+			var timer = null;
+			function startMove(iTarget){
+				var oDiv = document.getElementById('div1');
+
+				clearInterval(timer);
+				timer=setInterval(function(){
+					var iSpeed = (iTarget-oDiv.offsetWidth)/8;
+					iSpeed=iSpeed>0?Math.ceil(iSpeed):Math.floor(iSpeed);
+
+					if (oDiv.offsetWidth==iTarget) {
+						clearInterval(timer);//当宽度等于目标宽度时停止计时器
+					}
+					else{
+						oDiv.style.width=oDiv.offsetWidth+iSpeed+'px';
+					}
+				},30)
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			
+		</div>
+	</body>
+</html>
