@@ -1,6 +1,7 @@
-function startMove(obj,attr,iTarget){
+function startMove(obj,attr,iTarget,fn){
 				clearInterval(obj.timer);
 				obj.timer=setInterval(function(){
+					//1.取当前的值
 					var iCur=0;
 
 					if (attr=='opacity') {
@@ -10,17 +11,22 @@ function startMove(obj,attr,iTarget){
 						iCur=parseInt(getStyle(obj,attr));
 					}
 
+					//2.算速度
 					var iSpeed = (iTarget-iCur)/8;
 					iSpeed=iSpeed>0?Math.ceil(iSpeed):Math.floor(iSpeed);
 
+					//3.检测停止
 					if (iCur==iTarget) {
 						clearInterval(obj.timer);
+
+						if (fn) {
+							fn();
+						};
 					}
 					else{
 						if (attr=='opacity') {
 							obj.style.filter='alpha(opacity:'+(iCur+iSpeed)+')';
 							obj.style.opacity=(iCur+iSpeed)/100;
-							document.getElementById('txt1').value=obj.style.opacity
 						}
 						else{
 							obj.style[attr]=iCur+iSpeed+'px';
