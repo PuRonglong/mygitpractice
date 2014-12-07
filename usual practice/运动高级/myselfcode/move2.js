@@ -1,6 +1,7 @@
 function startMove(obj,json,fn){
 				clearInterval(obj.timer);
 				obj.timer=setInterval(function(){
+					var bStop=true;//这一次运动就结束了——所有的值都到达了
 					for(var attr in json){
 					//1.取当前的值
 						var iCur=0;
@@ -17,25 +18,25 @@ function startMove(obj,json,fn){
 					iSpeed=iSpeed>0?Math.ceil(iSpeed):Math.floor(iSpeed);
 
 					//3.检测停止
-					if (iCur==json[attr]) {
+					if (iCur!=json[attr]) {
+						bStop=false;
+					}
+					if (attr=='opacity') {
+							obj.style.filter='alpha(opacity:'+(iCur+iSpeed)+')';
+							obj.style.opacity=(iCur+iSpeed)/100;
+					}
+					else{
+						obj.style[attr]=iCur+iSpeed+'px';
+						}
+					}
+					if (bStop) {
 						clearInterval(obj.timer);
 
 						if (fn) {
 							fn();
 						};
-					}
-					else{
-						if (attr=='opacity') {
-							obj.style.filter='alpha(opacity:'+(iCur+iSpeed)+')';
-							obj.style.opacity=(iCur+iSpeed)/100;
-						}
-						else{
-							obj.style[attr]=iCur+iSpeed+'px';
-						}
-					}
-				}
-					}
-					,30)
+					};
+				},30)
 			}
 
 			function getStyle(obj,attr){

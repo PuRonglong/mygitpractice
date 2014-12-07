@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			#div1{
+				width: 100px;
+				height: 100px;
+				background: #ccc;
+				position: absolute;
+				left: 200px;
+				top: 200px;
+				margin: 0;
+			}
+		</style>
+		<script type="text/javascript" src="move2.js"></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oDiv=document.getElementById('div1');
+
+				oDiv.onmouseover=function(){
+					startMove(oDiv,{width:200,height:200,marginLeft:-50,marginTop:-50});//注意这里不要写成了margin-left了,否则没有效果
+				}
+				oDiv.onmouseout=function(){
+					startMove(oDiv,{width:100,height:100,marginLeft:0,marginTop:0});
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1"></div>
+		<!-- 这里注意一个顺序问题，因为都是用的绝对定位所以谁在后面就会盖在另一个的上面 -->
+	</body>
+</html>
