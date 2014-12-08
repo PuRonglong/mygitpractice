@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			#div1{
+				width: 100px;
+				height: 100px;
+				background: red;
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oDiv=document.getElementById('div1');
+
+				oDiv.onmouseover=function(){
+					startMove(oDiv,200);
+				}
+				oDiv.onmouseout=function(){
+					startMove(oDiv,50);
+				}
+			}
+			var height=20;
+			var iSpeed=0;
+			function startMove(obj,iTarget){
+				clearInterval(obj.timer);
+
+				obj.timer=setInterval(function(){
+					iSpeed+=(iTarget-height)/5;
+					iSpeed*=0.7;
+
+					if (Math.abs(iSpeed)<1 && Math.abs(iTarget-height)<1) {
+						clearInterval(obj.timer);
+						obj.style.height=iTarget;
+					}
+					else{
+						height+=iSpeed;
+
+						document.getElementById('txt1').value+=height+'\n';
+
+						obj.style.height=height+'px';
+					}
+				},30)
+			}
+		</script>
+	</head>
+	<body>
+		<textarea id="txt1" rows="10" cols="40"></textarea>
+		<div id="div1"></div>
+	</body>
+</html>

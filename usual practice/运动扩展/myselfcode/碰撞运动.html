@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			#div1{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			var iSpeedX=6;
+			var iSpeedY=8;
+			function startMove(){
+				setInterval(function(){
+					var oDiv=document.getElementById('div1');
+					var l=oDiv.offsetLeft+iSpeedX;
+					var t=oDiv.offsetTop+iSpeedY;
+
+					oDiv.style.left=l+'px';
+					oDiv.style.top=t+'px';
+				},30)
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="开始运动" onclick="startMove()" />
+		<div id="div1"></div>
+	</body>
+</html>

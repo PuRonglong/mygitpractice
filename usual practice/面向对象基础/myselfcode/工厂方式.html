@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			//用工厂方式构造对象
+
+			function createPerson(name,sex){//构造函数,因为这个函数的作用是用来构造一个对象。
+				//1.原料
+				var obj=new Object();
+				//2.加工
+				obj.name=name;
+				obj.sex=sex;
+				obj.showName=function(){
+					alert('我的名字叫：'+this.name);
+				}
+				obj.showSex=function(){
+					alert('我是'+this.sex+'的');
+				}
+				//3.出厂
+				return obj;
+			}
+
+			var p2=createPerson('蒲荣龙','男');
+			var p2=createPerson('蒲凤姣','女');
+
+			p1.showName();
+			p1.showSex();
+
+			p2.showName();
+			p2.showSex();
+		</script>
+	</head>
+	<body>
+		<!-- 工厂方式：1.原料；
+					   2.加工
+					   3.出厂
+
+			工厂方式的问题：
+			1.没有new
+			2.每个对象都有一套自己的函数——极其浪费资源
+		 -->
+	</body>
+</html>

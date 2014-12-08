@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			#div1{
+				width: 100px;
+				height: 100px;
+				background: red;
+				left: 0;
+				position: absolute;
+				top: 50px;
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			var iSpeed=20;
+
+			function startMove(){
+				var oDiv=document.getElementById('div1');
+
+				setInterval(function(){
+					iSpeed*=0.95;//可以看做是摩擦系数
+
+					oDiv.style.left=oDiv.offsetLeft+iSpeed+'px';
+					document.getElementById('txt1').value+=iSpeed+'\n';
+				},30)
+			}
+		</script>
+	</head>
+	<body>
+		<textarea id="txt1" rows="10" cols="40"></textarea>
+		<input type="button" value="开始运动" onclick="startMove();">
+		<div id="div1"></div>
+	</body>
+</html>

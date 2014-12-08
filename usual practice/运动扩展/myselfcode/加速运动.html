@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			#div1{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+				top: 50px;
+				left: 0;
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function startMove(){
+				var oDiv=document.getElementById('div1');
+				var iSpeed=0;
+
+				setInterval(function(){
+					iSpeed++;
+					oDiv.style.left=oDiv.offsetLeft+iSpeed+'px';
+				},30)
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="开始运动" onclick="startMove()">
+		<div id="div1"></div>
+	</body>
+</html>

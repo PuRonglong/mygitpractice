@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			var arr1=new Array(12,5,8,4);//new和方括号没有区别
+			var arr2=new Array(44,6,5,4,5,55,9);
+
+			// arr1.sum=function(){
+				Array.prototype.sum=function(){//给一类元素添加方法和属性;只要是从这个Array上new出来的对象，都有这个sum方法
+				var result = 0;
+				for (var i = 0; i < this.length; i++) {
+					result+=this[i];
+				};
+				return result;
+			}
+		/*	alert(arr1.sum());
+			alert(arr2.sum());*/
+			alert(arr1.sum==arr2.sum);//true
+			alert(arr1.sum==Array.prototype.sum);//true
+		</script>
+	</head>
+	<body>
+		<!-- 
+		var arr=new Array();
+		Array类			不具备实际的功能，只能用来构造对象
+		arr对象			真正有功能的东西，被类给构造出来
+
+		原型的一个重要功能（应用）——可以扩展系统对象
+		 -->
+	</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+			#div1{
+				position: relative;
+				border: 1px solid black;
+				width: 680px;
+				height: 132px;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			#div1 ul{
+				position: absolute;
+				left: 0;
+			}
+			#div1 ul li{
+				list-style-type: none;
+				float: left;
+				width: 150px;
+				height: 112px;
+				padding: 10px;
+			}
+			#div1 ul li img{
+				width: 150px;
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oDiv=document.getElementById('div1');
+				var oUl=document.getElementsByTagName('ul')[0];
+				var aLi=oUl.getElementsByTagName('li');
+				var aA=document.getElementsByTagName('a');
+				var timer=null;
+				var iSpeed=0;
+
+				oUl.innerHTML+=oUl.innerHTML;
+				oUl.style.width=aLi.length*aLi[0].offsetWidth+'px';
+
+				timer=setInterval(function(){
+					if (oUl.offsetLeft<-oUl.offsetWidth/2) {
+						oUl.style.left=0;
+					}
+					else if(oUl.offsetLeft>0){
+						oUl.style.left=-oUl.offsetWidth/2+'px';
+					}
+
+					oUl.style.left=oUl.offsetLeft+iSpeed+'px';
+				},30)
+
+				aA[0].onclick=function(){
+					iSpeed=-10;
+				}
+				aA[1].onclick=function(){
+					iSpeed=10;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<a href="javascript:;">左</a>
+		<a href="javascript:;">右</a>
+		<div id="div1">
+			<ul>
+				<li><img src="images/1.jpg"></li>
+				<li><img src="images/2.jpg"></li>
+				<li><img src="images/3.jpg"></li>
+				<li><img src="images/4.jpg"></li>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function createPerson(name,sex){
+				//假象的系统内部工作流程
+				//var this=new Object();
+				this.name=name;
+				this.sex=sex;
+				this.showName=function(){
+					alert('我的名字叫：'+this.name);
+				}
+				this.showSex=function(){
+					alert('我是'+this.sex+'的');
+				}
+				//假象的系统内部工作流程
+				//return this;
+			}
+
+			var p1=new createPerson('蒲荣龙','男');
+			var p2=new createPerson('蒲凤姣','女');
+
+		/*	p1.showName();
+			p1.showSex();
+
+			p2.showName();
+			p2.showSex();*/
+
+			alert(p1.showName==p2.showName);//false；每执行一次都会new一个function出来
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

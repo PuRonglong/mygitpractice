@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			* { padding: 0; margin: 0; }
+			li { list-style: none; }
+
+			ul { width: 400px; height: 30px; position: relative; margin: 100px auto 0; }
+			li { float: left; width: 98px; height: 28px; line-height: 28px; border: 1px solid #ccc; text-align: center; z-index: 2; position: relative; cursor: pointer; }
+			.bg { width: 100px; height: 5px; overflow: hidden; background: red; border: none; position: absolute; top: 24px; left: 0; z-index: 1; }
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			var iSpeed=0;
+
+			function startMove(obj,iTarget){
+				clearInterval(obj.timer);
+
+				obj.timer=setInterval(function(){
+					iSpeed+=(iTarget-obj.offsetLeft)/5;
+					iSpeed*=0.7;
+
+					// iSpeed=iSpeed>0?Math.ceil(iSpeed):Math.floor(iSpeed);//速度取整以后会发现下划线一直在左右移动停不下来
+
+					obj.style.left=obj.offsetLeft+iSpeed+'px';
+
+					document.title=obj.offsetLeft+'|'+iTarget+'|iSpeed:'+iSpeed;//打出到达的位置和指定到达的位置
+				},30)
+			}
+			window.onload=function(){
+				var oUl=document.getElementById('ul1');
+				var aLi=oUl.getElementsByTagName('li');
+				var oBg=aLi[aLi.length-1];
+
+				for (var i = 0; i < aLi.length-1; i++) {//bg不需要加事件，所以跳过去
+					aLi[i].onmouseover=function(){
+						startMove(oBg,this.offsetLeft);
+					}
+				};
+			}
+		</script>
+	</head>
+	<body>
+		<ul id="ul1">
+			<li>首页</li>
+			<li>关于我们</li>
+			<li>产品</li>
+			<li>联系方式</li>
+		    <li class="bg"></li>
+		</ul>
+	</body>
+</html>

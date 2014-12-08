@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function CreatePerson(name,sex){//构造函数;首字母大写
+				//在构造函数里添加属性,属性每个对象都不相同
+				this.name=name;
+				this.sex=sex;
+			}//用原型来添加方法可以把构造函数极度简化；同一类的所有对象里面只有一套方法，节省资源
+
+			//在原型里添加方法，方法是所有对象都一样的
+			CreatePerson.prototype.showName=function(){
+					alert('我的名字叫：'+this.name);
+				}
+			CreatePerson.prototype.showSex=function(){
+					alert('我是'+this.sex+'的');
+				}
+
+			var p1=new CreatePerson('蒲荣龙','男');
+			var p2=new CreatePerson('蒲凤姣','女');
+
+			p1.showName();
+			p1.showSex();
+
+			p2.showName();
+			p2.showSex();
+
+			// alert(p1.showName==p2.showName);//false；每执行一次都会new一个function出来
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>
