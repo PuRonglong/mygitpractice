@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function Person(name,sex){
+				this.name=name;
+				this.sex=sex;
+			}
+
+			Person.prototype.showName=function(){
+				alert(this.name);
+			}
+			Person.prototype.showSex=function(){
+				alert(this.sex);
+			}
+
+			var p=new Person('蒲荣龙','男');
+
+			p.showName();
+			p.showSex();
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
