@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function Bbb(){
+				var _this=this;
+				this.b=5;
+
+				document.getElementById('btn1').onclick=function(){
+					_this.show();
+				}
+			}
+
+			Bbb.prototype.show=function(){
+				alert(this.b);
+			}
+
+			window.onload=function(){
+				new Bbb();//要放到window.onload里面不然取不到对象
+			}
+		</script>
+	</head>
+	<body>
+		<input id="btn1" type="button" value="按钮" />
+	</body>
+</html>

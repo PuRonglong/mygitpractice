@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			#div1{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+			}
+			#div2{
+				width: 100px;
+				height: 100px;
+				background: yellow;
+				position: absolute;
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			//把函数变成方法，把全局变量变成属性
+			function Drag(id){
+				var _this=this;//把this存一下,因为在事件和定时器中this会有所不同
+
+				this.oDiv=null;
+				this.disX=0;
+				this.disY=0;
+				this.oDiv=document.getElementById(id);
+
+				this.oDiv.onmousedown=function(){
+					_this.fnDown();
+				}
+			}
+		
+			Drag.prototype.fnMove=function (ev){
+				var oEvent=ev||event;
+				this.oDiv.style.left=oEvent.clientX-this.disX+'px';
+				this.oDiv.style.top=oEvent.clientY-this.disY+'px';
+			}
+
+			Drag.prototype.fnUp=function (){
+						document.onmousemove=null;
+						document.onmouseup=null;
+					}
+			Drag.prototype.fnDown=function (ev){
+					var _this=this;
+					var oEvent=ev||event;
+					this.disX=oEvent.clientX-this.oDiv.offsetLeft;
+					this.disY=oEvent.clientY-this.oDiv.offsetTop;
+
+					document.onmousemove=function(){
+						_this.fnMove();
+					}
+
+					document.onmouseup=function(){
+						_this.fnUp();
+					}
+				}
+			
+			window.onload=function(){
+				new Drag('div1');
+				new Drag('div2');
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1"></div>
+		<div id="div2"></div>
+	</body>
+</html>
