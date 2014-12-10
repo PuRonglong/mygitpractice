@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			//js里所有的对象全是引用
+			var arr1=[1,2,3];
+			var arr2=arr1;//把一赋给二的过程和配钥匙的过程一样，只是让arr2它也指到了这个数组上，它们俩指的是同一块东西。数组是内存里的一块区域，所谓引用就是这块内存的地址
+			arr2.push(4);
+
+			alert(arr1);//1,2,3,4
+			alert(arr2);//1,2,3,4
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

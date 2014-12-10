@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+		/*
+			水平定义列表就像内联列表一样，Bootstrap可以给<dl>添加类名“.dl-horizontal”给定义列表实现水平显示效果.源码如下：
+			@media (min-width: 768px) {
+				.dl-horizontal dt {
+				float: left;
+				width: 160px;
+				overflow: hidden;
+				clear: left;
+				text-align: right;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				  }
+				.dl-horizontal dd {
+				margin-left: 180px;
+				  }
+				}
+				此处添加了一个媒体查询。也就是说，只有屏幕大于768px的时候，添加类名“.dl-horizontal”才具有水平定义列表效果。其实现主要方式：
+				1、将dt设置了一个左浮动，并且设置了一个宽度为160px
+				2、将dd设置一个margin-left的值为180px，达到水平的效果
+				3、当标题宽度超过160px时，将会显示三个省略号
+		*/
+		</script>
+	</head>
+	<body style="font-size: 30px;">
+		<dl class="dl-horizontal">
+			<dt>标题一莫言居然把烟写得这么经典：
+				<dd> 烟恋上了手指，手指却把香烟给了嘴唇， 香烟亲吻着嘴唇，内心却给了肺， 肺以为得到了香烟的真心，却不知伤害了自己！ 是手指的背叛成就了烟的多情， 还是嘴唇的贪婪促成了肺的伤心...... 人生如烟，岁月无痕，烟自多情， 却把自己烧的只剩下灰</dd>
+			</dt>
+		</dl>
+		<dl class="dl-horizontal">
+			<dt>标题二
+				<dd>描述内容</dd>
+			</dt>
+		</dl>
+	</body>
+</html>

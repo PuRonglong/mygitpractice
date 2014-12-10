@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function Person(name,sex){//构造函数的作用用来创建一个对象
+				this.name=name;
+				this.sex=sex;
+			}
+
+			Person.prototype.showName=function(){
+				alert(this.name);
+			}
+			Person.prototype.showSex=function(){
+				alert(this.sex);
+			}
+
+			var oP1=new Person('puronglong','男');
+
+			// oP1.showName();
+			//-------------------------------------------------------
+			function Worker(name,sex,job){
+				//this->new出来的Worker对象,经过一步伪装，传给person，让person以为这个this是new出来的一个person
+				Person.call(this,name,sex);//构造函数伪装  调用父级的构造函数——为了继承属性
+
+				this.job=job;
+			}
+
+			//原型链。这些方法先是从person传给woker，由woker传给coder,像链条一样一环扣一环，形象地称之为原型链，说的就是这些方法，在原型之间，在父子集的原型之间，像个链条一样，一环扣一环传递起来
+			Worker.prototype=Person.prototype;//从父级的原型上拿东西,或者说通过原型来继承父级的方法。这不是赋值，是让worker的prototype指向了person的原型区域，是一个引用，这个时候对worker.prototype的修改其实就是对person.prototype的修改，会导致person的原型上出现showJob这个方法，即子类反过来影响了父类的东西
+
+			Worker.prototype.showJob=function(){
+				alert(this.job);
+			}
+
+			var oW1=new Worker('puronglong','男','打杂的');
+
+			oW1.showJob();
+			oW1.showName();
+
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

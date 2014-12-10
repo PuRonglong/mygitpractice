@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function Person(name,sex){//构造函数的作用用来创建一个对象
+				this.name=name;
+				this.sex=sex;
+			}
+
+			Person.prototype.showName=function(){
+				alert(this.name);
+			}
+			Person.prototype.showSex=function(){
+				alert(this.sex);
+			}
+			//-------------------------------------------------------
+			function Worker(name,sex,job){
+				//this->new出来的Worker对象,经过一步伪装，传给person，让person以为这个this是new出来的一个person
+				Person.call(this,name,sex);//构造函数伪装  调用父级的构造函数——为了继承属性;原型链继承方法
+
+				this.job=job;
+			}
+
+			for (var i in Person.prototype) {//通过for in把父类的东西一个一个塞到子类中去
+				Worker.prototype[i]=Person.prototype[i];
+			};
+
+			Worker.prototype.showJob=function(){
+				alert(this.job);
+			}
+
+			// alert(Person.prototype.showJob);
+
+			var oP=new Person('puronglong','男');
+			var oW=new Worker('puronglong','男','打杂的');
+
+			oP.showName();
+			oP.showSex();
+
+			oW.showName();
+			oW.showSex();
+			oW.showJob();
+
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

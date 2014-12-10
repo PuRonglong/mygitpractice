@@ -39,8 +39,9 @@
 			}
 		}
 
-		$w1=new Worker('blue','男','打杂的');
+		$w1=new Worker('puronglong','男','打杂的');
 
+		$w1->showName();
 		$w1->showSex();
 		?>
 	</body>

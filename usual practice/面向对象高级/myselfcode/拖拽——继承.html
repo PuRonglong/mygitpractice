@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			#div1{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+			}
+			#div2{
+				width: 100px;
+				height: 100px;
+				background: yellow;
+				position: absolute;
+			}
+		</style>
+		<script type="text/javascript" src="Drag.js"></script>
+		<script type="text/javascript" src="LimitDrag.js"></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				new Drag('div1');
+				new LimitDrag('div2');
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1"></div>
+		<div id="div2"></div>
+	</body>
+</html>
