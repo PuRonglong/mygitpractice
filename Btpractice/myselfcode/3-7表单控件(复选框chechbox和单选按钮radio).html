@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			body {
+				  padding: 50px 50px;
+				}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			/*
+				Bootstrap框架中checkbox和radio有点特殊，Bootstrap针对他们做了一些特殊化处理，主要是checkbox和radio与label标签配合使用会出现一些小问题（最头痛的是对齐问题）。
+				可以得知：
+				1、不管是checkbox还是radio都使用label包起来了
+				2、checkbox连同label标签放置在一个名为“.checkbox”的容器内
+				3、radio连同label标签放置在一个名为“.radio”的容器内
+				在Bootstrap框架中，主要借助“.checkbox”和“.radio”样式，来处理复选框、单选按钮与标签的对齐方式。
+			*/
+		</script>
+	</head>
+	<body>
+		<form role="form">
+		  <h3>案例1</h3>
+		  <div class="checkbox">
+		    <label>
+		      <input type="checkbox" value="">
+		      记住密码
+		    </label>
+		  </div>
+		  <div class="radio">
+		    <label>
+		      <input type="radio" name="optionsRadios" id="optionsRadios1" value="love" checked>
+		      喜欢
+		    </label>
+		  </div>
+		    <div class="radio">
+		    <label>
+		      <input type="radio" name="optionsRadios" id="optionsRadios2" value="hate">
+		      不喜欢
+		    </label>
+		  </div>
+		</form> 
+	</body>
+</html>

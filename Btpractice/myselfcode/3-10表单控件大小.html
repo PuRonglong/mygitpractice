@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			body {
+			  padding: 100px;
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			/*
+				前面看到的表单控件都正常的大小。可以通过设置控件的height，line-height，padding和font-size等属性来实现控件的高度设置。不过Bootstrap框架还提供了两个不同的类名，用来控制表单控件的高度。这两个类名是：
+				1、input-sm:让控件比正常大小更小
+				2、input-lg:让控件比正常大小更大
+				这两个类适用于表单中的input，textarea和select控件
+				不管是“input-sm”还是“input-lg”仅对控件高度做了处理。但往往很多时候，我们需要控件宽度也要做一定的变化处理。这个时候就要借住Bootstrap框架的网格系统。
+			*/
+		</script>
+	</head>
+	<body>
+		<h1>案例1</h1>
+		<form role="form">
+		  <div class="form-group">
+		    <label class="control-label">控件变大</label>
+		    <input class="form-control input-lg" type="text" placeholder="添加.input-lg，控件变大">
+		  </div>
+		  <div class="form-group">
+		    <label class="control-label">正常大小</label>
+		    <input class="form-control" type="text" placeholder="正常大小">
+		  </div>  
+		  <div class="form-group">
+		    <label class="control-label">控件变小</label>
+		    <input class="form-control input-sm" type="text" placeholder="添加.input-sm，控件变小">
+		  </div> 
+		</form> 
+		  <br>
+		  <br>
+		  <br>
+		 <h1>案例2</h1>
+		<form role="form" class="form-horizontal">
+		  <div class="form-group">
+		    <div class="col-xs-4">
+		      <input class="form-control input-lg" type="text" placeholder=".col-xs-4">
+		    </div>
+		    <div class="col-xs-4">
+		      <input class="form-control input-lg" type="text" placeholder=".col-xs-4">
+		    </div>
+		    <div class="col-xs-4">
+		      <input class="form-control input-lg" type="text" placeholder=".col-xs-4">
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <div class="col-xs-6"><input class="form-control" type="text" placeholder=".col-xs-6"></div>
+		    <div class="col-xs-6"><input class="form-control" type="text" placeholder=".col-xs-6"></div>
+		    
+		  </div>  
+		  <div class="form-group">
+		    <div class="col-xs-5">
+		      <input class="form-control input-sm" type="text" placeholder=".col-xs-5">
+		    </div>
+		    <div class="col-xs-7">
+		      <input class="form-control input-sm" type="text" placeholder=".col-xs-7">
+		    </div>
+		  </div> 
+		</form>
+	</body>
+</html>
