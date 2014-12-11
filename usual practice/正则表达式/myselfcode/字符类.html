@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			var str='1a2 abc 1c2 ee';
+			var re=/1[abc]2/;//1和2之间出现的是a也行，b也行，c也行；方括号里的东西只能代表一个字符
+			// var re=/1a2|1b2|ac2/;//作用同上
+
+			alert(str.match(re));//1a2
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
