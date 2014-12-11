@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			body {
+				  padding: 50px 50px;
+				}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			/*
+				表单主要功能是用来与用户做交流的一个网页控件，良好的表单设计能够让网页与用户更好的沟通。表单中常见的元素主要包括：文本输入框、下拉选择框、单选按钮、复选按钮、文本域和按钮等。其中每个控件所起的作用都各不相同，而且不同的浏览器对表单控件渲染的风格都各有不同。
+				对于基础表单，Bootstrap并未对其做太多的定制性效果设计，仅仅对表单内的fieldset、legend、label标签进行了定制。
+				主要将这些元素的margin、padding和border等进行了细化设置。
+				当然表单除了这几个元素之外，还有input、select、textarea等元素，在Bootstrap框架中，通过定制了一个类名`form-control`，也就是说，如果这几个元素使用了类名“form-control”，将会实现一些设计上的定制效果。
+				1、宽度变成了100%
+				2、设置了一个浅灰色（#ccc）的边框
+				3、具有4px的圆角
+				4、设置阴影效果，并且元素得到焦点之时，阴影和边框效果会有所变化
+				5、设置了placeholder的颜色为#999
+			*/
+		</script>
+	</head>
+	<body>
+		<form role="form">
+		  <div class="form-group">
+		    <label for="exampleInputEmail1">邮箱：</label>
+		    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="请输入您的邮箱地址">
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputPassword1">密码</label>
+		    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="请输入您的邮箱密码">
+		  </div>
+		  <div class="checkbox">
+		    <label>
+		      <input type="checkbox"> 记住密码
+		    </label>
+		  </div>
+		  <button type="submit" class="btn btn-default">进入邮箱</button>
+		</form>	
+	</body>
+</html>
