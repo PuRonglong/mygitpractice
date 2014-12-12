@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			body {
+			  padding: 50px 200px;
+			}
+			.btn {
+			  margin: 20px; 
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			/*
+				图像在网页制作中也是常要用到的元素，在Bootstrap框架中对于图像的样式风格提供以下几种风格：
+				1、img-responsive：响应式图片，主要针对于响应式设计
+				2、img-rounded：圆角图片
+				3、img-circle：圆形图片
+				4、img-thumbnail：缩略图片
+				使用方法：
+				使用方法非常简单，只需要在<img>标签上添加对应的类名
+				由于样式没有对图片做大小上的样式限制，所以在实际使用的时候，需要通过其他的方式来处理图片大小。比如说控制图片容器大小。（注意不可以通过css样式直接修改img图片的大小，这样操作就不响应了）
+				注意：
+				对于圆角图片和圆形图片效果，因为是使用了CSS3的圆角样式来实现的，所以注意对于IE8以及其以下版本不支持，是没有圆角效果的。
+			*/
+		</script>
+	</head>
+	<body>
+		<div class="container">
+		  <div class="row">
+		    <div class="col-sm-4">
+		      <img   alt="315x243" src="images/kid.PNG">
+		        <div>默认图片</div>
+		    </div>
+		    <div class="col-sm-4">
+		      <img  class="img-rounded" alt="315x243" src="images/kid.PNG"> 
+		        <div>圆角图片</div>
+		    </div>
+		    <div class="col-sm-4">
+		      <img  class="img-circle" alt="315x243" src="images/kid.PNG">
+		        <div>圆形图片</div>
+		    </div>
+		      <div class="row">
+		        <div class="col-sm-6">
+		          <img  class="img-thumbnail" alt="315x243" src="images/kid.PNG"> 
+		            <div>缩略图</div>
+		        </div>
+		        <div class="col-sm-6">
+		          <img  class="img-responsive" alt="315x243" src="images/kid.PNG" /> 
+		          <div>响应式图片</div>
+		        </div>
+		      </div>
+		  </div>
+		</div>
+	</body>
+</html>

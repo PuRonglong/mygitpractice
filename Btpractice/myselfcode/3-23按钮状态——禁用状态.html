@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			body {
+			  padding: 50px 200px;
+			}
+			.btn {
+			  margin: 20px; 
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			/*
+				和input等表单控件一样，在Bootstrap框架的按钮中也具有禁用状态的设置。禁用状态与其他状态按钮相比，就是背景颜色的透明度做了一定的处理，opcity的值从100%调整为65%。
+				在Bootstrap框架中，要禁用按钮有两种实现方式：
+				方法1：在标签中添加disabled属性
+				方法2：在元素标签中添加类名“disabled”
+				两者的主要区别是：
+				“.disabled”样式不会禁止按钮的默认行为，比如说提交和重置行为等。如果想要让这样的禁用按钮也能禁止按钮的默认行为，则需要通过JavaScript这样的语言来处理。对于<a>标签也存在类似问题，如果通过类名“.disable”来禁用按钮，其链接行为是无法禁止。而在元素标签中添加“disabled”属性的方法是可以禁止元素的默认行为的。
+				通过为reset按钮添加.disabled样式的方法使按钮处于禁止状态，但reset按钮的重置行为没有被禁止，而通过设置disabled="disabled"这样的属性方法可以禁止元素的默认行为
+			*/
+		</script>
+	</head>
+	<body>
+		<button class="btn btn-primary btn-lg btn-block" type="button" disabled="disabled">通过disabled属性禁用按钮</button> 
+		<button class="btn btn-primary btn-block disabled" type="button">通过添加类名disabled禁用按钮</button>
+		<button class="btn btn-primary btn-sm btn-block" type="button">未禁用的按钮</button>
+	    <input type="reset" class="disabled" value="重置">
+	</body>
+</html>
