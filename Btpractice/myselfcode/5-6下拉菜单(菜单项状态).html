@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			body{margin:100px;padding:100px;}
+		</style>
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.js"></script>
+		
+		<script type="text/javascript">
+			/*
+			下拉菜单项的默认的状态（不用设置）有悬浮状态（:hover）和焦点状态（:focus）：
+			下拉菜单项除了上面两种状态，还有当前状态（.active）和禁用状态（.disabled）。这两种状态使用方法只需要在对应的菜单项上添加对应的类名：
+			*/
+		</script>
+	</head>
+	<body>
+		<div class="dropdown">
+		  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+		    选择你喜欢的水果
+		    <span class="caret"></span>
+		  </button>
+		  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+		    <li role="presentation" class="active"><a role="menuitem" tabindex="-1" href="#">苹果</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">香蕉</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">梨</a></li>
+		    <li role="presentation" class="divider"></li>
+		    <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" href="#">桃</a></li>
+		  </ul>
+		</div>
+	</body>
+</html>	

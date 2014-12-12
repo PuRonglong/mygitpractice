@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			body{margin:50px;padding:50px;}
+		</style>
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.js"></script>
+		
+		<script type="text/javascript">
+			/*
+			在Bootstrap框架中的下拉菜单还提供了下拉分隔线，假设下拉菜单有两个组，那么组与组之间可以通过添加一个空的<li>，并且给这个<li>添加类名“divider”来实现添加下拉分隔线的功能。
+			源码如下：
+			.dropdown-menu .divider {
+				  height: 1px;
+				  margin: 9px 0;
+				  overflow: hidden;
+				  background-color: #e5e5e5;
+				}
+			*/
+		</script>
+	</head>
+	<body>
+		<div class="dropdown">
+    	  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+		    选择你喜欢的水果
+		    <span class="caret"></span>
+		  </button>
+		  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+		    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">苹果</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">香蕉</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">梨</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">桃</a></li>
+            <li class="divider"></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">芹菜</a></li>
+    	    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">萝卜</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">茄子</a></li>
+            <li class="divider"></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">米饭</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">馒头</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">面条</a></li>
+		  </ul>
+		</div> 
+	</body>
+</html>	
