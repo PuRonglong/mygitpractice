@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			body{margin:50px;padding:50px;}
+		</style>
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.js"></script>
+		
+		<script type="text/javascript">
+			/*
+			在使用Bootstrap框架的下拉菜单时，必须调用Bootstrap框架提供的bootstrap.js文件。当然，如果你使用的是未编译版本，在js文件夹下你能找到一个名为“dropdown.js”的文件。你也可以调用这个js文件
+			特别声明：因为Bootstrap的组件交互效果都是依赖于jQuery库写的插件，所以在使用bootstrap.min.js之前一定要先加载jquery.min.js才会生效果，即要注意两者的顺序，我原来这里范的一个错误就是先引用bootstrap.js了，导致错误。
+			使用方法：
+			在使用Bootstrap框架中的下拉菜单组件时，其结构运用的正确与否非常的重要，如果结构和类名未使用正确，直接影响组件是否能正常运用。
+			1、使用一个名为“dropdown”的容器包裹了整个下拉菜单元素，
+			2、使用了一个<button>按钮做为父菜单，并且定义类名“dropdown-toggle”和自定义“data-toggle”属性，且值必须和最外容器类名一致
+			3、下拉菜单项使用一个ul列表，并且定义一个类名为“dropdown-menu”，
+			
+			*/
+		</script>
+	</head>
+	<body>
+		<div class="dropdown">
+		  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+		    选择你喜欢的水果
+		    <span class="caret"></span>
+		  </button>
+		  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+		    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">苹果</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">香蕉</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">梨</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">桃</a></li>
+		  </ul>
+		</div>
+	</body>
+</html>	

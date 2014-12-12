@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			[class *= col-]{
+				  background-color: #eee;
+				  border: 1px solid #ccc;
+				}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			/*
+			有的时候，我们不希望相邻的两个列紧靠在一起，但又不想使用margin或者其他的技术手段来。这个时候就可以使用列偏移（offset）功能来实现。使用列偏移也非常简单，只需要在列元素上添加类名“col-md-offset-*”(其中星号代表要偏移的列组合数)，那么具有这个类名的列就会向右偏移。例如，你在列元素上添加“col-md-offset-4”，表示该列向右移动4个列的宽度
+			实现原理非常简单，就是利用十二分之一（1/12）的margin-left。然后有多少个offset，就有多少个margin-left。
+			注意：
+			不过有一个细节需要注意，使用”col-md-offset-*”对列进行向右偏移时，要保证列与偏移列的总数不超过12，不然会致列断行显示，
+			*/
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<h4>列向右移动四列的间距</h4>
+			  <div class="row">
+			    <div class="col-md-4">.col-md-4</div>
+			    <div class="col-md-2 col-md-offset-4">列向右移动四列的间距</div>
+			    <div class="col-md-2">.col-md-2</div>
+			  </div>
+			  <div class="row">
+			    <div class="col-md-4">.col-md-4</div>
+			    <div class="col-md-4 col-md-offset-4">列向右移动四列的间距</div>
+			  </div>
+			</div>
+			<br />
+			<h4>发生行断裂</h4>
+			<div class="container">
+			  <div class="row">
+			    <div class="col-md-4">.col-md-4</div>
+			    <div class="col-md-2 col-md-offset-4">列向右移动四列的间距</div>
+			    <div class="col-md-2">.col-md-2</div>
+			  </div>
+			  <div class="row">
+			    <div class="col-md-4">.col-md-4</div>
+			    <div class="col-md-4 col-md-offset-4">列向右移动四列的间距</div>
+			  </div>
+			  <div class="row">
+			    <div class="col-md-3">.col-md-3</div>
+			    <div class="col-md-3 col-md-offset-3">col-md-offset-3</div>
+			    <div class="col-md-4">col-md-4</div>
+			  </div>
+			</div>
+			<br/>
+			<div class="row">
+			    <div class="col-md-2">.col-md-2</div>
+			    <div class="col-md-2 col-md-offset-1">偏移一个网格</div>
+			    <div class="col-md-2 col-md-offset-1">偏移一个网格</div>
+			    <div class="col-md-3 col-md-offset-1">.col-md-3</div>
+			  </div>
+	</body>
+</html>

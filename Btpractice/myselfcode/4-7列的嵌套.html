@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			[class *= col-]{
+				  background-color: #eee;
+				  border: 1px solid #ccc;
+				}
+				[class *= col-] [class *= col-] {
+				  background-color: #f36;
+				  border:1px dashed #fff;
+				  color: #fff;
+				}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			/*
+			Bootstrap框架的网格系统还支持列的嵌套。你可以在一个列中添加一个或者多个行（row）容器，然后在这个行容器中插入列（像前面介绍的一样使用列）。但在列容器中的行容器（row），宽度为100%时，就是当前外部列的宽度。
+			*/
+		</script>
+	</head>
+	<body>
+		<div class="container">
+		  <div class="row">
+		    <div class="col-md-8">
+		      我的里面嵌套了一个网格
+		      <div class="row">
+		        <div class="col-md-6">col-md-6</div>
+		        <div class="col-md-6">col-md-6</div>
+		      </div>
+		    </div>
+		    <div class="col-md-4">col-md-4</div>
+		  </div>
+		  <div class="row">
+		    <div class="col-md-4">.col-md-4</div>
+		    <div class="col-md-8">
+		      我的里面嵌套了一个网格
+		      <div class="row">
+		        <div class="col-md-4">col-md-4</div>
+		        <div class="col-md-4">col-md-4</div>
+		        <div class="col-md-4">col-md-4</div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="row">
+		    <div class="col-md-8">.col-md-8
+		        我的里面嵌套了一个网格
+		        <div class="row">
+			        <div class="col-md-8">col-md-8</div>
+			        <div class="col-md-4">col-md-4</div>
+		        </div>
+		    </div>
+		    <div class="col-md-4">.col-md-4
+		      <div class="row">
+		        <div class="col-md-9">col-md-9</div>
+		        <div class="col-md-3">col-md-3</div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</body>
+</html>

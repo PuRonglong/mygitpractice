@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			[class *= col-]{
+				  background-color: #eee;
+				  border: 1px solid #ccc;
+				}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			/*
+			列排序其实就是改变列的方向，就是改变左右浮动，并且设置浮动的距离。在Bootstrap框架的网格系统中是通过添加类名“col-md-push-*”和“col-md-pull-*” (其中星号代表移动的列组合数)。
+			*/
+		</script>
+	</head>
+	<body>
+		<div class="container">
+		  <div class="row">
+		    <div class="col-md-4 col-md-push-8">.col-md-4</div>
+		    <div class="col-md-8 col-md-pull-4">.col-md-8</div>
+		  </div>
+		  <div class="row">
+		    <div class="col-md-4">.col-md-4</div>
+		    <div class="col-md-8">.col-md-8</div>
+		  </div>
+		</div>
+	</body>
+</html>

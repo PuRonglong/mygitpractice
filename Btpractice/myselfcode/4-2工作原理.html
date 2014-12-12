@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			[class *= col-]{
+				  background-color: #eee;
+				  border: 1px solid #ccc;
+				}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			/*
+			Bootstrap框架的网格系统工作原理如下：
+			1、数据行(.row)必须包含在容器（.container）中，以便为其赋予合适的对齐方式和内距(padding)
+			2、在行(.row)中可以添加列(.column)，但列数之和不能超过平分的总列数，比如12。
+			3、具体内容应当放置在列容器（column）之内，而且只有列（column）才可以作为行容器(.row)的直接子元素
+			4、通过设置内距（padding）从而创建列与列之间的间距。然后通过为第一列和最后一列设置负值的外距（margin）来抵消内距(padding)的影响
+			*/
+		</script>
+	</head>
+	<body>
+		<div class="container">
+		  <div class="row">
+		    <div class="col-md-4">.col-md-4</div>
+		    <div class="col-md-8">.col-md-8</div>
+		  </div>
+		  <div class="row">
+		    <div class="col-md-2">.col-md-2</div>
+		    <div class="col-md-2">.col-md-2</div>
+		    <div class="col-md-4">.col-md-4</div>
+		    <div class="col-md-4">.col-md-4</div>
+		  </div>
+		  <div class="row">
+		    <div class="col-md-3">.col-md-3</div>
+		    <div class="col-md-6">.col-md-6</div>
+		    <div class="col-md-3">.col-md-3</div>
+		  </div>
+		</div>
+	</body>
+</html>
