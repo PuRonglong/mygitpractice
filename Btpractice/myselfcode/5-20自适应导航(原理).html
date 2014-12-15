@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			body{margin:100px;padding:100px;font-size: 40px;}
+		</style>
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.js"></script>
+		
+		<script type="text/javascript">
+			/*
+			实现原理并不难，列表（<ul>）上设置宽度为“100%”，然后每个菜单项(<li>)设置了“display:table-cell”，让列表项以模拟表格单元格的形式显示：
+			源码：
+			.nav-justified {
+				  width: 100%;
+				}
+				.nav-justified > li {
+				  float: none;
+				}
+				.nav-justified > li > a {
+				  margin-bottom: 5px;
+				  text-align: center;
+				}
+				.nav-justified > .dropdown .dropdown-menu {
+				  top: auto;
+				  left: auto;
+				}
+				@media (min-width: 768px) {
+				  .nav-justified > li {
+				  display: table-cell;
+				  width: 1%;
+				  }
+				  .nav-justified > li > a {
+				  margin-bottom: 0;
+				  }
+				}
+			*/
+		</script>
+	</head>
+	<body>
+		<ul class="nav nav-tabs nav-justified">
+		    <li class="active"><a href="##">商品介绍</a></li>
+		 	<li><a href="##">规格参数</a></li>
+		 	<li><a href="##">商品评价</a></li>
+		 	<li><a href="##">售后保证</a></li>
+		</ul>
+		<br />
+		<ul class="nav nav-pills nav-justified">
+		    <li class="active"><a href="##">商品介绍</a></li>
+		 	<li><a href="##">规格参数</a></li>
+		 	<li><a href="##">商品评价</a></li>
+		 	<li><a href="##">售后保证</a></li>
+		</ul>
+	</body>
+</html>	

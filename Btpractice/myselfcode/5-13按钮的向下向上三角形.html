@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			body{margin:100px;padding:100px;}
+		</style>
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.js"></script>
+		
+		<script type="text/javascript">
+			/*
+			按钮的向下三角形，我们是通过在<button>标签中添加一个“<span>”标签元素，并且命名为“caret”
+			这个三角形完全是通过CSS代码来实现的：
+			.caret {
+				  display: inline-block;
+				  width: 0;
+				  height: 0;
+				  margin-left: 2px;
+				  vertical-align: middle;
+				  border-top: 4px solid;
+				  border-right: 4px solid transparent;
+				  border-left: 4px solid transparent;
+				}
+			有的时候我们的下拉菜单会向上弹起（接下来一个小节会介绍），这个时候我们的三角方向需要朝上显示，实现方法：需要在“.btn-group”类上追加“dropup”类名（这也是做向上弹起下拉菜单要用的类名）。
+			*/
+		</script>
+	</head>
+	<body>
+		  <div class="btn-group dropup">
+		    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">按钮下拉菜单<span class="caret"></span></button>
+		    <ul class="dropdown-menu">
+		        <li><a href="##">按钮下拉菜单项</a></li>
+		    	<li><a href="##">按钮下拉菜单项</a></li>
+		    	<li><a href="##">按钮下拉菜单项</a></li>
+		    	<li><a href="##">按钮下拉菜单项</a></li>
+		    </ul>
+		</div>
+	</body>
+</html>	

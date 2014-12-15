@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			body{margin:100px;padding:100px;font-size: 40px;}
+		</style>
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.js"></script>
+		
+		<script type="text/javascript">
+			/*
+			在实际运用当中，除了水平导航之外，还有垂直导航，就类似前面介绍的垂直排列按钮一样。制作垂直堆叠导航只需要在“nav-pills”的基础上添加一个“nav-stacked”类名即可
+			垂直堆叠导航与胶囊形导航相比，主要是让导航项不浮动，让其垂直排列，然后给相邻导航项留有一定的间距
+			在下拉菜单练习中，下拉菜单组与组之间有一个分隔线。其实在垂直堆叠导航也具有这样的效果，只需要添加在导航项之间添加“<li class=”nav-divider”></li>”即可
+			如果在”nav-tabs”上添加“nav-stacked”是不是也能实现垂直的标签选项导航呢？答案是：在bootstrap V2.x版本可以，但在Bootstrap V3.x版本将这个效果取消了，可能觉得垂直选择项并不太常见，也不美观吧
+			*/
+		</script>
+	</head>
+	<body>
+		<ul class="nav nav-pills nav-stacked">
+		    <li class="active"><a href="##">商品介绍</a></li>
+		 	<li><a href="##">规格参数</a></li>
+		 	<li><a href="##">商品评价</a></li>
+		 	<li class="nav-divider"></li>
+		 	<li><a href="##">售后保证</a></li>
+		</ul>
+	</body>
+</html>	

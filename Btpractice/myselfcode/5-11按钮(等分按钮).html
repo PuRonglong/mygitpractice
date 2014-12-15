@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			body{margin:100px;padding:100px;}
+		</style>
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.js"></script>
+		
+		<script type="text/javascript">
+			/*
+			等分按钮的效果在移动端上特别的实用。整个按钮组宽度是容器的100%，而按钮组里面的每个按钮平分整个容器宽度。例如，如果你按钮组里面有五个按钮，那么每个按钮是20%的宽度，如果有四个按钮，那么每个按钮是25%宽度，以此类推
+			等分按钮也常被称为是自适应分组按钮，其实现方法也非常的简单，只需要在按钮组“btn-group”上追加一个“btn-group-justified”类名，
+			实现原理非常简单，把“btn-group-justified”模拟成表格（display:table），而且把里面的按钮模拟成表格单元格（display:table-cell）。
+			特别声明：在制作等分按钮组时，请尽量使用<a>标签元素来制作按钮，因为使用<button>标签元素时，使用display:table在部分浏览器下支持并不友好
+			*/
+		</script>
+	</head>
+	<body>
+		
+		  <div class="btn-group btn-group-justified">
+			    <a class="btn btn-default" href="#">首页</a>
+			    <a class="btn btn-default" href="#">产品展示</a>
+			    <a class="btn btn-default" href="#">案例分析</a>
+			    <a class="btn btn-default" href="#">新闻中心</a>
+			    <a class="btn btn-default" href="#">商务平台</a>
+			    <a class="btn btn-default" href="#">服务平台</a>
+		  </div>
+	</body>
+</html>	
