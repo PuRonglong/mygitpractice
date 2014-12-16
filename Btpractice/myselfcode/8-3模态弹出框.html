@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.js"></script>
+		<script type="text/javascript">
+			/*
+			“模太弹出框”，插件的源文件：modal.js。
+			在Bootstrap框架中把模态弹出框统一称为Modal。这种弹出框效果在大多数Web网站的交互中都可见。比如点击一个按钮弹出一个框，弹出的框可能是一段文件描述，也可能带有按钮操作，也有可能弹出的是一张图片。
+			*/
+			$(function(){
+				$(".btn").click(function(){
+					$("#mymodal").modal("toggle");
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<button class="btn btn-primary" type="button">点击我</button>
+		<div class="modal" id="mymodal">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		        	<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title">模态弹出窗标题</h4>
+					</div>
+					<div class="modal-body">
+						<p>模态弹出窗主体内容</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary">保存</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+	</body>
+</html>	

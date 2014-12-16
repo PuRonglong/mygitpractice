@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		 <!-- <script type="text/javascript" src="scripts/transition.js"></script>
+		 <script type="text/javascript" src="scripts/modal.js"></script> -->
+		<script type="text/javascript" src="scripts/bootstrap.js"></script>
+		<script type="text/javascript">
+			/*
+			Bootstrap框架默认给各个组件提供了基本动画的过渡效果，如果要使用，有两种方法：
+			  ☑ 调用统一编译的bootstrap.js；
+			  ☑ 调用单一的过渡动画的JavaScript插件文件transition.js
+			  transition.js文件为Bootstrap具有过渡动画效果的组件提供了动画过渡效果。不过需要注意的是，这些过渡动画都是采用CSS3来实现的，所以IE6-8浏览器是不具备这些过渡动画效果。
+			默认情况之下，Bootstrap框架中以下组件使用了过渡动画效果：
+			  ☑ 模态弹出窗（Modal）的滑动和渐变效果；
+			  ☑ 选项卡（Tab）的渐变效果；
+			  ☑ 警告框（Alert）的渐变效果；
+			  ☑ 图片轮播（Carousel）的滑动效果。
+			*/
+			$(function(){
+				$(".btn").click(function(){
+					$("#mymodal").modal("toggle");
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<button class="btn btn-primary" type="button">点击我</button>
+		<div class="modal fade" id="mymodal">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		        	<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title">模态弹出窗标题</h4>
+					</div>
+					<div class="modal-body">
+						<p>模态弹出窗主体内容</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary">保存</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+	</body>
+</html>	

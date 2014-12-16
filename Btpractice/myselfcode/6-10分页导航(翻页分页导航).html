@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			body{margin:100px;padding:100px;font-size: 40px;}
+			.navbar-header a{font-size: 40px;}
+		</style>
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.js"></script>
+		
+		<script type="text/javascript">
+			/*
+			Bootstrap框架除了提供带页码的分页导航之外还提供了翻页导航。这种分页导航常常在一些简单的网站上看到，比如说个人博客，杂志网站等。这种分页导航是看不到具体的页码，只会提供一个“上一页”和“下一页”的按钮。
+			使用方法：
+			在实际使用中，翻页分页导航和带页码的分页导航类似，为ul标签加入pager类
+			对齐样式设置：
+			默认情况之下，翻页分页导航是居中显示，但有的时候我们需要一个居左，一个居右。Bootstrap框架提供了两个样式：
+			   ☑   previous：让“上一步”按钮居左
+			   ☑   next：让“下一步”按钮居右
+			具体使用的时候，只需要在li标签上添加对应类名即可
+			状态样式设置：
+			和带页码分页导航一样，如果在li标签上添加了disabled类名的时候，分页按钮处于禁用状态，但同样不能禁止其点击功能。你可以通过js来处理，或将a标签换成span标签。
+			*/
+		</script>
+	</head>
+	<body>
+		<ul class="pager">
+		  <li><a href="#">&laquo;上一页</a></li>
+		  <li><a href="#">下一页&raquo;</a></li>
+		</ul> 
+		<!--左右对齐-->
+		<ul class="pager">
+		  <li class="previous"><a href="#">&laquo;上一页</a></li>
+		  <li class="next"><a href="#">下一页&raquo;</a></li>
+		</ul> 
+		<!--禁止状态-->
+		<ul class="pager">
+		  <li class="disabled"><span>&laquo;上一页</span></li>
+		  <li><a href="#">下一页&raquo;</a></li>
+		</ul> 
+	</body>
+</html>	

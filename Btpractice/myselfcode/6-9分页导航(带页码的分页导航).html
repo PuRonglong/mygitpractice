@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			body{margin:100px;padding:100px;font-size: 40px;}
+		</style>
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.js"></script>
+		
+		<script type="text/javascript">
+			/*
+			分页导航几乎在哪个网站都可见。好的分页导航能给用户带来更好的用户体验。在Bootstrap框架中提供了两种分页导航：
+			   ☑   带页码的分页导航
+			   ☑   带翻页的分页导航。
+			   带页码的分页导航
+			带页码的分页导航，可能是最常见的一种分页导航，特别是在列表页内容超多的时候，会给用户提供分页的导航方式。
+			使用方法：
+			平时很多同学喜欢用div>a和div>span结构来制作带页码的分页导航。不过，在Bootstrap框架中使用的是ul>li>a这样的结构，在ul标签上加入pagination方法.从效果中可以看出，当前状态页码会高亮显示，而且不能点击。而最后一页是禁用状态，也不能点击。
+			注意：要禁用当前状态和禁用状态不能点击，我们还要依靠js来实现，或者将这两状态下的a标签换成span标签
+			大小设置：
+			在Bootstrap框架中，也可以通过几个不同的情况来设置其大小。类似于按钮一样：
+			1、通过“pagination-lg”让分页导航变大；
+			2、通过“pagination-sm”让分页导航变小
+			大小设置实现原理：
+			其实就是通增加相应的padding大小、font-size大小和圆角大小，
+			*/
+		</script>
+	</head>
+	<body>
+		<ul class="pagination pagination-lg">
+		  <li><a href="#">&laquo;第一页</a></li>
+		  <li><a href="#">11</a></li>
+		  <li><a href="#">12</a></li>
+		  <li class="active"><a href="#">13</a></li>
+		  <li><a href="#">14</a></li>
+		  <li><a href="#">15</a></li>
+		  <li class="disabled"><a href="#">最后一页&raquo;</a></li>
+		</ul> 
+		  
+		<ul class="pagination pagination">
+		  <li><a href="#">&laquo;第一页</a></li>
+		  <li><a href="#">11</a></li>
+		  <li><a href="#">12</a></li>
+		  <li class="active"><a href="#">13</a></li>
+		  <li><a href="#">14</a></li>
+		  <li><a href="#">15</a></li>
+		  <li class="disabled"><a href="#">最后一页&raquo;</a></li>
+		</ul>   
+		<ul class="pagination pagination-sm">
+		  <li><a href="#">&laquo;第一页</a></li>
+		  <li><a href="#">11</a></li>
+		  <li><a href="#">12</a></li>
+		  <li class="active"><a href="#">13</a></li>
+		  <li><a href="#">14</a></li>
+		  <li><a href="#">15</a></li>
+		  <li class="disabled"><a href="#">最后一页&raquo;</a></li>
+		</ul>
+	</body>
+</html>	

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			body{margin:100px;padding:100px;font-size: 40px;}
+		</style>
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.js"></script>
+		
+		<script type="text/javascript">
+			/*
+			从某种意义上来说，徽章效果和前面介绍的标签效果是极其的相似。也是用来做一些提示信息使用。常出现的是一些系统发出的信息，比如你登录你的twitter后，如果你信息没有看，系统会告诉你有多少信息未读，
+			使用方法：
+			使用方法，其实也没什么太多可说的，你可以像标签一样，使用span标签来制作，然后为他加入badge类
+			实现原理：
+			主要将其设置为椭圆形，并且加了一个背景色
+			同样也使用css3的属性:empty伪元素，当没有内容的时候隐藏
+			按钮和胶囊形导航设置徽章：
+			另外，徽章在按钮元素button和胶囊形导航nav-pills也可以有类似的样式，只不过是颜色不同而以
+			注意：不过和标签组件不一样的是：在徽章组件中没有提供多种颜色风格的效果
+			*/
+		</script>
+	</head>
+	<body>
+		<a href="#">Inbox <span class="badge">42</span></a> 
+		<!--navbar-default导航条勋章-->
+		<div class="navbar navbar-default" role="navigation">
+		  　<div class="navbar-header">
+		  　    <a href="##" class="navbar-brand">商品介绍</a>
+		  　</div>
+			<ul class="nav navbar-nav">
+			 	<li class="active"><a href="##">规格参数</a></li>
+		        <li><a href="##">商品评价<span class="badge">25</span></a></li>
+		        <li><a href="##">售后保证</a></li>
+		        
+			</ul>
+		</div>
+		<!--nav-pills导航条勋章-->
+		<ul class="nav nav-pills">
+		  <li class="active"><a href="#">Home <span class="badge">42</span></a></li>
+		  <li><a href="#">Profile</a></li>
+		  <li><a href="#">Messages <span class="badge">3</span></a></li>
+		</ul>
+		<br /> 
+		<ul class="nav nav-pills nav-stacked" style="max-width: 260px;">
+		      <li class="active">
+		        <a href="#">
+		          <span class="badge pull-right">42</span>
+		          Home
+		        </a>
+		      </li>
+		      <li><a href="#">Profile</a></li>
+		      <li>
+		        <a href="#">
+		          <span class="badge pull-right">3</span>
+		          Messages
+		        </a>
+		      </li>
+		</ul>
+		<br />
+		<!--按钮勋章-->
+		<button class="btn btn-primary" type="button">
+		      Messages <span class="badge">4</span>
+		</button> 
+	</body>
+</html>	

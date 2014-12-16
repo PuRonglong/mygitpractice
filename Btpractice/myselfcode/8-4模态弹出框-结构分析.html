@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.js"></script>
+		<script type="text/javascript">
+			/*
+			Bootstrap框架中的模态弹出框，分别运用了“modal”、“modal-dialog”和“modal-content”样式，而弹出窗真正的内容都放置在“modal-content”中，其主要又包括三个部分：
+			  ☑ 弹出框头部，一般使用“modal-header”表示，主要包括标题和关闭按钮
+			  ☑ 弹出框主体，一般使用“modal-body”表示，弹出框的主要内容
+			  ☑ 弹出框脚部，一般使用“modal-footer”表示，主要放置操作按钮
+			  弹出窗的主体样式实现：
+			但是对于一个模态弹出窗而言，modal-content才是样式的关键。其主要设置了弹出窗的边框、边距、背景色和阴影等样式。
+			除此之外，modal-content中的modal-header、modal-body和modal-footer三个部分样式设置
+			*/
+			$(function(){
+				$(".btn").click(function(){
+					$("#mymodal").modal("toggle");
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div class="modal show">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		                <h4 class="modal-title">模态弹出窗标题</h4>
+		            </div>
+		            <div class="modal-body">
+		                <p>模态弹出窗主体内容</p>
+		            </div>
+		            <div class="modal-footer">
+		                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		                <button type="button" class="btn btn-primary">保存</button>
+		            </div>
+		        </div><!-- /.modal-content -->
+		    </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+	</body>
+</html>	

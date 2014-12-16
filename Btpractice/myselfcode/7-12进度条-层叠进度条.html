@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			body{padding: 30px;}
+		</style>
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.js"></script>
+		
+		<script type="text/javascript">
+			/*
+			Bootstrap框架除了提供上述几种进度条之外，还提供了一种层叠进度条，层叠进度条，可以将不同状态的进度条放置在一起，按水平方式排列。
+			不用为层叠进度条添加额外的样式代码，就可以正常显示。通过看基本进度条那部分源码，不难发现，在“progress-bar”上有一个左浮动的样式。也就是这个样式，在不增加任何样式代码就能实现上例的层叠效果。当然有一点需要注意，层叠进度条宽度之和不能大于100%，
+			除了层叠彩色进度条之外，还可以层叠条纹进度条，或者说条纹进度条和彩色进度条混合层叠，仅需要在“progress”容器中添加对应的进度条，同样要注意，层叠的进度条之和不能大于100%。
+			*/
+		</script>
+	</head>
+	<body>
+		<h5>正常层叠进度条</h5>
+		<div class="progress">
+		    <div class="progress-bar progress-bar-success" style="width:20%"></div>
+		    <div class="progress-bar progress-bar-info" style="width:10%"></div>
+		    <div class="progress-bar progress-bar-warning" style="width:30%"></div>
+		    <div class="progress-bar progress-bar-danger" style="width:15%"></div>
+		</div> 
+		<h5>不良效果层叠进度条</h5> 
+		<div class="progress">
+			<div class="progress-bar progress-bar-success" style="width:20%"></div>
+			<div class="progress-bar progress-bar-info" style="width:40%"></div>
+			<div class="progress-bar progress-bar-warning" style="width:30%"></div>
+			<div class="progress-bar progress-bar-danger" style="width:45%"></div>
+		</div> 
+		<h5>层叠条纹进度条</h5>
+		<div class="progress">
+			<div class="progress-bar progress-bar-success" style="width:20%"></div>
+			<div class="progress-bar progress-bar-info" style="width:20%"></div>
+			<div class="progress-bar progress-bar-warning" style="width:30%"></div>
+			<div class="progress-bar progress-bar-danger" style="width:15%"></div>
+		</div>  
+		<div class="progress">
+			<div class="progress-bar progress-bar-success progress-bar-striped active" style="width:20%"></div>
+			<div class="progress-bar progress-bar-info progress-bar-striped" style="width:20%"></div>
+			<div class="progress-bar progress-bar-striped progress-bar-warning" style="width:30%"></div>
+			<div class="progress-bar progress-bar-danger progress-bar-striped" style="width:15%"></div>
+		</div> 
+		<div class="progress">
+			<div class="progress-bar progress-bar-success" style="width:20%"></div>
+			<div class="progress-bar progress-bar-info progress-bar-striped" style="width:20%"></div>
+			<div class="progress-bar progress-bar-warning" style="width:30%"></div>
+			<div class="progress-bar progress-bar-danger progress-bar-striped" style="width:15%"></div>
+		</div> 
+	</body>
+</html>	

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.js"></script>
+		<script type="text/javascript">
+			/*
+			众所周知，模态弹出窗在页面加载完成时，是被隐藏在页面中的，只有通过一定的动作（事件）才能触发模态弹出窗的显示。在Bootstrap框架中实现方法有2种，接下来分别来介绍这2种触发模态弹出窗的使用方法。
+			声明式触发方法：
+			方法一：模态弹出窗声明，只需要自定义两个必要的属性：data-toggle和data-target（bootstrap中声明式触发方法一般依赖于这些自定义的data-xxx 属性。比如data-toggle="" 或者 data-dismiss=""）。
+			注意以下事项：
+			1、data-toggle必须设置为modal(toggle中文翻译过来就是触发器)；
+			2、data-target可以设置为CSS的选择符，也可以设置为模态弹出窗的ID值，一般情况设置为模态弹出窗的ID值，因为ID值是唯一的值。
+			方法二：触发模态弹出窗也可以是一个链接<a>元素，那么可以使用链接元素自带的href属性替代data-target属性，
+			不过建议还是使用统一使用data-target的方式来触发。
+			*/
+		</script>
+	</head>
+	<body>
+		<a data-toggle="modal" href="#mymodal" class="btn btn-primary">通过链接href属性触发</a>
+		<!-- 模态弹出窗内容 -->
+		<div class="modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="mymodal">
+		    <div class="modal-dialog">
+		    	<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title">模态弹出窗标题</h4>
+					</div>
+					<div class="modal-body">
+						<p>模态弹出窗主体内容</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary">保存</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- data-target触发模态弹出窗元素 -->
+		<button class="btn btn-primary" data-toggle="modal" data-target="#mymodal" type="button">通过data-target触发</button>
+		<!-- 模态弹出窗内容 -->
+		<div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title">模态弹出窗标题</h4>
+					</div>
+					<div class="modal-body">
+						<p>模态弹出窗主体内容</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary">保存</button>
+					</div>
+				</div>
+			</div>
+		</div>
+</html>	

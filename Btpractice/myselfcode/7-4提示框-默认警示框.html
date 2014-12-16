@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			body{
+			  padding: 20px 200px;
+			}
+		</style>
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.js"></script>
+		
+		<script type="text/javascript">
+			/*
+			Bootstrap框架通过“alert“样式来实现警示框效果。在默认情况之下，提供了四种不同的警示框效果：
+			  1、成功警示框：告诉用用户操作成功，在“alert”样式基础上追加“alert-success”样式，具体呈现的是背景、边框和文本都是绿色；
+			  2、信息警示框：给用户提供提示信息，在“alert”样式基础上追加“alert-info”样式，具体呈现的是背景、边框和文本都是浅蓝色；
+			  3、警告警示框：提示用户小心操作（提供警告信息），在“alert”样式基础上追加“alert-warning”样式，具体呈现的是背景、边框、文本都是浅黄色；
+			  4、错误警示框：提示用户操作错误，在“alert”样式基础上追加“alert-danger”样式，具体呈现的是背景、边框和文本都是浅红色。
+			使用方法：
+			具体使用的时候，可以在类名为“alert”的div容器里放置提示信息。实现不同类型警示框，只需要在“alert”基础上追加对应的类名
+			实现原理：
+			其中“alert”样式的源码主要是设置了警示框的背景色、边框、圆角和文字颜色。另外对其内部几个元素h4、p、ul和“.alert-link”做了样式上的特殊处理
+			不同类型的警示框，主要是通过“alert-success”、“alert-info”、“alert-warning”和“alert-danger”样式来实现
+			*/
+		</script>
+	</head>
+	<body>
+		<div class="alert alert-success" role="alert">请修改相应信息</div>
+		<div class="alert alert-info" role="alert">谢谢，操作成功！</div>
+		<div class="alert alert-warning" role="alert">您已操作失败两次，还有最后一次机会</div>
+		<div class="alert alert-danger" role="alert">对不起，您刚才的操作失败</div>
+	</body>
+</html>	

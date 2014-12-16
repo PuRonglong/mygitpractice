@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.js"></script>
+		<script type="text/javascript">
+			/*
+			在做模态弹出窗时，底部常常会有一个透明的黑色蒙层效果，
+			在Bootstrap框架中为模态弹出窗也添加了一个这样的蒙层样式“modal-backdrop”，只不过他默认情况下是全屏黑色的
+			两种尺寸选择：
+			除此之外，Bootstrap框架还为模态弹出窗提供了不同尺寸，一个是大尺寸样式“modal-lg”，另一个是小尺寸样式“modal-sm”。
+			*/
+			$(function(){
+				$(".btn").click(function(){
+					$("#mymodal").modal("toggle");
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<h3>大/小尺寸模态弹出框</h3>
+		<!-- Large modal -->
+		<button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">
+		大的模态弹出窗
+		</button>
+		<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title">模态弹出窗标题</h4>
+					</div>
+					<div class="modal-body">
+						<p>模态弹出窗主体内容</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary">保存</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Small modal -->
+		<button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">
+		小的模态弹出窗
+		</button>
+		<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title">模态弹出窗标题</h4>
+					</div>
+					<div class="modal-body">
+						<p>模态弹出窗主体内容</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary">保存</button>
+					</div>
+				</div>
+			</div>
+		</div>
+</html>	

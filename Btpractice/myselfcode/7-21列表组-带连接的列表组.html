@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			body {
+			  padding: 30px 100px;
+			}
+		</style>
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.js"></script>
+		
+		<script type="text/javascript">
+			/*
+			带链接的列表组，其实就是每个列表项都具有链接效果。大家可能最初想到的就是在基础列表组的基础上，给列表项的文本添加链接
+			这样做有一个不足之处，就是链接的点击区域只在文本上有效
+			但很多时候，都希望在列表项的任何区域都具备可点击。这个时候就需要在链接标签上增加额外的样式：“display:block”
+			虽然这样能解决问题，达到需求。但在Bootstrap框架中，还是采用了另一种实现方式。就是将ul.list-group使用div.list-group来替换，而li.list-group-item直接用a.list-group-item来替换。这样就可以达到需要的效果
+			*/
+		</script>
+	</head>
+	<body>
+		<div class="list-group">
+			<a href="#" class="list-group-item"><span class="badge">23</span>性能优化之PHP优化</a>
+			<a href="#" class="list-group-item"><span class="badge">34</span>Canvas绘图详情</a>
+			<a href="#" class="list-group-item"><span class="badge">5</span>玩转Bootstrap</a>
+			<a href="#" class="list-group-item"><span class="badge">13</span>基于Bootstrap的网页开发</a>
+		</div> 
+	</body>
+</html>	

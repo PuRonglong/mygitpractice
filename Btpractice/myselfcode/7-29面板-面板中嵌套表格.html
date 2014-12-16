@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			body {
+			  padding: 30px;
+			}
+		</style>
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.js"></script>
+		
+		<script type="text/javascript">
+			/*
+			一般情况下可以把面板理解为一个区域，在使用面板的时候，都会在panel-body放置需要的内容，可能是图片、表格或者列表等。
+			优化代码：
+			在实际应用运中，你或许希望表格和面板边缘不需要有任何的间距。但由于panel-body设置了一个padding：15px的值，为了实现这样的效果。我们在实际使用的时候需要把table提取到panel-body外面
+			前面介绍表格的时候table-bordered明明有边框，按理说这里应该会出现边框重叠效果才对，怎么没有呢？其实原本是有边框重叠的，只不过在面板中对表格又做了一次优化。
+			*/
+		</script>
+	</head>
+	<body>
+		<h3>面板中嵌套表格（一）</h3>
+		<div class="panel panel-default">
+		    <div class="panel-heading">图解CSS3</div>
+			<div class="panel-body">
+				<p>详细讲解了选择器、边框、背景、文本、颜色、盒模型、伸缩布局盒模型、多列布局、渐变、过渡、动画、媒体、响应Web设计、Web字体等主题下涵盖的所有CSS3新特性
+				</p>
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>＃</th>
+							<th>我的书</th>
+							<th>发布时间</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>《图解CSS3》</td>
+							<td>2014-07-10</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="panel-footer">作者：大漠</div>
+		</div>
+		<h3>面板中嵌套表格（二）</h3>
+		<div class="panel panel-default">
+		    <div class="panel-heading">图解CSS3</div>
+			<div class="panel-body">
+				<p>详细讲解了选择器、边框、背景、文本、颜色、盒模型、伸缩布局盒模型、多列布局、渐变、过渡、动画、媒体、响应Web设计、Web字体等主题下涵盖的所有CSS3新特性
+				</p>
+			</div>
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>＃</th>
+						<th>我的书</th>
+						<th>发布时间</th>
+					</tr>
+				</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>《图解CSS3》</td>
+					<td>2014-07-10</td>
+				</tr>
+			</tbody>
+			</table>
+			<div class="panel-footer">作者：大漠</div>
+		</div>
+	</body>
+</html>	

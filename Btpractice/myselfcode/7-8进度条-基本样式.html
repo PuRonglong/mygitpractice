@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			body{padding: 30px;}
+		</style>
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.js"></script>
+		
+		<script type="text/javascript">
+			/*
+			Bootstrap框架中对于进度条提供了一个基本样式，一个100%宽度的背景色，然后个高亮的色表示完成进度。其实制作这样的进度条非常容易，一般是使用两个容器，外容器具有一定的宽度，并且设置一个背景颜色，他的子元素设置一个宽度，比如完成度是30%（也就是父容器的宽度比例值），同时给其设置一个高亮的背景色。
+			使用方法：
+			Bootstrap框架中也是按这样的方式实现的，他提供了两个容器，外容器使用“progress”样式，子容器使用“progress-bar”样式。其中progress用来设置进度条的容器样式，而progress-bar用于限制进度条的进度。
+			实现原理：
+			前面也说了，这样的基本进度条主要分成两部分：
+			progress样式主要设置进度条容器的背景色，容器高度、间距等
+			而progress-bar样式在设置进度方向，重要的是设置了进度条的背景颜色和过渡效果
+			虽然这样实现了基本进度条效果，但对于残障人员浏览网页有点困难，所以我们可以将结构做得更好些（语义化更友好些）
+			1、role属性作用：告诉搜索引擎这个div的作用是进度条。
+			2、aria-valuenow="40"属性作用：当前进度条的进度为40%。
+			3、aria-valuemin="0"属性作用：进度条的最小值为0%。
+			4、aria-valuemax="100"属性作用：进度条的最大值为100%。
+			*/
+		</script>
+	</head>
+	<body>
+		<div class="progress">
+		     <div class="progress-bar" style="width:80%">
+		    </div>
+		</div>
+	</body>
+</html>	

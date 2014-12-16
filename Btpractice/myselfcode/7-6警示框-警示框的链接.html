@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			body {
+			  padding: 20px 200px;
+			}
+		</style>
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.js"></script>
+		
+		<script type="text/javascript">
+			/*
+			有时候你可能想在警示框中加入链接地址，用来告诉用户跳到某一个地方或新的页面。而这个时候你又想让用户能明显的看出来这是链接地址。在Bootstrap框架中对警示框里的链接样式做了一个高亮显示处理。为不同类型的警示框内的链接进行了加粗处理，并且颜色相应加深。
+			实现方法：
+			Bootstrap框架是通过给警示框加的链接添加一个名为“alert-link”的类名，通过“alert-link”样式给链接提供高亮显示
+			*/
+		</script>
+	</head>
+	<body>
+		<div class="alert alert-warning" role="alert">
+			<strong>Warning!</strong>
+			 Better check yourself, you're<a href="#" class="alert-link"> not looking too good</a>
+			 .
+		</div>
+		<div class="alert alert-danger" role="alert">
+			<strong>Oh snap!</strong><a href="#" class="alert-link">Change a few things up</a>
+			 and try submitting again.
+		</div>   
+	</body>
+</html>	

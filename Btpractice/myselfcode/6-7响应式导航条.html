@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+		
+		</style>
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.js"></script>
+		
+		<script type="text/javascript">
+			/*
+			如今浏览Web页面的终端不在是一尘不变了，前面示例实现的导航条仅能适配于大屏幕的浏览器，但当浏览器屏幕变小的时候，就不适合了。因此响应式设计也就随之而来。那么在一个响应式的Web页面中，对于响应式的导航条也就非常的重要
+			使用方法：
+			1、保证在窄屏时需要折叠的内容必须包裹在带一个div内，并且为这个div加入collapse、navbar-collapse两个类名。最后为这个div添加一个class类名或者id名。
+			2、保证在窄屏时要显示的图标样式（固定写法）
+			3、并为button添加data-target=".类名/#id名"，究竞是类名还是id名呢？由需要折叠的div来决定。
+			*/
+		</script>
+	</head>
+	<body>
+		<div class="navbar navbar-default" role="navigation">
+		  <div class="navbar-header">
+		     　<!-- .navbar-toggle样式用于toggle收缩的内容，即nav-collapse collapse样式所在元素 -->
+		       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+		         <span class="sr-only">Toggle Navigation</span>
+		         <span class="icon-bar"></span>
+		         <span class="icon-bar"></span>
+		         <span class="icon-bar"></span>
+		       </button>
+		       <!-- 确保无论是宽屏还是窄屏，navbar-brand都显示 -->
+		       <a href="##" class="navbar-brand">慕课网</a>
+		  </div>
+		  <!-- 屏幕宽度小于768px时，div.navbar-responsive-collapse容器里的内容都会隐藏，显示icon-bar图标，当点击icon-bar图标时，再展开。屏幕大于768px时，默认显示。 -->
+		  <div class="collapse navbar-collapse navbar-responsive-collapse">
+		    	<ul class="nav navbar-nav">
+		      		<li class="active"><a href="##">网站首页</a></li>
+		      		<li><a href="##">系列教程</a></li>
+		      		<li><a href="##">名师介绍</a></li>
+		      		<li><a href="##">成功案例</a></li>
+		      		<li><a href="##">关于我们</a></li>
+			 	</ul>
+		  </div>
+		</div>
+	</body>
+</html>	

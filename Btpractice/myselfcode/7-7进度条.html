@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			body{padding: 30px;}
+		</style>
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.js"></script>
+		
+		<script type="text/javascript">
+			/*
+			在网页中，进度条的效果并不少见，比如一个评分系统，比如加载状态等。
+			而且Bootstrap框架为大家提供多种样式风格的进度条，供大家使用
+			*/
+		</script>
+	</head>
+	<body>
+		<h2>基本进度条</h2>
+		<div class="progress">
+		     <div class="progress-bar" style="width:40%">
+		    </div>
+		</div> 
+		<h2>彩色进度条</h2>
+		<div class="progress">
+		    <div class="progress-bar progress-bar-success" style="width:40%"></div>
+		</div> 
+		<div class="progress">
+		     <div class="progress-bar progress-bar-info" style="width:60%"></div>
+		</div> 
+		<div class="progress">
+		 	<div class="progress-bar progress-bar-warning" style="width:80%"></div>
+		</div> 
+		<div class="progress">
+		 	<div class="progress-bar progress-bar-danger" style="width:50%"></div>
+		</div> 
+		<h2>条纹进度条</h2>
+		<div class="progress progress-striped">
+		    <div class="progress-bar progress-bar-success" style="width:40%"></div>
+		</div>
+		<div class="progress progress-striped">
+		    <div class="progress-bar progress-bar-info" style="width:60%"></div>
+		</div>
+		<div class="progress progress-striped">
+			<div class="progress-bar progress-bar-warning" style="width:80%"></div>
+		</div>
+		<div class="progress progress-striped">
+			<div class="progress-bar progress-bar-danger" style="width:50%"></div>
+		</div>
+		<h2>动态条纹进度条</h2>
+		<div class="progress progress-striped active">
+		    <div class="progress-bar progress-bar-success" style="width:40%"></div>
+		</div> 
+		<div class="progress progress-striped active">
+		    <div class="progress-bar progress-bar-info" style="width:60%"></div>
+		</div> 
+		<div class="progress progress-striped active">
+			<div class="progress-bar progress-bar-warning" style="width:80%"></div>
+		</div> 
+		<div class="progress progress-striped active">
+			<div class="progress-bar progress-bar-danger" style="width:50%"></div>
+		</div>
+		<h2>层叠进度条</h2>
+		<h5>正常层叠进度条</h5>
+		<div class="progress">
+		    <div class="progress-bar progress-bar-success" style="width:20%"></div>
+		    <div class="progress-bar progress-bar-info" style="width:10%"></div>
+		    <div class="progress-bar progress-bar-warning" style="width:30%"></div>
+		    <div class="progress-bar progress-bar-danger" style="width:15%"></div>
+		</div> 
+		<h5>不良效果层叠进度条</h5> 
+		<div class="progress">
+		    <div class="progress-bar progress-bar-success" style="width:20%"></div>
+			<div class="progress-bar progress-bar-info" style="width:40%"></div>
+			<div class="progress-bar progress-bar-warning" style="width:30%"></div>
+			<div class="progress-bar progress-bar-danger" style="width:45%"></div>
+		</div> 
+		<h5>层叠条纹进度条</h5>
+		<div class="progress">
+			<div class="progress-bar progress-bar-success" style="width:20%"></div>
+			<div class="progress-bar progress-bar-info" style="width:20%"></div>
+			<div class="progress-bar progress-bar-warning" style="width:30%"></div>
+			<div class="progress-bar progress-bar-danger" style="width:15%"></div>
+		</div>  
+		<div class="progress">
+			<div class="progress-bar progress-bar-success progress-bar-striped" style="width:20%"></div>
+			<div class="progress-bar progress-bar-info progress-bar-striped" style="width:20%"></div>
+			<div class="progress-bar progress-bar-striped progress-bar-warning" style="width:30%"></div>
+			<div class="progress-bar progress-bar-danger progress-bar-striped" style="width:15%"></div>
+		</div> 
+		<div class="progress">
+			<div class="progress-bar progress-bar-success" style="width:20%"></div>
+			<div class="progress-bar progress-bar-info progress-bar-striped" style="width:20%"></div>
+			<div class="progress-bar progress-bar-warning" style="width:30%"></div>
+			<div class="progress-bar progress-bar-danger progress-bar-striped" style="width:15%"></div>
+		</div>
+		<h2>带Label的进度条</h2>
+		<h5>进度条1</h5>
+		<div class="progress">
+		    <div class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%">20%</div>  
+		</div>  
+		<div class="progress">
+		    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"   style="width:70%">70%</div>
+		</div>
+		<div class="progress">
+			<div class="progress-bar progress-bar-warning"  role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width:30%">30%</div>
+		</div>
+		<div class="progress">
+			<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width:15%">15%</div>
+		</div>
+
+		<h5>进度条2</h5> 
+		<div class="progress">
+		  <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+		</div>
+	</body>
+</html>	

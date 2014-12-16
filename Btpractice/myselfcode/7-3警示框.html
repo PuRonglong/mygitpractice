@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			body{padding: 30px;}
+		</style>
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.js"></script>
+		
+		<script type="text/javascript">
+			/*
+			在网站中，网页总是需要和用户一起做沟通与交流。特别是当用户操作上下文为用户提供一些有效的警示框，比如说告诉用户操作成功、操作错误、提示或者警告等。
+			*/
+		</script>
+	</head>
+	<body>
+		<h2>默认警示框</h2>
+		<div class="alert alert-success" role="alert">恭喜您操作成功！</div>
+		<div class="alert alert-info" role="alert">请输入正确的密码</div>
+		<div class="alert alert-warning" role="alert">您已操作失败两次，还有最后一次机会</div>
+		<div class="alert alert-danger" role="alert">对不起，您输入的密码有误</div> 
+		<h2>可关闭的警示框</h2>
+		<div class="alert alert-success alert-dismissable" role="alert">
+		    <button class="close" type="button" data-dismiss="alert">&times;</button>
+		    恭喜您操作成功！
+		</div>
+		<div class="alert alert-info alert-dismissable" role="alert">
+			<button class="close" type="button" data-dismiss="alert">&times;</button>
+			请输入正确的密码
+		</div>
+		<div class="alert alert-warning alert-dismissable" role="alert">
+			<button class="close" type="button" data-dismiss="alert">&times;</button>
+			您已操作失败两次，还有最后一次机会
+		</div>
+		<div class="alert alert-danger alert-dismissable" role="alert">
+			<button class="close" type="button" data-dismiss="alert">&times;</button>
+			对不起，您输入的密码有误
+		</div>
+		<h2>警示框的链接</h2>
+		<div class="alert alert-success" role="alert">
+		    <strong>Well done!</strong> 
+		    You successfully read 
+			<a href="#" class="alert-link">this important alert message</a>
+			.
+		</div>
+		<div class="alert alert-info" role="alert">
+			<strong>Heads up!</strong>
+			 This 
+			 <a href="#" class="alert-link">alert needs your attention</a>
+			 , but it's not super important.
+		</div>
+		<div class="alert alert-warning" role="alert">
+			<strong>Warning!</strong>
+			 Better check yourself, you're 
+			 <a href="#" class="alert-link">not looking too good</a>
+			 .
+		</div>
+		<div class="alert alert-danger" role="alert">
+			<strong>Oh snap!</strong>
+			<a href="#" class="alert-link">Change a few things up</a>
+			 and try submitting again.
+		</div>
+	</body>
+</html>	

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+		<style type="text/css">
+			body{padding:20px;}
+			.media {
+			  width: 600px;
+			  margin: 20px auto;
+			}
+			.media-object {
+			    border:1px solid #ccc;
+			  }
+		</style>
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.js"></script>
+		
+		<script type="text/javascript">
+			/*
+			在Web页面或者说移动页面制作中，常常看到这样的效果，左边居左（或居右），内容居右（或居左）排列
+			我们常常把这样的效果称为媒体对象。可以说他是一种抽像的样式，可以用来构建不同类型的组件。这些组件都具有开篇所说的样式风格。
+			*/
+		</script>
+	</head>
+	<body>
+		<h3>默认媒体对象</h3>
+		<div class="media">
+		    <a class="pull-left" href="#">
+		        <img class="media-object" src="http://img.mukewang.com/52e1d29d000161fe06000338-300-170.jpg" alt="...">
+		  	</a>
+		  	<div class="media-body">
+		    	<h4 class="media-heading">系列：十天精通CSS3</h4>
+		    	<div>全方位深刻详解CSS3模块知识，经典案例分析，代码同步调试，让网页穿上绚丽装备！</div>
+		  	</div>
+		</div>
+		<h3>媒体对象的嵌套</h3>
+		<div class="media">
+		    <a class="pull-left" href="#">
+		    	<img class="media-object" src="http://a.disquscdn.com/uploads/users/3740/2069/avatar92.jpg?1406972031" alt="...">
+			</a>
+			<div class="media-body">
+				<h4 class="media-heading">我是大漠</h4>
+				<div>我是W3cplus站长大漠，我在写Bootstrap框中的媒体对象测试用例</div>
+				<div class="media">
+					<a class="pull-left" href="#">
+						<img class="media-object" src="http://tp2.sinaimg.cn/3306361973/50/22875318196/0" alt="...">
+					</a>
+					<div class="media-body">
+						<h4 class="media-heading">慕课网</h4>
+						<div>大漠写的《玩转Bootstrap》系列教程即将会在慕课网上发布</div>
+						<div class="media">
+							<a class="pull-left" href="#">
+								<img class="media-object" src="http://tp4.sinaimg.cn/1167075935/50/22838101204/1" alt="...">
+							</a>
+							<div class="media-body">
+								<h4 class="media-heading">W3cplus</h4>
+								<div>W3cplus站上还有很多教程....</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h3>媒体对象列表</h3>
+		<ul class="media-list">
+		    <li class="media">
+		        <a class="pull-left" href="#">
+		            <img class="media-object" src="http://a.disquscdn.com/uploads/users/3740/2069/avatar92.jpg?1406972031" alt="...">
+		        </a>
+		        <div class="media-body">
+		            <h4 class="media-heading">我是大漠</h4>
+		            <div>我是W3cplus站长大漠，我在写Bootstrap框中的媒体对象测试用例</div>
+		        </div>
+		    </li>
+		    <li class="media">
+		        <a class="pull-left" href="#">
+		            <img class="media-object" src="http://tp2.sinaimg.cn/3306361973/50/22875318196/0" alt="...">
+		        </a>
+		        <div class="media-body">
+		            <h4 class="media-heading">慕课网</h4>
+		            <div>大漠写的《玩转Bootstrap》系列教程即将会在慕课网上发布</div>
+		        </div>
+		    </li>
+		    <li class="media">
+		        <a class="pull-left" href="#">
+		            <img class="media-object" src="http://tp4.sinaimg.cn/1167075935/50/22838101204/1" alt="...">
+		        </a>
+		        <div class="media-body">
+		            <h4 class="media-heading">W3cplus</h4>
+		            <div>W3cplus站上还有很多教程....</div>
+		        </div>
+		    </li>
+		</ul>
+	</body>
+</html>	
