@@ -11,15 +11,20 @@
 		<script type="text/javascript" src="scripts/bootstrap.js"></script>
 		<script type="text/javascript">
 			/*
-			除了通过data-toggle和data-target来控制模态弹出窗之外，Bootstrap框架针对模态弹出框还提供了其他自定义data-属性，来控制模态弹出窗。比如说:是否有灰色背景modal-backdrop，是否可以按ESC键关闭模态弹出窗。
+			除了使用自定义属性触发模态弹出框之外，还可以通过JavaScript方法来触发模态弹出窗。通过给一个元素一个事件，来触发。比如说给一个按钮一个单击事件，然后触发模态弹出窗。
+
 			*/
+			$(function(){
+			  $(".btn").click(function(){
+			    $("#mymodal").modal();
+			  });
+			});
 		</script>
 	</head>
 	<body>
-		<button class="btn btn-primary" data-toggle="modal" data-target="#mymodal-data" type="button" data-backdrop="static" data-keyboard="false">通过data-target触发</button>
-		<!-- 模态弹出窗内容 -->
-		<div class="modal fade" id="mymodal-data" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
+		<button class="btn btn-primary" type="button">点击我</button>
+		<div class="modal" id="mymodal">
+		    <div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
@@ -32,7 +37,7 @@
 						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
 						<button type="button" class="btn btn-primary">保存</button>
 					</div>
-				</div>
-			</div>
-		</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 </html>	
