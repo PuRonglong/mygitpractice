@@ -1,0 +1,55 @@
+.elected-list{
+	float: left;
+	margin: 5px;
+	background-color: #f5f5f5;
+	width: 150px;
+	height: 200px;
+	border: 2px solid #e3e8ee;
+	border-radius: 2px;
+	padding: 5px;
+	overflow: auto;
+}
+.elected-list2{
+	float: left;
+	margin: 5px;
+	background-color: #f5f5f5;
+	width: 150px;
+	height: 200px;
+	border: 2px solid #e3e8ee;
+	border-radius: 2px;
+	padding: 5px;
+	overflow: auto;
+}
+.elected-list li{
+	position: relative;
+	width: 80%;
+	height: 20px;
+	background-color: #ebeef3;
+	margin: 2px 0;
+	padding: 3px;
+	padding-right: 20px;
+}
+.elected-list li a{
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: inline-block;
+	width: 20px;
+	height: 26px;
+	text-align: center;
+	background-color: #56c4ab;
+	color: #fff;
+}
+.btns{
+	float: left;
+	margin-top: 100px;
+	width: 30px;
+	padding: 0 10px;
+}
+.clearboth{
+	clear: both;
+	padding-left: 20px;
+}
+.elected-list li.selected{
+	background-color:#ccc; 
+}
