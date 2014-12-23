@@ -1,0 +1,58 @@
+body{
+	background: #31363C;
+}
+.navList{
+	width: 220px;
+	margin: 50px auto 0 auto;
+}
+.navList li{
+	width: 220px;
+	background: url(img/nav-bg.gif) repeat-x;
+}
+.navList li span{
+	display: block;
+	width: 185px;
+	height: 36px;
+	line-height: 36px;
+	padding-left: 35px;
+	color: #fff;
+}
+.navList .current{
+	background: url(img/nav-current-bg.gif) repeat-x;
+}
+.none{
+	display: none;
+}
+.show{
+	display: block;
+}
+.nav1 span{
+	background: url(img/icon1.png) 9px 10px no-repeat;
+}
+.nav2 span{
+	background: url(img/icon2.png) 9px 10px no-repeat;
+}
+.nav3 span{
+	background: url(img/icon3.png) 6px 10px no-repeat;
+}
+.nav4 span{
+	background: url(img/icon4.png) 9px 10px no-repeat;
+}
+.nav5 span{
+	background: url(img/icon5.png) 9px 10px no-repeat;
+}
+.navList li ul li{
+	width: 220px;
+	height: 36px;
+	background: #fff;
+}
+.navList li ul li a{
+	display: block;
+	width: 185px;
+	height: 36px;
+	line-height: 36px;
+	padding-left: 35px;
+	background: url(img/dot.png) 14px 50% no-repeat;
+	color: #878d95;
+	border-top: 1px solid #EFEFF0;
+}
