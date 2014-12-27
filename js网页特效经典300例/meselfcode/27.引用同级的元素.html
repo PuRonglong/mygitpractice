@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function getLevelBtnVal(btn){
+				var p = btn.parentNode;//通过按钮获取它的父节点
+				var children = p.childNodes;//得到父节点的所有子节点
+				//遍历子节点
+				for (var i = 0; i < children.length; i++) {
+					//判断不是当前节点，但却是同类节点
+					if (children[i]!=btn&&children[i].nodeType==btn.nodeType) {//判断节点类型
+						alert(children[i].value);//提示对方的value值
+					};
+				};
+			}
+		</script>
+	</head>
+	<body>
+		<p>
+			<input type="button" value="获取同级按钮的value" onclick="getLevelBtnVal(this);" />
+			<input type="button" value="获取同级按钮的value2" onclick="getLevelBtnVal(this);" />
+		</p>
+	</body>
+</html>
