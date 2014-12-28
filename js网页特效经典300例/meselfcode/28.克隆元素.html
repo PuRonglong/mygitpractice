@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function cloneImg(){
+				var myImg = document.getElementById('myImg');//得到元素DOM
+				var newImg = myImg.cloneNode(true);//克隆出新的元素
+				//使用appendChild()函数挂接
+				document.getElementById('myContent').appendChild(newImg);
+			}
+		</script>
+	</head>
+	<body>
+		<p id="myContent">
+			<input type="button" value="克隆" onclick="cloneImg();" />
+			<br />
+			<img id="myImg" src="images/ab.gif">
+		</p>
+	</body>
+</html>
