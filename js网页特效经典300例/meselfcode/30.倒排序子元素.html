@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function deleteChilds(){
+				//获取父DOM
+				var ul = document.getElementsByTagName('ul')[0];
+				//判断是否包含子元素
+				if (ul.hasChildNodes()) {
+					var len = ul.childNodes.length;//子元素的个数
+					var arr = [];//新数组变量用于存储节点
+					for (var i = 0; i < len; i++) {
+						arr[i]=ul.childNodes[0];//把节点存入数组
+						ul.removeChild(ul.childNodes[0]);//从第一个元素开始删除
+					}
+					//倒过来遍历所有节点
+					for (var i = len-1; i >= 0; i--) {
+						ul.appendChild(arr[i]);//添加到ul为子元素
+					};
+				};
+			}
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>item1</li>
+			<li>item2</li>
+			<li>item3</li>
+			<li>item4</li>
+		</ul>
+		<br />
+		<input type="button" onclick="deleteChilds()" value="倒排序子元素" />
+	</body>
+</html>
