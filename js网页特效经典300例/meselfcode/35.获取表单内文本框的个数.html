@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function getInputCount(){
+				var f = document.forms[0];//获取表单DOM
+				var elements = f.elements;//获取所有的控件数组
+				var count = 0;//统计总数
+				//循环遍历
+				for (var i = 0; i < elements.length; i++) {
+					var e=elements[i]//当前的控件
+					//是否为文本框
+					if(e.tagName=='INPUT'&&e.type=='text'){
+						count++;//总数自增
+					}
+				};
+				//用提示框展示结果
+				alert('文本框一共有：'+ count + "个");
+			}
+		</script>
+	</head>
+	<body>
+		<form>
+			文本框1：<input type="text" name="myText1" />
+			<br />
+			单选框：<input type="radio" name="myRadio" value="1" />
+			<br />
+			文本框2：<input type="text" name="myText2" />
+			<br />
+			<input type="button" value="一共多少个文本框" onclick="getInputCount()" />
+		</form>
+	</body>
+</html>
