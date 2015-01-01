@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var $t_a = $(".test :hidden");
+				var $t_b = $(".test:hidden");
+				var len_a = $t_a.length;
+				var len_b = $t_b.length;
+				alert(len_a);
+				alert(len_b);
+			})
+		</script>
+	<head>
+	<body>
+		<div class="test">
+			<div style="display:none;">aa</div>
+			<div style="display:none;">bb</div>
+			<div style="display:none;">cc</div>
+			<div class="test" style="display:none;">dd</div>
+		</div>
+		<div class="test" style="display:none;">ee</div>
+		<div class="test" style="display:none;">ff</div>
+	</body>
+</html>
