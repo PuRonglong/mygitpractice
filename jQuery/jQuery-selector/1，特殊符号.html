@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src="scripts/jQuery.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var $id_a=$("#id.a");
+				var $id_b=$("#id#b");
+				var $id_c=$("#id[1]");
+
+				alert($id_a.html());
+				alert($id_b.html());
+				alert($id_c.html());
+
+				var $id_right_a=$("#id\\.a");
+				alert($id_right_a.html());
+			})
+		</script>
+	<head>
+	<body>
+		<div id="id.a">aa</div>
+		<div id="id#b">bb</div>
+		<div id="id[1]">c</div>
+	</body>
+</html>
