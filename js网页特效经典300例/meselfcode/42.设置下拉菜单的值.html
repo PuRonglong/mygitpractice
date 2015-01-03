@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			//设定年份的函数
+			function selectYear(){
+				setTimeout(function(){
+					var y = new Date().getYear() + 1900;//得到当前的年份
+					document.forms[0].mySelect.value = y;//通过value为下拉菜单设值
+				},1)
+			}
+		</script>
+	</head>
+	<body>
+		<form>
+			下拉列表：
+			<select name="mySelect">
+				<option value="">==请选择==</option>
+				<option value="2010">2010</option>
+				<option value="2011">2011</option>
+				<option value="2012">2012</option>
+				<option value="2013">2013</option>
+				<option value="2014">2014</option>
+				<option value="2015">2015</option>
+			</select>
+			<br />
+			<input type="button" value="选择当年" onclick="selectYear();" />
+		</form>
+	</body>
+</html>
