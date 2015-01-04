@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+
+			function init(){
+				var f = document.forms[0];//获取表单DOM
+				var elements = f.elements;//获取所有的控件数组
+				var str = '';//拼接字符串
+				//循环遍历
+				for (var i = 0; i < elements.length; i++) {
+					var e = elements[i];
+					e.onfocus=function(){
+						//修改边框为红色
+						this.style.border = '1px solid red';
+					}
+					e.onblur = function(){
+						this.style.border='';
+					}
+				};
+			}
+		</script>
+	</head>
+	<body onload="init();">
+		<form>
+			年份：
+			<select name="myyear">
+				<option value="2012">2012</option>
+				<option value="2013">2013</option>
+				<option value="2014">2014</option>
+				<option value="2015">2015</option>
+			</select>
+			<br /><br />
+			姓名：<input type="text" name="myname" />
+			<br /><br />
+			年龄：<input type="text" name="myage" />
+			<br /><br />
+		</form>
+	</body>
+</html>
