@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function showParams(){
+				//设值隐藏变量的值，这个值也可以通过标签的value指定
+				document.forms[0].myhidden.value='我是隐藏的';
+				var str = '表单将提交的参数包括：';//定义字符拼接变量
+				//拼接年份参数
+				str += '\n年份：'+document.forms[0].myyear.value;
+				//拼接姓名参数
+				str += '\n姓名：'+document.forms[0].myname.value;
+				//拼接隐藏参数
+				str +='\n隐藏变量：'+document.forms[0].myhidden.value;
+				alert(str);//展示字符的值
+			}
+		</script>
+	</head>
+	<body>
+		<form>
+			<input type="hidden" name="myhidden" />
+			年份：
+			<select name="myyear">
+				<option value="2012">2012</option>
+				<option value="2013">2013</option>
+				<option value="2014">2014</option>
+				<option value="2015">2015</option>
+			</select>
+			<br /><br />
+			姓名：<input type="text" name="myname" />
+			<br /><br />
+			<input type="button" value="提交" onclick="showParams();" />
+		</form>
+	</body>
+</html>
