@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function checkAll(c){
+				//获取所有的复选框
+				var arr = document.getElementsByName('myname');
+				if (c) {
+					//遍历所有的复选框
+					for (var i = 0; i < arr.length; i++) {
+						arr[i].checked = true;//选中
+					}
+				}
+				else{
+					for (var i = 0; i < arr.length; i++) {
+						arr[i].checked = false;//不选中
+					};
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form>
+			你的兴趣：<br />
+			<input type="checkbox" name="myall" onclick="checkAll(this.checked)" />全选<br />
+			<br /><br />
+			<input type="checkbox" name="myname" />全选&nbsp;&nbsp;
+			<input type="checkbox" name="myname" />全选&nbsp;&nbsp;
+			<input type="checkbox" name="myname" />全选
+		</form>
+	</body>
+</html>
