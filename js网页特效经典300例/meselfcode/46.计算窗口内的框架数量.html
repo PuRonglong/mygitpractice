@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function alertFrames(){
+				var frames = window.frames;//得到框架数组
+				alert(frames.length);//提示框架数
+			}
+		</script>
+	</head>
+	<body>
+		<iframe id="iframe1"></iframe>
+		<iframe id="iframe2"></iframe>
+		<br />
+		<input type="button" value="一共有多少个框架" onclick="alertFrames();" />
+	</body>
+</html>
