@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function alertFrames(){
+				var frames = window.frames;//得到框架数组
+				var frame1 = frames[0];//引用到第一个框架
+				var frame2 = frame1.parent.frames[1];
+				alert(frame2.document);
+			}
+		</script>
+	</head>
+	<body>
+		<iframe id="iframe1"></iframe>
+		<iframe id="iframe2"></iframe>
+		<br />
+		<input type="button" value="用frame1引用frame2" onclick="alertFrames();" />
+	</body>
+</html>
