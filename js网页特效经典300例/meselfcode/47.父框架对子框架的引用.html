@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function referFrame2(){
+				var frames = window.frames;
+				var frame1 = frames[0];
+				var subFrame = frame1.frames;
+				var frame2 = subFrame[0];
+				alert(frame2.document);
+			}
+		</script>
+	</head>
+	<body>
+		<iframe src="subFrame.html" id="iframe1"></iframe>
+		<br />
+		<input type="button" value="引用frame2框架" onclick="referFrame2();" />
+	</body>
+</html>
