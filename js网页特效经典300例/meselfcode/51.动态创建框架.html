@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function createFrame(){
+				//创建iframe的DOM
+				var myScript = document.createElement('iframe');
+				myScript.src='./subFrame.html';//指定框架的src
+				document.body.appendChild(myScript);//把dom挂载到body里
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="动态创建框架" onclick="createFrame();" />
+	</body>
+</html>
