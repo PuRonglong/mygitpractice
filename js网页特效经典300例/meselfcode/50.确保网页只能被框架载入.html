@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function init(){
+				if (top==self) {//判断当前区域是否为顶层窗口
+					alert("本网页只能在框架内载入");
+					//覆盖原有的网页内容，改为提示内容
+					document.body.innerHTML='<h2>本网页只能在框架内载入</h2>';
+					window.close();//关闭窗口
+				};
+			}
+		</script>
+	</head>
+	<body onload="init();">
+		网页内容...
+	</body>
+</html>
