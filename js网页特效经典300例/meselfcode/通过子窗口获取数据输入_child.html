@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function passValue(){
+				//获取用户输入的值
+				var val = document.getElementById('mytext').value;
+				window.opener.passValue(val);//调用父窗口的函数传入值
+				self.close();//关闭子窗口
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" name="mytext" id="mytext" />
+		<input type="button" value="通过子窗口获取数据输入" onclick="passValue();" />
+	</body>
+</html>
