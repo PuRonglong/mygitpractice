@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			//为子窗口准备的传值函数
+			function passValue(val){
+				alert("子窗口输入的是："+val);
+			}
+			function openNewWin(){
+				var win = window.open("通过子窗口获取数据输入_child.html")
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="打开子窗口" onclick="openNewWin();" />
+	</body>
+</html>
