@@ -9,14 +9,12 @@
 		</style>
 		<script type="text/javascript" src=""></script>
 		<script type="text/javascript">
-			function closeWin(){
-				window.close();
-			}
+			if (self!=top) {
+				top.location.href=self.location.href;
+			};
 		</script>
 	<head>
 	<body>
-		<p>
-			<input type="button" value="关闭此窗口" onclick="closeWin()" />
-		</p>
+		
 	</body>
 </html>
