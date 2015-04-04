@@ -45,17 +45,14 @@
 						var iHeight=oDiv.offsetHeight;
 						oDiv.style.height=0;
 						startMove(oDiv,{opacity:100,height:iHeight,})
-					}
+					};
+
 					aLi[i].onmouseout=function(){
 						var oDiv=this.getElementsByTagName('div')[0];
-
-						oDiv.style.height='auto';
-						var iHeight=oDiv.offsetHeight;
-						oDiv.style.height=0;
-						startMove(oDiv,{opacity:0,height:0,})
-					}
-				};
-			}
+						startMove(oDiv,{opacity:0,height:0});
+					};
+				}
+			};
 		</script>
 	</head>
 	<body>
