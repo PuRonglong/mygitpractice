@@ -4,7 +4,7 @@ function startMove(obj,json,fn){
 					var bStop=true;//这一次运动就结束了——所有的值都到达了
 					for(var attr in json){
 					//1.取当前的值
-						var iCur=0;
+					var iCur=0;
 
 					if (attr=='opacity') {
 						iCur=parseInt(parseFloat(getStyle(obj,attr)*100));
