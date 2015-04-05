@@ -45,7 +45,7 @@
 				//2.加事件
 				for (var i = 0; i < aLi.length; i++) {
 					aLi[i].onmouseover=function(){
-						this.style.zIndex=iMinZindex++;//每一次移入让this的z-index的值在iMinZindex的基础上+1。index的最大值是2的31次方约为二亿一千万
+						this.style.zIndex=iMinZindex++;//每一次移入让this的z-index的值在iMinZindex的基础上+1。index的最大值是int的范围，也就是2的31次方约为二亿一千万
 						startMove(this,{width:200,height:200,marginLeft:-50,marginTop:-50})
 					}
 					aLi[i].onmouseout=function(){
