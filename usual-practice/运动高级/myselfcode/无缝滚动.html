@@ -5,10 +5,10 @@
 		<title>未命名</title>
 		<link rel="stylesheet" type="text/css" href="" />
 		<style type="text/css">
-		*{
-			margin: 0;
-			padding: 0;
-		}
+			*{
+				margin: 0;
+				padding: 0;
+			}
 			#div1{
 				position: relative;
 				border: 1px solid black;
@@ -42,12 +42,12 @@
 				var timer=null;
 				var iSpeed=5;
 
-				oUl.innerHTML+=oUl.innerHTML;
+				oUl.innerHTML+=oUl.innerHTML;//innerHTML是4个li,此表达式就是8个li
 				oUl.style.width=aLi.length*aLi[0].offsetWidth+'px';
 
 				timer=setInterval(function(){
 					if (oUl.offsetLeft<-oUl.offsetWidth/2) {
-						oUl.style.left=0;
+						oUl.style.left=0;//到了一半的时候又把它扯回来
 					}
 					else if(oUl.offsetLeft>0){
 						oUl.style.left=-oUl.offsetWidth/2+'px';
