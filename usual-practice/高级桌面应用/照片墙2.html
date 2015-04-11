@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			*{
+				margin: 0;padding: 0;
+			}
+			#ul1 {
+				width: 660px;
+				position: relative;
+				margin: 10px auto;
+			}
+			#ul1 li{
+				width: 200px;
+				height: 150px;
+				float: left;
+				list-style-type: none;
+				margin: 10px;
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oUl = document.getElementById('ul1');
+				var aLi = document.getElementsByTagName('li');
+				var aPos = [];
+				var i = 0;
+
+				//布局转换
+				for (var i = 0; i < aLi.length; i++) {
+					aPos[i]={left:aLi[i].offsetLeft,top:aLi[i].offsetTop};
+				};
+
+				for (var i = 0; i < aLi.length; i++) {
+					aLi[i].style.left=aPos[i].left+'px';
+					aLi[i].style.top=aPos[i].top+'px';
+
+					aLi[i].style.position='absolute';
+					aLi[i].style.margin='0';
+				};
+			}
+		</script>
+	</head>
+	<body>
+		<ul id="ul1">
+			<li><img src="images/1.jpg"></li>
+			<li><img src="images/2.jpg"></li>
+			<li><img src="images/3.jpg"></li>
+			<li><img src="images/4.jpg"></li>
+			<li><img src="images/5.jpg"></li>
+			<li><img src="images/1.jpg"></li>
+			<li><img src="images/2.jpg"></li>
+			<li><img src="images/3.jpg"></li>
+			<li><img src="images/4.jpg"></li>
+			<li><img src="images/5.jpg"></li>
+		</ul>
+	</body>
+</html>
