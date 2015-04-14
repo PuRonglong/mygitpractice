@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			*{
+				margin: 0;padding: 0;
+			}
+			#ul1{
+				width: 660px;
+				position: relative;
+				margin: 10px auto;
+			}
+			#ul1 li{
+				width: 200px;
+				height: 150px;
+				float: left;
+				list-style-type: none;
+				margin: 10px;
+				z-index: 1;
+			}
+			.active{
+				border:1px dashed red;
+			}
+		</style>
+		<script type="text/javascript" src="move2.js"></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oUl = document.getElementById('ul1');
+				var aLi = oUl.getElementsByTagName('li');
+				var aPos=[];
+				var iMinZindex=2;
+				var i = 0;
+
+				//布局转换
+				for (var i = 0; i < aLi.length; i++) {
+					aPos[i]={left:aLi[i].offsetLeft,top:aLi[i].offsetTop};
+				};
+
+				for (var i = 0; i < aLi.length; i++) {
+					aLi[i].style.left=aPos[i].left+'px';
+					aLi[i].style.top=aPos[i].top+'px';
+
+					aLi[i].style.position='absolute';
+					aLi[i].style.margin='0';
+
+					aLi[i].index = i;//给li加上一个索引值
+				};
+
+				//拖拽
+				for (var i = 0; i < aLi.length; i++) {
+					setDrag(aLi[i]);
+				}
+
+				function setDrag(obj){
+					obj.onmousedown=function(ev){
+						obj.style.zIndex=iMinZindex++;
+						var oEvent=ev||event;//这个事件对象要用到，先取出来一会要用到
+
+						var disX = oEvent.clientX-obj.offsetLeft;
+						var disY = oEvent.clientY-obj.offsetTop;
+
+						document.onmousemove=function(ev){
+							var oEvent=ev||event;
+
+							obj.style.left=oEvent.clientX-disX+'px';
+							obj.style.top=oEvent.clientY-disY+'px';
+
+							for (var i = 0; i < aLi.length; i++) {
+								aLi[i].className='';
+							}
+
+							var oNear = findNearest(obj);//有两种可能性
+
+							if (oNear) {
+								oNear.className='active';
+							}
+
+							/*for (var i = 0; i < aLi.length; i++) {//循环所有的li，因为可能和所有的li碰撞
+								aLi[i].className='';
+								if(obj==aLi[i]) continue;
+								if (cdTest(obj,aLi[i])) {
+									aLi[i].className='active';
+								};
+							};*/
+						};
+
+						document.onmouseup=function(){
+							document.onmousemove=null;
+							document.onmouseup=null;
+
+							var oNear = findNearest(obj);
+							if (oNear) {
+								oNear.className='';
+								startMove(oNear,aPos[obj.index]);
+								startMove(obj,aPos[oNear.index]);//跟这个near相对应的位置
+							}
+							else{
+								startMove(obj,aPos[obj.index]);
+							}
+						};
+						clearInterval(obj.timer);
+						return false;
+					}
+				}
+
+				//碰撞检测
+				function cdTest(obj1,obj2){
+					var l1 = obj1.offsetLeft;
+					var r1 = obj1.offsetLeft+obj1.offsetWidth;
+					var t1=obj1.offsetTop;
+					var b1=obj1.offsetTop+obj1.offsetHeight;
+
+					var l2 = obj2.offsetLeft;
+					var r2 = obj2.offsetLeft+obj2.offsetWidth;
+					var t2=obj2.offsetTop;
+					var b2=obj2.offsetTop+obj2.offsetHeight;
+
+					if (r1<r2 || l1>r2 || b1< t2 || t1>b2) {
+						return false;
+					}
+					else{
+						return true;
+					}
+				}
+
+				function getDis(obj1,obj2){
+					var a=obj1.offsetLeft-obj2.offsetLeft;
+					var b=obj1.offsetTop-obj2.offsetTop;
+
+					return Math.sqrt(a*a+b*b);
+				}
+
+				//找到碰撞的，并且最近的
+				function findNearest(obj){
+					var iMin=9999999999;
+					var iMinIndex = -1;
+					for (var i = 0; i < aLi.length; i++) {
+						if(obj==aLi[i])continue;
+						if (cdTest(obj, aLi[i])) {
+							var dis=getDis(obj, aLi[i]);
+							if (iMin>dis) {
+								iMin=dis;
+								iMinIndex=i;
+							}
+						}
+					}
+					if (iMinIndex==-1) {
+						return null;
+					}
+					else{
+						return aLi[iMinIndex];//跟我碰上并且距离还是最近的那个li
+					}
+				}
+
+				//运动
+
+
+			};
+		</script>
+	</head>
+	<body>
+		<ul id="ul1">
+			<li><img src="images/1.jpg"></li>
+			<li><img src="images/2.jpg"></li>
+			<li><img src="images/3.jpg"></li>
+			<li><img src="images/4.jpg"></li>
+			<li><img src="images/5.jpg"></li>
+			<li><img src="images/1.jpg"></li>
+			<li><img src="images/2.jpg"></li>
+			<li><img src="images/3.jpg"></li>
+			<li><img src="images/4.jpg"></li>
+			<li><img src="images/5.jpg"></li>
+		</ul>
+	</body>
+</html>
