@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			*{
+				padding: 0;margin: 0;
+			}
+			#div1{
+				text-align: center;
+				width: 100%;
+				position: absolute;
+				bottom: 0;
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			document.onmousemove=function(ev){
+				var oEvent = ev||event;
+				var oDiv = document.getElementById('div1');
+				var aImg = document.getElementsByTagName('img');
+				var aTxt = document.getElementsByTagName('input');
+				var i = 0;
+
+				for (var i = 0; i < aImg.length; i++) {
+					var x = aImg[i].offsetLeft+ aImg[i].offsetWidth/2;
+					var y = aImg[i].offsetTop+oDiv.offsetTop+aImg[i].offsetHeight/2;
+					aTxt[i].value='x:'+x+',y:'+y;
+
+					var a = x-oEvent.clientX;
+					var b = y-oEvent.clientY;
+
+					var dis = Math.sqrt(Math.pow(a,2)+b*b);
+
+					var scale =1-dis/300;
+
+					if (scale<0.5) {
+						scale=0.5;
+					};
+
+					aImg[i].width=scale*128;
+
+					aTxt[i].value = scale.toFixed(2);//保留两位小数
+
+				};
+			}
+		</script>
+	</head>
+	
+	<body>
+		<input type="text" />
+		<input type="text" />
+		<input type="text" />
+		<input type="text" />
+		<input type="text" />
+
+		<div id="div1">
+			<img src="img/1.png" width="64" />
+			<img src="img/2.png" width="64" />
+			<img src="img/3.png" width="64" />
+			<img src="img/4.png" width="64" />
+			<img src="img/5.png" width="64" />
+		</div>
+	</body>
+</html>
