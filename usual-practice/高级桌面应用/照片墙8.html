@@ -94,8 +94,18 @@
 							var oNear = findNearest(obj);
 							if (oNear) {
 								oNear.className='';
+
+								oNear.style.zIndex=iMinZindex++;
+								obj.style.zIndex=iMinZindex++;
+
 								startMove(oNear,aPos[obj.index]);
 								startMove(obj,aPos[oNear.index]);//跟这个near相对应的位置
+
+								var tmp=0;
+
+								tmp=obj.index;
+								obj.index=oNear.index;
+								oNear.index=tmp;
 							}
 							else{
 								startMove(obj,aPos[obj.index]);
