@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>center</title>
+    <style>
+        #wrapper {
+	border:1px solid #ccc;
+	width:400px;
+	height:200px;
+	text-align:center;
+	line-height:200px;　　// Vertical Align For IE7 & Firefox
+	_font-size:120px;　　// Vertical Align For IE6
+
+}
+#wrapper a {
+	display:-moz-inline-block;　　// For Firefox 2(-)
+	display:inline-block;　　// For Firefox 3 & IE6, 对于IE6来说其实相当于zoom:1, 仅仅是给elem一个layout。
+			　　　 // 注意：支持display:inline-block的浏览器有：Firefox3,Safari,Opera
+	margin:0 auto;　　// For Firefox 2(-)
+
+	width:80px;
+	height:20px;
+	font:11px/20px arial;
+	background:red;
+}
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <a >一段文字</a>
+    </div>
+</body>
+</html>
