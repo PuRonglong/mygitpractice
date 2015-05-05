@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			function aaa(){
+				alert('a');
+			}
+
+			function bbb(){
+				alert('b');
+			}
+
+			//谁
+			//事件
+			//函数
+
+			function myAddEvent(obj,sEvent,fn){
+				if (obj.attachEvent) {
+					obj.attachEvent('on'+sEvent,fn);
+				}else{
+					obj.addEventListener(sEvent,fn,false);
+				}
+			}
+
+			window.onload=function(){
+				var oBtn = document.getElementById('btn1');
+
+				myAddEvent(oBtn,'click',aaa);
+				myAddEvent(oBtn,'click',bbb);
+
+				/*if (oBtn.attachEvent) {
+					oBtn.attachEvent('click',aaa);
+					oBtn.attachEvent('click',bbb);
+				}else{
+					oBtn.addEventListener('click',aaa,false);
+					oBtn.addEventListener('click',bbb,false);
+				}*/
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="aaa" id="btn1">
+	</body>
+</html>
