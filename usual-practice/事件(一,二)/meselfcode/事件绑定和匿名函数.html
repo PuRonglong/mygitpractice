@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oBtn = document.getElementById('btn1');
+
+				oBtn.addEventListener('click',function(){
+					alert('a');
+				},false);
+				oBtn.removeEventListener('click',function(){
+					alert('a');
+				},false);
+			}//这是两个函数，所以解除绑定不了
+		</script>
+	</head>
+	<body>
+		<input type="button" id="btn1" value="aaa">
+	</body>
+</html>
