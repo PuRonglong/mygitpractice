@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			#div1{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+			}
+			.box{
+				position: absolute;
+				border: 1px dashed black;
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oDiv = document.getElementById('div1');
+
+				oDiv.onmousedown=function(ev){
+					var oEvent = ev||event;
+					var disX = oEvent.clientX-oDiv.offsetLeft;//鼠标的位置减去div左边的距离
+					var disY = oEvent.clientY-oDiv.offsetTop;
+					var oNewDiv = document.createElement('div');
+
+					oNewDiv.className='box';
+					oNewDiv.style.width = oDiv.offsetWidth-2 + 'px';
+					oNewDiv.style.height = oDiv.offsetHeight-2 + 'px';
+					oNewDiv.style.left = oDiv.offsetLeft + 'px';
+					oNewDiv.style.top = oDiv.offsetTop + 'px';
+
+					document.body.appendChild(oNewDiv);
+
+					document.onmousemove=function(ev){
+						var oEvent = ev||event;
+
+						oNewDiv.style.left = oEvent.clientX-disX+'px';
+						oNewDiv.style.top = oEvent.clientY-disY+'px';
+					};
+
+					document.onmouseup=function(){
+						document.onmousemove=null;
+						document.onmouseup=null;
+
+						oDiv.style.left = oNewDiv.style.left;
+						oDiv.style.top = oNewDiv.style.top;
+
+						document.body.removeChild(oNewDiv);
+					}
+
+					return false;//避免拖拽的时候会选中文字
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			
+		</div>
+	</body>
+</html>
