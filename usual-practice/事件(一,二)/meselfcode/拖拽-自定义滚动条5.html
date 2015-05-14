@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			#parent{
+				width: 400px;
+				height: 20px;
+				background: #ccc;
+				position: relative;
+				margin: 20px auto;
+			}
+			#div1{
+				width: 20px;
+				height: 20px;
+				background: red;
+				cursor: pointer;
+				position: absolute;
+			}
+			#div2{
+				width: 200px;
+				height: 300px;
+				border: 1px solid black;
+				position: relative;
+				overflow: hidden;
+			}
+			#div3{
+				position: absolute;
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oDiv = document.getElementById('div1');
+				var oDiv2 = document.getElementById('div2');
+				var oDiv3 = document.getElementById('div3');
+				var oParent = document.getElementById('parent');
+
+				oDiv.onmousedown=function(ev){
+					var oEvent = ev||event;
+					var disX = oEvent.clientX-oDiv.offsetLeft;//鼠标的位置减去div左边的距离
+
+					document.onmousemove=function(ev){
+						var oEvent = ev||event;
+						var l = oEvent.clientX-disX;
+
+						if (l<0) {
+							l=0;
+						}else if(l>oParent.offsetWidth-oDiv.offsetWidth){
+							l=oParent.offsetWidth-oDiv.offsetWidth;
+						}
+						
+						oDiv.style.left = l +'px';
+						var scale = l/(oParent.offsetWidth-oDiv.offsetWidth);
+
+						oDiv3.style.top = -(oDiv3.offsetHeight-oDiv2.offsetHeight)*scale + 'px';
+
+						document.title = scale;
+					};
+
+					document.onmouseup=function(){
+						document.onmousemove=null;
+						document.onmouseup=null;
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="parent">
+			<div id="div1"></div>
+		</div>
+		<div id="div2">
+			<div id="div3">
+				虽然最后还是由我帮他完成了剩下的那一个目标，因为我突然发现他总是努力让自己变得那么强大的背后，其实是一个形单影只的落寞的背影，那时候我突然很想陪陪他。
+ 
+“当每个人都还在青春里迷茫的时候，至少我知道我要做什么。”
+ 
+不过，我一直知道，在他的内心深处，总会有隐隐向上生根发芽的小小愿景。或许一个男人对事业的期许总归会大于女子吧，无论是来自现实的压力，还是发自内心地对梦想的追逐。
+ 
+他是你的生活背景，而你是他的甲乙丙丁。——《喜欢你是一场漫长的失恋》
+ 
+他是雪域的君王，还是旷世的情郎？
+西藏离天很近，在那里，群山静默，云翳低垂。清凉的风拂面，如神在低语。你可以脚踩大地，眼望天堂。
+西藏遍地是佛，每一句平凡的言语或带梵音。
+ 
+我知道，在妈妈心中一定有一张世界地图。那地图上没有国家，没有城市，只有我走过的每一步路。我也知道，我的每一步都踏着她的担心。
+ 
+友情这东西，玩好了就是小时代，玩掰了就是甄嬛传。人啊，长了颗红楼梦的心，却生活在水浒的世界，想交些三国里的桃园弟兄，却总遇到西游记里的妖魔鬼怪，别说你认识多少人，先看你有困难时还有多少人认识你。天天一起吃喝的有事不一定会帮你，朋友，要质量，不要数量，土豆拉一车，不如夜明珠一颗。
+ 
+如果提出的问题本身就有问题，那么答案又有什么用呢？——盖聂
+ 
+一个自卑的人比一个狂妄的人更糟糕，因为一个狂妄的人也许还会抓住一些生活中本来不属于他的机会，而自卑的人永远会失去本来属于他的机会。——俞敏洪
+ 
+孤独不可怕，可怕的是害怕孤独。我们之所以惧怕孤独，是因为我们找不到一个和自己相处的方式。但我们终究得学会和自己相处，最好的办法就是接受自己，不管好的坏的都照单全收，然后重新出发。—— 卢思浩
+ 
+世界上最动人的承诺，不是“我爱你”，而是在你需要的时候,Ta说 " I have always been with you " 。
+我一直都在
+ 
+诀别书——卓文君
+春华竞芳，五色凌素，琴尚在御，而新声代故！
+锦水有鸳，汉宫有木，彼物而新，嗟世之人兮，瞥于淫而不悟！
+朱弦断，明镜缺，朝露稀，芳时歇，白头吟，伤离别，努力加餐勿念妾，锦水汤汤，与君长诀！
+ 
+你说你喜欢雨，但是你在下雨的时候打伞。 你说你喜欢太阳，但是你在阳光明媚的时候躲在阴凉的地方。你说你喜欢风，但是在刮风的时候你却关上窗户。这就是为什么我会害怕你说你也喜欢我。 —— 莎士比亚
+ 
+在一回首间，才忽然发现，原来我一生的种种努力，一直在为了周遭的人对我满意而已。为了博得他人的称许与微笑，我战战兢兢地将自己自己套入所有的模式，所有的桎梏。走到中途才忽然发现，我只剩下一副模糊的面目，一副没有灵魂的肉身，和一条不能回头的路。——席慕容
+ 
+陀思妥耶夫斯基说，＂我最担心的是，我配不上自己所受的苦难。＂
+ 
+与春同生，与玫瑰同亡；架着绢的翅膀在晴空翱翔；在初放的花朵中踌躇，陶醉于花香、碧空与阳光；奋力抖落了翅膀上的花粉，像一丝轻风飞向无尽的穹苍。这便是蝴蝶幸运的一生，它像是一种从未实现的愿望，不满足地轻掠过每件事物，最终为寻找乐土又返回天堂。——《蝴蝶》 
+ 
+要么滚回去，要么拼命
+ 
+读书，会在不知不觉中影响你的思想、谈吐、容貌，以及为人处事、精神气质。现在读书的厚度，决定今后远行的长度。忙累了容易迷失，不如停下了来，读一本好书，静心给自己一段灵魂修炼的时光
+ 
+the power of dreams
+看到的本田的一个创意广告
+ 
+有人说：人生需要经历三次成长，第一次发现自己并不是世界的中心；第二次发现自己即使再努力，终是还有许多令自己无能为力的事；第三次发现明知有些事无能为力，但自己还是在努力争取。 经历不是要人停留在过往，而是在经历中给人留下多彩
+ 
+没有人会关心你付出过多少努力，撑得累不累，摔得痛不痛，他们只会看你最后站在什么位置，然后羡慕或鄙夷
+ 
+那种触及指尖却又飘然远去的feel，
+			</div>
+		</div>
+	</body>
+</html>
