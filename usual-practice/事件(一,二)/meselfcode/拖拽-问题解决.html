@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			#div1{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: absolute;
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oDiv = document.getElementById('div1');
+
+
+				oDiv.onmousedown=function(ev){
+					var oEvent = ev||event;
+					var disX = oEvent.clientX-oDiv.offsetLeft;//鼠标的位置减去div左边的距离
+					var disY = oEvent.clientY-oDiv.offsetTop;
+
+					if (oDiv.setCapture) {
+						oDiv.onmousemove=fnMove;
+
+						oDiv.onmouseup=fnUp;
+						oDiv.setCapture();//事件捕获
+					}
+					else{
+						document.onmousemove=fnMove;
+
+						document.onmouseup=fnUp;
+					}
+
+					function fnMove(ev){
+						var oEvent = ev||event;
+
+						oDiv.style.left = oEvent.clientX-disX+'px';
+						oDiv.style.top = oEvent.clientY-disY+'px';
+					};
+
+					function fnUp(){
+							this.onmousemove=null;
+							this.onmouseup=null;
+
+							if(this.releaseCapture){
+								this.releaseCapture;
+							};
+						}
+
+					return false;//避免拖拽的时候会选中文字
+				}
+			}
+		</script>
+	</head>
+	<body>
+		方块外	
+		<div id="div1">
+			方块内
+		</div>
+		方块外
+	</body>
+</html>
