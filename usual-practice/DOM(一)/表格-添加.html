@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oTab = document.getElementById('tab1');
+				var oTxt = document.getElementById('txt1');
+				var oBtn = document.getElementById('btn1');
+				var oldBgColor = "";
+				for (var i = 0; i < oTab.tBodies[0].rows.length; i++) {
+					oTab.tBodies[0].rows[i].style.background = i%2?"#ccc":"";
+
+					oTab.tBodies[0].rows[i].index = i;//用来存当前索引值
+
+					oTab.tBodies[0].rows[i].onmouseover = function(){
+						oldBgColor = this.style.background;//先将当前的样式存到一个变量中
+						this.style.background = "yellow";
+					}
+
+					oTab.tBodies[0].rows[i].onmouseout = function(){
+						this.style.background = oldBgColor;
+					}
+				};
+
+				oBtn.onclick=function(){
+					var oTr = document.createElement('tr');
+					var oTd = null;
+
+					oTd = document.createElement('td');
+					oTd.innerHTML = oTab.tBodies[0].rows.length+1;
+					oTr.appendChild(oTd);
+
+					oTd = document.createElement('td');
+					oTd.innerHTML = oTxt.value;
+					oTr.appendChild(oTd);
+
+					oTd = document.createElement('td');
+					oTd.innerHTML = '&nbsp';
+					oTr.appendChild(oTd);
+
+					oTab.tBodies[0].appendChild(oTr);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="txt1" />
+		<input type="button" value="添加" id="btn1">
+		<table id="tab1" border="1px" width="400">
+			<thead>
+				<td>ID</td>
+				<td>姓名</td>
+				<td>操作</td>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Blue</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Blue</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Blue</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>Blue</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>Blue</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
