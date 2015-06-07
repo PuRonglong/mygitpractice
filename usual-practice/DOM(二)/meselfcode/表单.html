@@ -11,19 +11,34 @@
 		<script type="text/javascript">
 			widow.onload=function(){
 				var oForm = document.getElementById('form1');
-				var
+				var oUser = document.getElementByName('user')[0];
+				var oPass = document.getElementByName('pass')[0];
 
 				oForm.onsubmit = function(){
-					alert('a');
+					if (oUser.value==''||oPass.value=='') {
+						alert("您填错了");
+						return false;
+					};
+				}
+
+				oForm.onreset = function(){
+					/*if (confirm('是否要清空？')) {
+						return true;
+					}else{
+						return false;
+					}*/
+
+					return confirm('是否要清空？');
 				}
 			}
 		</script>
 	</head>
 	<body>
 		<form action="https://www.baidu.com/" method="get" id="form1">
-			用户名：<input type="text" name="user">
-			密码：<input type="password" name="pass">
-			<input type="submit" value="提交">
+			用户名：<input type="text" name="user" /><!-- name用于给后台定位输入框的 -->
+			密码：<input type="password" name="pass" />
+			<input type="submit" value="提交" />
+			<input type="reset" value="重置" />
 		</form>
 	</body>
 </html>
