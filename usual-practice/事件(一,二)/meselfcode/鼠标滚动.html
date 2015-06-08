@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>未命名</title>
+		<link rel="stylesheet" type="text/css" href="" />
+		<style type="text/css">
+			#div1{
+				width: 200px;
+				height: 200px;
+				background: red;
+			}
+		</style>
+		<script type="text/javascript" src=""></script>
+		<script type="text/javascript">
+		//DOM事件
+			window.onload=function(){
+				var oDiv = document.getElementById('div1');
+
+				//IE chrome
+				/*oDiv.onmousewheel = function(){
+					alert('a');
+				}*/
+				//FF
+				/*oDiv.DOMMouseScroll = function(){
+					alert('a');
+				}*/
+
+				oDiv.addEventListener('DOMMouseScroll',function(){
+					alert('a');
+				},false);
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1"></div>
+	</body>
+</html>
