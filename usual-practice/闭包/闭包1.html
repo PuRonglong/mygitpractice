@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>未命名</title>
+        <link rel="stylesheet" type="text/css" href="" />
+        <style type="text/css">
+            
+        </style>
+        <script type="text/javascript" src=""></script>
+        <script type="text/javascript">
+            //函数嵌套函数是闭包的第一个特点;
+            //内部函数可以引用外部函数的参数和变量,参数和变量不会被垃圾回收机制所收回
+            function aaa(a){
+                var b = 5;
+                function bbb(){
+                    alert(a);
+                    alert(b);
+                }
+            }
+            //JS中的垃圾回收机制
+            /*function aaa(){
+                var a = 1;
+            }*/
+            aaa();
+        </script>
+    </head>
+    <body>
+        <!-- 
+        什么是闭包？
+        有什么作用？有哪些应用？
+        需要注意的地方？ 
+        -->
+    </body>
+</html>
