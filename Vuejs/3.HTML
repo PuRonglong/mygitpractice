@@ -1,0 +1,38 @@
+<!doctype>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<script type="text/javascript" src="lib/vue.min.js"></script>
+	</head>
+	<style type="text/css">
+		body {
+			font-family: Helvetica Neue, Arial, sans-serif;
+		}
+		.done {
+			text-decoration: line-through;
+		}
+	</style>
+	<body>
+		<ul id="list">
+			<li v-repeat="item in items" v-on="click:toggle(item)">
+				{{item.text}}
+			</li>
+		</ul>
+		<script type="text/javascript">
+			new Vue({
+				el:'#list',
+				data:{
+					items:[
+						{text:'one',done:true},
+						{text:'two',done:false}
+					]
+				},
+				methods:{
+					toggle:function(item){
+						item.done=!item.done
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
