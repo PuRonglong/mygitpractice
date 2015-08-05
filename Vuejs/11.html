@@ -1,0 +1,33 @@
+<!doctype>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<script type="text/javascript" src="lib/vue.min.js"></script>
+	</head>
+	<body>
+		<ul id="list">
+			<li v-repeat="item in items" v-on="click: toggle(item)">
+				{{item.text}}
+			</li>
+		</ul>
+		<script>
+			//执行表达式
+			//当在v-repeat里使用v-on时,targetVM显得很有用,因为v-repeat会创建大量ViewModel.
+			//但是,通过执行表达式的方式,把代表当前ViewModel数据对象的别名穿进去,会更方便直观一些
+			var list = new Vue({
+				el: '#list',
+				data: {
+					items: [
+						{ text: 'one', done: true },
+						{ text: 'two', done: false }
+					]
+				},
+				methods: {
+					toggle: function (item) {
+						item.done = !item.done
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
