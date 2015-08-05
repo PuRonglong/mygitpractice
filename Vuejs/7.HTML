@@ -1,0 +1,27 @@
+<!doctype>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<script type="text/javascript" src="lib/vue.min.js"></script>
+	</head>
+	<body>
+		<ul id="users">
+			<li v-repeat="user in users">
+				{{user.name}} - {{user.email}}
+			</li>
+		</ul>
+		<script type="text/javascript">
+			//使用别名
+			var users = new Vue({
+				el:'#users',
+				data:{
+					users:[
+						{name:'Foo Bar',email:'foo@bar.com'},
+						{name:'John Doh',email:'john@doh.com'}
+					]
+				}
+			})
+			//需要注意的是这里的user in users语法只在Vue 0.12.8及以上版本中可用，老版本使用user:users语法
+		</script>
+	</body>
+</html>

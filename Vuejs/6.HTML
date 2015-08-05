@@ -1,0 +1,24 @@
+<!doctype>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<script type="text/javascript" src="lib/vue.min.js"></script>
+	</head>
+	<body>
+		<ul id="tags">
+			<li v-repeat="tags">
+				{{$value}}
+			</li>
+		</ul>
+		<script type="text/javascript">
+			//简单值数组
+			//简单值即字符串，数字，boolean等并非对象的值。对于包含简单值的数组，你可用$value直接访问值
+			var tags = new Vue({
+				el:'#tags',
+				data:{
+					tags:['javascript','MVVM','Vue.js']
+				}
+			})
+		</script>
+	</body>
+</html>
