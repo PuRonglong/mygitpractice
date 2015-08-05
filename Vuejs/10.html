@@ -1,0 +1,29 @@
+<!doctype>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<script type="text/javascript" src="lib/vue.min.js"></script>
+	</head>
+	<body>
+		<div id="demo">
+			<a v-on="click:onClick">触发一个方法函数</a>
+			<a v-on="click:n++">触发一个表达式{{n}}</a>
+		</div>
+	<script>
+		//事件监听
+		//可以使用v-on指令来绑定并监听DOM事件,绑定的内容可以是当前实例上的方法或一个内联表达式
+		var demo = new Vue({
+			el:'#demo',
+			data:{
+				n:0
+			},
+			methods:{
+				onClick:function(e){
+					console.log(e.target.tagName);
+					console.log(e.targetVM===this);
+				}
+			},
+		})
+	</script>
+	</body>
+</html>
