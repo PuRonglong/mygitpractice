@@ -1,0 +1,28 @@
+<!doctype>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<script type="text/javascript" src="lib/vue.min.js"></script>
+	</head>
+	<body>
+		<div id="demo">
+			<li v-repeat="items" class="item-{{$index}}">
+				{{$index}}-{{parentMsg}} {{childMsg}}
+			</li>
+		</div>
+		<script type="text/javascript">
+			var demo = new Vue({
+				el:'#demo',
+				data:{
+					parentMsg:"Hello",
+					items:[
+						{childMsg:"Foo"},
+						{childMsg:'Bar'},
+						{childMsg:'puronglong'}
+					]
+				}
+			})
+			// 使用v-repeat指令来基于ViewModel上的对象数组渲染列表。此外，还可以通过$index属性来获取当前实例对应的数组索引
+		</script>
+	</body>
+</html>
