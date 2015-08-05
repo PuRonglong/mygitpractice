@@ -1,0 +1,35 @@
+<!doctype>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<script type="text/javascript" src="lib/vue.min.js"></script>
+	</head>
+	<body>
+		<ul id="repeat_object">
+			<li v-repeat="primitiveValues">{{$key}}:{{$value}}</li>
+			<li v-repeat="objectValues">{{$key}}:{{msg}}</li>
+		</ul>
+		<script type="text/javascript">
+			//遍历对象
+			//你也可以使用v-repeat遍历一个对象的所有属性。每个重复的实例会有一个特殊的属性$key。对于简单值，你也可以像访问数组中的简单值那样使用$value值
+			var repeat_object = new Vue({
+				el:'#repeat_object',
+				data:{
+					primitiveValues:{
+						FirstName:'John',
+						LastName:'Snow',
+						Age:30
+					},
+					objectValues:{
+						one:{
+							msg:'one'
+						},
+						two:{
+							msg:'two'
+						}
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
