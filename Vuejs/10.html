@@ -11,7 +11,8 @@
 		</div>
 	<script>
 		//事件监听
-		//可以使用v-on指令来绑定并监听DOM事件,绑定的内容可以是当前实例上的方法或一个内联表达式
+		//可以使用v-on指令来绑定并监听DOM事件,绑定的内容可以是当前实例上的方法或一个内联表达式,
+		//如果提供的是一个方法,则原生的DOMevent会被作为第一个参数传入,同时这个event会带有targetVM属性,指向触发该事件的响应的ViewModel
 		var demo = new Vue({
 			el:'#demo',
 			data:{
@@ -19,8 +20,8 @@
 			},
 			methods:{
 				onClick:function(e){
-					console.log(e.target.tagName);
-					console.log(e.targetVM===this);
+					console.log(e.target.tagName);//"A"
+					console.log(e.targetVM===this);//true
 				}
 			},
 		})
