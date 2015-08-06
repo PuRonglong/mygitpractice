@@ -1,0 +1,52 @@
+<!doctype>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<script type="text/javascript" src="lib/vue.min.js"></script>
+	</head>
+	<body>
+		<form id="demo">
+			<p>
+				<input type="text" v-model="msg">
+				{{msg}}
+			</p>
+			<p>
+				<input type="checkbox" v-model="checked">
+				{{checked ?"yes":"no"}}
+			</p>
+			<p>
+				<input type="radio" name="picked" value="one" v-model="picked">
+				<input type="radio" name="picked" value="two" v-model="picked">
+				{{picked}}
+			</p>
+			<p>
+				<select v-model="selected">
+					<option>one</option>
+					<option>two</option>
+				</select>
+				{{selected}}
+			</p>
+			<p>
+				<select v-model="multiSelect">
+					<option>one</option>
+					<option>two</option>
+					<option>three</option>
+				</select>
+				{{multiSelect}}
+			</p>
+		</form>
+		<script>
+			var demo = new Vue({
+				el:'#demo',
+				data:{
+					msg:'hi!',
+					checked:true,
+					picked:'two',
+					selected:'two',
+					multiSelect:['one','three']
+				}
+			})
+			//你可以在表单的input元素上使用v-model指令来创建双向数据绑定.它会根据input元素的类型自动选取正确的绑定模式
+		</script>
+	</body>
+</html>
