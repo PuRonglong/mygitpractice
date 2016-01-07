@@ -3,7 +3,9 @@
     <head>
         <script type="text/javascript" src="js/require.js"></script>
         <script type="text/javascript">
-            require(["./js/a"]);
+            require(["./js/a"], function(){
+                alert('require over');
+            });
         </script>
     </head>
     <body>
