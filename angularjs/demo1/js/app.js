@@ -1,6 +1,6 @@
 var myApp = angular.module('myApp', ['ui.router']);
 
-myApp.config('$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
+myApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
 	$stateProvider
 		.state('PageTab',{
 			url: '/PageTab',
@@ -20,4 +20,4 @@ myApp.config('$stateProvider', '$urlRouterProvider', function($stateProvider, $u
 		});
 
 	$urlRouterProvider.when("", "/PageTab");
-});
+}]);
