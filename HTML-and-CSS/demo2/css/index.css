@@ -3,19 +3,31 @@ body{
     width: 100%;
     height: 100%;
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+}
+
+div{
+    display: block;
+}
+
+.main{
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
 .index-left{
     background-color: green;
-    width: 50%;
+    width: 100%;
     height: 100%;
-    float: left;
+    right: 50%;
+    position: absolute;
 }
 
 .index-right{
+    position: absolute;
+    left: 50%;
     background: red;
-    width: 50%;
+    width: 100%;
     height: 100%;
-    margin-left: 50%;
 }
