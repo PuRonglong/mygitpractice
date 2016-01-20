@@ -51,6 +51,7 @@ body{
     font-size: 1.7rem;
     color: #50585D;
     margin-bottom: 0.51em;
+    text-indent: -3px;
 }
 
 .article-header-time{
@@ -63,4 +64,9 @@ body{
     font-family: Georgia, serif;
     font-size: 17px;
     line-height: 30px;
+}
+
+.article-more{
+    float: right;
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
 }
