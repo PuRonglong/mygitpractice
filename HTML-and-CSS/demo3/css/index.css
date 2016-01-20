@@ -38,3 +38,29 @@ body{
     list-style-type: none;
     font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
 }
+
+.article{
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.article-header-title{
+    font-family: "Open Sans","Helvetica Neue",'Helvetica',Arial, "Microsoft YaHei","STKaiti","Droid Sans Fallback",SimSun,serif;
+    font-size: 1.7rem;
+    color: #50585D;
+    margin-bottom: 0.51em;
+}
+
+.article-header-time{
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+.article-content{
+    font-family: Georgia, serif;
+    font-size: 17px;
+    line-height: 30px;
+}
