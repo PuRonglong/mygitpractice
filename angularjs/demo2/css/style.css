@@ -1,0 +1,28 @@
+.fade-in{
+    width: 50px;
+    height: 50px;
+    background: red;
+    transition: 2s linear all;
+    -webkit-transition: 2s linear all;
+}
+
+.fade-in:hover{
+    width: 300px;
+    height: 300px;
+}
+
+.fade-in .ng-enter{
+    opacity: 0;
+}
+
+.fade-in.ng-enter.ng-enter-active{
+    opacity: 1;
+}
+
+.fade-in.ng-leave{
+    opacity: 1;
+}
+
+.fade-in.ng-leave.ng-leave-active{
+    opacity: 0;
+}
