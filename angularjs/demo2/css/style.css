@@ -12,3 +12,100 @@
 .page-home         { background:#00D0BC; color:#00907c; }
 .page-about     { background:#E59400; color:#a55400; }
 .page-contact     { background:#ffa6bb; color:#9e0000; }
+
+/*我们定义了6个不同的动画效果。每一个页面都会有他们各自的ng-enter 和 ng-leave 的动画效果。*/
+
+/*离开动画*/
+@keyframes out-rotate-fall {
+    0%{
+        transform: rotateZ(0deg);
+    }
+    20%{
+        transform: rotateZ(10deg);
+    }
+    40%{
+        transform: rotateZ(17deg);
+    }
+    60%{
+        transform: rotateZ(16deg);
+    }
+    100%{
+        transform: translateY(100%) rotateZ(17deg);
+    }
+}
+
+@keyframes out-slide-left {
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes out-rotate-disapear {
+    100%{
+        transform: translateZ(-3000px) rotateZ(360deg);
+        opacity: 0;
+    }
+}
+
+/*进入动画*/
+
+@keyframes in-scale-up {
+    0%{
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+}
+
+@keyframes in-slide-right {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes in-slide-up {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+/*将上面这些进入和进出动画效果应用给.ng-enter 或 .ng-leave就可以为我们的页面添加不用的动画效果。*/
+
+.ng-enter{
+    z-index: 8888;
+}
+
+.ng-leave{
+    z-index: 9999;
+}
+
+.page-home.ng-enter{
+    animation: in-scale-up 0.5s both ease-in;
+}
+
+.page-home.ng-leave{
+    transform-origin: 0% 0%;
+    animation: out-rotate-fall 1s both ease-in;
+}
+
+.page-about.ng-enter{
+    animation: in-slide-right 0.5s both ease-in;
+}
+
+.page-about.ng-leave{
+    animation: out-slide-left 0.5s both ease-in;
+}
+
+.page-contact.ng-enter{
+    animation: in-slide-up 0.5s both ease-in;
+}
+
+.page-contact.ng-leave{
+    transform-origin: 50% 50%;
+    animation: out-rotate-disapear 0.5s both ease-in;
+}
