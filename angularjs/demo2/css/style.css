@@ -40,7 +40,7 @@
     }
 }
 
-@keyframes out-rotate-disapear {
+@keyframes out-rotate-disappear {
     100%{
         transform: translateZ(-3000px) rotateZ(360deg);
         opacity: 0;
@@ -107,5 +107,5 @@
 
 .page-contact.ng-leave{
     transform-origin: 50% 50%;
-    animation: out-rotate-disapear 0.5s both ease-in;
+    animation: out-rotate-disappear 0.5s both ease-in;
 }
