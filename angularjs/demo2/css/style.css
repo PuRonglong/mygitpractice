@@ -1,28 +1,14 @@
-.fade-in{
-    width: 50px;
-    height: 50px;
-    background: red;
-    transition: 2s linear all;
-    -webkit-transition: 2s linear all;
+.page        {
+    bottom:0;
+    position:absolute;
+    text-align:center;
+    top:0;
+    width:100%;
 }
 
-.fade-in:hover{
-    width: 300px;
-    height: 300px;
-}
+.page h1     { font-size:60px; }
+.page a     { margin-top:50px; }
 
-.fade-in .ng-enter{
-    opacity: 0;
-}
-
-.fade-in.ng-enter.ng-enter-active{
-    opacity: 1;
-}
-
-.fade-in.ng-leave{
-    opacity: 1;
-}
-
-.fade-in.ng-leave.ng-leave-active{
-    opacity: 0;
-}
+.page-home         { background:#00D0BC; color:#00907c; }
+.page-about     { background:#E59400; color:#a55400; }
+.page-contact     { background:#ffa6bb; color:#9e0000; }
