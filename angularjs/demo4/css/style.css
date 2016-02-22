@@ -4,6 +4,7 @@
     height: 100%;
     left: 0;
     top: 0;
+    overflow: hidden;
 }
 .view-1{
     background: #b3c589;
