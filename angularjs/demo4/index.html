@@ -2,23 +2,28 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>ng-class</title>
+        <title>ng-switch</title>
         <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.css">
         <link rel="stylesheet" href="css/style.css">
         <script src="http://cdn.bootcss.com/angular.js/1.2.20/angular.js"></script>
-        <script src="http://cdn.bootcss.com/angular.js/1.2.20/angular-route.js"></script>
+        <script src="js/angular-ui-router.js"></script>
         <script src="js/angular-animate.js"></script>
         <script src="js/app.js"></script>
         <script>
-            //注意：AngularJS只能捕获到通过表达式或ng-class改变的class
         </script>
     </head>
     <body data-ng-app="myApp">
-        <p>
-            <input type="button" value="set" ng-click="myCssVar='css-class'">
-            <input type="button" value="clear" ng-click="myCssVar=''">
-            <br>
-            <span ng-class="myCssVar">CSS-Animated Text</span>
-        </p>
+
+        <div class="view-container" ng-controller="viewController as view" ng-switch="view.current">
+
+            <div class="view-page view-1" ng-switch-when="1">
+                <input type="button" value="1" ng-click="view.current = '1'" />
+                <input type="button" value="2" ng-click="view.current = '2'" />
+            </div>
+            <div class="view-page view-2" ng-switch-when="2">
+                <input type="button" value="1" ng-click="view.current = '1'" />
+                <input type="button" value="2" ng-click="view.current = '2'" />
+            </div>
+        </div>
     </body>
 <html>
