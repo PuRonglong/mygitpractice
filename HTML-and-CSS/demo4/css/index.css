@@ -35,7 +35,6 @@ body{
 
 .loader:after{
     animation: after 2s infinite;
-    box-shadow: 0.55em 0.85em rgba(61, 184, 143, 0.75), -0.55em -0.85em rgba(233, 169, 32, 0.75);
 }
 
 @keyframes before {
