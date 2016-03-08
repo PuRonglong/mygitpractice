@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>demo</title>
+        <!--<link rel="stylesheet" type="text/css" href="css/index.css">-->
+
+    </head>
+    <body>
+        <ul>
+            <li>0</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <script type="text/javascript">
+            var lis = document.getElementsByTagName('li');
+            var i;
+            for (i = 0; i < lis.length; i++){
+                (function(i){
+                    lis[i].onclick = function(){
+                        alert(i);
+                    };
+                })(i);
+            }
+        </script>
+    </body>
+</html>
