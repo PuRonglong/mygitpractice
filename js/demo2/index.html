@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>demo</title>
+        <!--<link rel="stylesheet" type="text/css" href="css/index.css">-->
+        <style>
+            .div1{
+                width: 800px;
+                height: 1000px;
+                background: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="div1"></div>
+        <img class="lazy" src="" alt="http://7vznhl.com1.z0.glb.clouddn.com/image-dog.jpg"/>
+        <script type="text/javascript">
+            //js延迟加载图片
+
+            var temp = -1;//用来判断是否向下滚动
+
+            window.onscroll = function(){
+
+                //取得需要懒加载的图片
+                var imageArr = document.getElementsByTagName('img');
+                var lazyArr = new Array();
+                var j = 0;
+                for(var i = 0; i < imageArr.length; i++){
+                    if(imageArr[i].className == 'lazy'){
+                        lazyArr[j++] = imageArr[i];
+                    }
+                }
+
+
+                //判断是否处于可视窗口
+                var bodyscrollTop = document.body.scrollTop;//滚动的高度
+                var seeHeight = document.body.offsetHeight;//视窗高度
+
+                for(var k = 0; k < lazyArr.length; k++){
+                    var imageTop = lazyArr[k].offsetTop;//图片的offsetTop高度
+
+                    if((imageTop - bodyscrollTop) < seeHeight){
+                        lazyArr[k].src = lazyArr[k].alt;
+                        lazyArr[k].className = 'notLazy';
+                    }
+                }
+
+                temp = bodyscrollTop;
+
+            }
+        </script>
+    </body>
+</html>
