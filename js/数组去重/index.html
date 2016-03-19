@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>demo</title>
+        <!--<link rel="stylesheet" type="text/css" href="css/index.css">-->
+
+    </head>
+    <body>
+        <script type="text/javascript">
+            //通过属性比较数组重复
+            function isRepeat(arr){
+                var result = [], obj = {}, j;
+                var length = arr.length;
+                for(var i = 0; i < length; i++){
+                    if(!obj[arr[i]]) {
+                        result.push(arr[i]);
+                        obj[arr[i]] = 1;//把未重复的元素push进新的数组后把当前元素对应的属性的值改为1,用于标志有一个这个元素了.
+                    }
+                }
+                return result;
+            }
+        </script>
+    </body>
+</html>
