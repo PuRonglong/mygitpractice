@@ -20,6 +20,25 @@
                 }
                 return result;
             }
+
+            //方法二
+            function isRepeat(arr){
+                var newArr = [];
+                var length = arr.length;
+                for(var i = 0; i < length; i++){
+                    var repeat = false;
+                    for (var j = 0; j < newArr.length; j++){
+                        if(arr[i] == newArr[j]){
+                            repeat = true;
+                            break;
+                        }
+                    }
+                    if(!repeat){
+                        newArr.push(arr[i]);
+                    }
+                }
+                return newArr;
+            }
         </script>
     </body>
 </html>
