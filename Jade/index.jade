@@ -1,11 +1,17 @@
 doctype html
 html
-    head
-        meta(charset = "utf-8")
-        title imooc #{course.toUpperCase()} study
-    body
-        h1(id = "title1" class = "title2") imooc jade study h1
+head
+    meta(charset = "utf-8")
+    title imooc #{course.toUpperCase()} study
 
-        p.
-          你好
-          吗
+    - var imooc = {course: 'jade',level: 'high'};
+
+    - for (var k in imooc)
+      p= imooc[k]
+body
+    h1(id = "title1" class = "title2") imooc jade study h1
+
+    - var n = 0
+    ul
+      while n < 4
+        li= n++
