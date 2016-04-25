@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*- 
+#测试
 list = ['apple', 'mango', 'carrot', 'banana']
 
 print 'list 0 is', list[0]
