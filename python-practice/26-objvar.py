@@ -1,6 +1,6 @@
 class Person:
 	population = 0
-
+	
 	def __init__(self, name):
 		self.name = name
 		print '(Initializing %s.)' % self.name
