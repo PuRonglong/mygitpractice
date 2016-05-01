@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import urllib2
-import string
 import re
 
 
@@ -9,13 +8,19 @@ class ShiJianTianXia:
 
     # 声明相关属性
     def __init__(self, url):
-        self.url = url + '?see_lz=1'
+        self.url = (url + 'see_lz=1')
+        # self.url = url + '?see_lz=1'
         self.page = 1
         self.datas = []
 
     # 找出当前页的帖子
     def find_page(self):
-        current_page = urllib2.urlopen(self.url).read().decode('utf-8')
+        user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/' \
+                     '50.0.2661.86 Safari/537.36'
+        headers = {'User-Agent': user_agent}
+        my_req = urllib2.Request(self.url, headers=headers)
+        print self.url
+        current_page = urllib2.urlopen(my_req).read().decode('utf-8')
 
         # 找出当前页总页数
         last_page = self.find_count(current_page)
@@ -65,17 +70,17 @@ class ShiJianTianXia:
         f.writelines(self.datas)
         f.close()
 
-        print '已下载到本地并存储为txt文件'
-        print '按任意键退出...'
+        print '已将上面内容全部下载到本地并存储为txt文件;'
+        print '按回车键退出...'
         raw_input()
 
     # 获取这个主题后面的页
     def save_data(self, url, last_page):
         url = url + '&pn='
-        for i in range(1, last_page):
+        for i in range(1, last_page + 1):
             print '正在下载第%d页内容;' % i
             # 读取第i页内容
-            current_page = urllib2.urlopen(url + str(i) + 1).read().decode('utf-8')
+            current_page = urllib2.urlopen(url + str(i)).read().decode('utf-8')
             # 将第i页内容从页面中取出并存储
             self.get_data(current_page)
 
@@ -87,6 +92,6 @@ class ShiJianTianXia:
             self.datas.append(data)
 
 print "输入贴吧地址:"
-input_url = str(raw_input(' '))
+input_url = str(raw_input(''))
 louzhu = ShiJianTianXia(input_url)
 louzhu.find_page()
