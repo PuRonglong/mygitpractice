@@ -2,6 +2,7 @@
 
 import string, urllib2
 
+
 def qinshi_tieba(url, page_begin, page_end):
 	for i in range(page_begin, page_end + 1):
 		sName = string.zfill(i, 5) + '.html'
@@ -10,7 +11,6 @@ def qinshi_tieba(url, page_begin, page_end):
 		m = urllib2.urlopen(url + str(i)).read()
 		f.write(m)
 		f.close()
-	
 
 
 # url = 'http://tieba.baidu.com/p/4510793112?pn='
