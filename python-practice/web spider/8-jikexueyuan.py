@@ -51,11 +51,12 @@ class JiKeXueYuan:
         f = open('info.txt', 'w+')
 
         for each_course in course_info:
-            f.write('title:' + each_course['title'].encode("utf-8") + '\n')
-            f.write('content:' + each_course['content'].encode("utf-8") + '\n')
-            f.write('time:' + each_course['time'].encode("utf-8") + '\n')
-            f.write('people:' + each_course['people'].encode("utf-8") + '\n')
-            f.write('level:' + each_course['level'].encode("utf-8") + '\n')
+            f.write('title: ' + each_course['title'].encode("utf-8") + '\n')
+            f.write('content: ' + each_course['content'].encode("utf-8") + '\n')
+            f.write('time: ' + each_course['time'].encode("utf-8") + '\n')
+            f.write('people: ' + each_course['people'].encode("utf-8") + '\n')
+            f.write('level: ' + each_course['level'].encode("utf-8") + '\n')
+            f.write('\n')
 
         f.close()
 
@@ -83,3 +84,4 @@ if __name__ == '__main__':  # 如果程序是自己使用.py文件运行
             class_info.append(one_course_info)
 
     jikexueyuan.save_course_info(class_info)
+    print '获取课程信息完毕'
