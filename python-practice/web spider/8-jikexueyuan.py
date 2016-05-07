@@ -47,21 +47,24 @@ class JiKeXueYuan:
         return one_course_info
 
     # 存储课程信息
-    def save_course_info(self, course_info):
+    def save_course_info(self, course_info, i):
         f = open('info.txt', 'w+')
 
         for each_course in course_info:
+            f.write('课程: ' + str(i) + '\n')
             f.write('title: ' + each_course['title'].encode("utf-8") + '\n')
             f.write('content: ' + each_course['content'].encode("utf-8") + '\n')
             f.write('time: ' + each_course['time'].encode("utf-8") + '\n')
             f.write('people: ' + each_course['people'].encode("utf-8") + '\n')
             f.write('level: ' + each_course['level'].encode("utf-8") + '\n')
             f.write('\n')
+            i += 1
 
         f.close()
 
 if __name__ == '__main__':  # 如果程序是自己使用.py文件运行
 
+    i = 1
     class_info = []  # 存储课程信息
     url = 'http://www.jikexueyuan.com/course/?pageNum=1'
 
@@ -83,5 +86,5 @@ if __name__ == '__main__':  # 如果程序是自己使用.py文件运行
             # 存储一门课程的详细信息
             class_info.append(one_course_info)
 
-    jikexueyuan.save_course_info(class_info)
+    jikexueyuan.save_course_info(class_info, i)
     print '获取课程信息完毕'

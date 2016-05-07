@@ -1,285 +1,333 @@
+课程: 1
 title: 一元线性回归
 content: 本课程讲解一元线性回归的思想和原理，内容包括一元线性回归的术语和原理，以及对回归结果的检验，并通过实例演示一元线性回归的做法。
 time: 3课时 50分钟
 people: 2089人学习
 level: 初级
 
+课程: 2
 title: Cocos2d-x 引擎源码中的 OpenGL ES知识（下）
 content: 本课程为OpenGL
 time: 3课时 116分钟
 people: 2147人学习
 level: 高级
 
+课程: 3
 title: 编程之美“凌云之智“线上分享之 Azure 线上培训及工程师答疑
 content: 2016编程之美挑战赛已进入复赛阶段，为了帮助大家更好的使用
 time: 1课时 21分钟
 people: 2458人学习
 level: 初级
 
+课程: 4
 title: Launcher3－文件夹自动整理
 content: 本课程主要讲文件夹自动整理。将手机上除了第一屏之外的应用自动整理到文件夹，并能指定位置、固定位置。和上一节课的适配所有机型的桌面布局类似，方法可以借鉴。
 time: 4课时 42分钟
 people: 2262人学习
 level: 初级
 
+课程: 5
 title: iOS 封装第三方支付 SDK
 content: 本课程主要介绍
 time: 4课时 29分钟
 people: 2268人学习
 level: 初级
 
+课程: 6
 title: 物联网技术导论（十一）物联网中的信息安全与隐私保护
 content: 物联网信息安全比互联网中的信息安全更具挑战性。本课程重点介绍物联网中
 time: 3课时 46分钟
 people: 2356人学习
 level: 初级
 
+课程: 7
 title: C 语言编程实战：学生信息管理系统（下）
 content: 本课程介绍学生信息管理系统中的保存学生信息模块、加载学生信息模块、显示学生信息模块、查找学生信息模块以及删除学生信息模块。在理解系统功能的基础上，编写各个模块的代码，并对代码的关键部分进行讲解。
 time: 5课时 39分钟
 people: 2858人学习
 level: 中级
 
+课程: 8
 title: 名企数据结构面试题之 DFS（上）
 content: 本课程学习二叉树的
 time: 4课时 33分钟
 people: 2295人学习
 level: 中级
 
+课程: 9
 title: Tornado 开发--TCP 编程
 content: 本课程主要讲解通过使用
 time: 5课时 46分钟
 people: 2267人学习
 level: 高级
 
+课程: 10
 title: 编程之美“凌云之智“线上分享之复赛题目提点
 content: 2016编程之美挑战赛已进入复赛阶段，本次分享中，学术搜索首席研发总监
 time: 1课时 0分钟
 people: 2649人学习
 level: 初级
 
+课程: 11
 title: 马上着手 Swift 开发 - 踏上 Swift 征程
 content: 本课程介绍
 time: 3课时 53分钟
 people: 2256人学习
 level: 初级
 
+课程: 12
 title: Hadoop MapReduce 进阶
 content: 本课程主要讲解
 time: 5课时 63分钟
 people: 2213人学习
 level: 高级
 
+课程: 13
 title: 整站项目开发实战之网站首页布局搭建
 content: 设计本课程的目的是让
 time: 5课时 85分钟
 people: 5035人学习
 level: 中级
 
+课程: 14
 title: Android Studio 全方位指南之进阶使用技巧
 content: 本课程主要介绍在使用
 time: 4课时 53分钟
 people: 4005人学习
 level: 初级
 
+课程: 15
 title: iOS 界面动画教程之 Layer 动画进阶
 content: 本课程继续讲解
 time: 4课时 71分钟
 people: 2416人学习
 level: 中级
 
+课程: 16
 title: 微网站制作速成法
 content: 本课程介绍微网站产生的背景，主要用途与制作实例，重点讲解在没有美工的情况下，微网站该如何制作。学完本课程，你将可以独自完成一个微网站的项目。
 time: 3课时 58分钟
 people: 4062人学习
 level: 中级
 
+课程: 17
 title: 编程之美优秀选手唐飞虎经验分享
 content: 他是14年编程之美挑战赛的全国总冠军孙祥彦的高中室友，从小学开始一路保送到大学，是哈尔滨工业大学的叱咤风云的“传说中的学长”，是腼腆羞涩却心怀青春热血的创业达人，是特立独行执行力超强的编程高手，是近乎偏执沉迷于编程世界的疯狂极客，他也是15年编程之美挑战赛的全国总冠军。在本期分享中，唐飞虎将于你分享他的个人创业经历，决赛项目经验，赛后生活，职业规划及求职技巧。
 time: 1课时 34分钟
 people: 2803人学习
 level: 初级
 
+课程: 18
 title: Revel 开发高级阶段之数据存储
 content: 本课程在前面课程的基础上，将对常见关系型数据库的
 time: 3课时 88分钟
 people: 2201人学习
 level: 初级
 
+课程: 19
 title: 物联网技术导论（十）物联网中的智能决策
 content: 本课程介绍数据挖掘的基本流程（预处理，数据挖掘，知识评估与表示），重点介绍几种典型的数据挖掘算法，最后讨论物联网中智能决策的新特点。
 time: 3课时 36分钟
 people: 2318人学习
 level: 初级
 
+课程: 20
 title: 开发远程控制程序高级功能
 content: 本课程讲解在图形化远程控制程序的基础上，实现读写剪贴板，查看远程受控电脑的屏幕和上传文件等高级功能。
 time: 5课时 48分钟
 people: 2327人学习
 level: 中级
 
+课程: 21
 title: Android 应用结构与实例
 content: 本课程主讲
 time: 3课时 40分钟
 people: 2412人学习
 level: 初级
 
+课程: 22
 title: 如何提升 APP 防御能力
 content: 2015年安卓应用盗版情况不断恶化，平均1款正版
 time: 4课时 44分钟
 people: 2681人学习
 level: 中级
 
+课程: 23
 title: Laravel 入门之路由
 content: 本课程主要讲解
 time: 4课时 51分钟
 people: 2493人学习
 level: 初级
 
+课程: 24
 title: Python 类深入
 content: 本课程在已经掌握的有关类的知识基础上，对类和实例的某些特殊方法、属性进行深入探究，并梳理对类的认识，用特殊方法定制简单的类，还要了解迭代器和生成器的特点及应用。
 time: 3课时 39分钟
 people: 2428人学习
 level: 初级
 
+课程: 25
 title: Android 基准网格、边距与布局标准
 content: 本课程引入
 time: 4课时 34分钟
 people: 2852人学习
 level: 初级
 
+课程: 26
 title: Phaser.js 中的物理引擎
 content: 本课程主要介绍
 time: 3课时 38分钟
 people: 2215人学习
 level: 初级
 
+课程: 27
 title: Hadoop MapReduce 入门
 content: 本课程主要讲解
 time: 3课时 56分钟
 people: 2492人学习
 level: 高级
 
+课程: 28
 title: BitmapDrawable、NinePatchDrawable 和 PictureDrawable 类型精讲
 content: 本课程先讲述
 time: 3课时 27分钟
 people: 2415人学习
 level: 初级
 
+课程: 29
 title: WebService 概述
 content: 本课程通过
 time: 5课时 61分钟
 people: 3884人学习
 level: 初级
 
+课程: 30
 title: wxPython 环境搭建及可视化编程
 content: 本课程会讲解
 time: 3课时 106分钟
 people: 2416人学习
 level: 中级
 
+课程: 31
 title: 使用 Alamofire 请求网络
 content: 学完本课程后能够熟悉
 time: 3课时 49分钟
 people: 2388人学习
 level: 高级
 
+课程: 32
 title: Android logcat 命令使用
 content: 本课程详细介绍
 time: 5课时 49分钟
 people: 2273人学习
 level: 初级
 
+课程: 33
 title: 数据结构与算法之位运算
 content: 本课程介绍位运算的相关知识。位运算相关的算法是面试中的高频题，我们会从基础开始详细介绍位运算的各方面知识，并对经典算法进行深入剖析，给出不同的解决方案。
 time: 3课时 54分钟
 people: 2687人学习
 level: 中级
 
+课程: 34
 title: 索引的基础操作
 content: 本课程将介绍如何实现索引的增、删、改、查操作，并介绍如何指定查询操作中的排序方式，完成索引的基础操作。
 time: 3课时 27分钟
 people: 2475人学习
 level: 高级
 
+课程: 35
 title: 编程之美优秀选手孙祥彦经验分享
 content: 本期嘉宾是2014编程之美挑战赛全国总冠军，来自复旦大学的孙祥彦同学。他将在本期分享课程中独家爆料
 time: 1课时 21分钟
 people: 2781人学习
 level: 初级
 
+课程: 36
 title: Python GUI 入门
 content: 本课程会讲解
 time: 3课时 43分钟
 people: 3619人学习
 level: 中级
 
+课程: 37
 title: Windows 10 应用开发之文件与流（上）
 content: 绝大多数应用程序都会涉及到文件或各种流（除了文件流，还有内存流、网络流等）的读写操作。用户在使用应用程序的过程中都不可避免会产生数据，而这些数据并不能仅仅存放于内存中。比如，应用程序有一个搜索框，每当用户完成一次搜索操作后，程序会保存用户的搜索历史，这些数据都应该保存到文件中，如果保存在内存中，应用程序退出后就会丢失。本课程先向学员介绍如何对流进行读写操作，而对文件的操作将放在下一个课程中讲述。
 time: 4课时 26分钟
 people: 2241人学习
 level: 初级
 
+课程: 38
 title: Objective-C 基础
 content: 设计本课的目标：主要是让初学者掌握
 time: 3课时 51分钟
 people: 2541人学习
 level: 初级
 
+课程: 39
 title: Clip、Inset、Rotate 和 Scale Drawable 类型精讲
 content: 本课程先讲述
 time: 4课时 38分钟
 people: 2450人学习
 level: 初级
 
+课程: 40
 title: 初识 DFS 与 BFS
 content: DFS
 time: 6课时 86分钟
 people: 2268人学习
 level: 中级
 
+课程: 41
 title: YARN 架构详解
 content: 本课程主要介绍
 time: 3课时 49分钟
 people: 2402人学习
 level: 高级
 
+课程: 42
 title: Python 类拓展
 content: 在初步了解类知识的基础之上，进一步拓展对类的认识，本课时将讲授类的继承、类的绑定方法、静态方法和类方法，还有多态和封装。
 time: 3课时 38分钟
 people: 2721人学习
 level: 初级
 
+课程: 43
 title: 移动应用的破解与防护
 content: 由于
 time: 4课时 59分钟
 people: 5045人学习
 level: 中级
 
+课程: 44
 title: 使用 CocoaPods 管理 iOS 库
 content: 学完本课程后能够掌握
 time: 3课时 40分钟
 people: 2695人学习
 level: 中级
 
+课程: 45
 title: Fabric 自动化运维
 content: 本课程学习如何通过
 time: 5课时 35分钟
 people: 2215人学习
 level: 中级
 
+课程: 46
 title: 编程之美优秀选手朱睿经验分享
 content: 本期课程的主讲人为北京大学的朱睿同学，他曾在14年编程之美挑战赛中凭借着优秀的算法能力和
 time: 1课时 0分钟
 people: 2639人学习
 level: 初级
 
+课程: 47
 title: Meteor 错误和扩展包
 content: 本课程介绍了
 time: 4课时 42分钟
 people: 2313人学习
 level: 初级
 
+课程: 48
 title: Nginx 下 ASP.NET 开发环境搭建
 content: 本课程主要会讲
 time: 3课时 83分钟
