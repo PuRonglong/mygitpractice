@@ -34,8 +34,6 @@ class Douban(CrawlSpider):
                 quote = ''
 
             item['title'] = fullTitle
-            info1 = MovieInfo[0].split()
-            info2 = MovieInfo[0].split()
             item['movieInfo'] = MovieInfo[0] + '\n' + MovieInfo[1]
             item['star'] = star
             item['quote'] = quote
