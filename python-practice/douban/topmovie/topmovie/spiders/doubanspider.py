@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# 豆瓣电影top250排行榜爬虫
 
 import scrapy
 from scrapy.spiders import CrawlSpider
