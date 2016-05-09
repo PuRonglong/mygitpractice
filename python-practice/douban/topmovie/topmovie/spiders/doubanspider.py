@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
 
 import scrapy
-from scrapy.contrib.spiders import CrawlSpider
+from scrapy.spiders import CrawlSpider
 from scrapy.http import Request
 from scrapy.selector import Selector
 from topmovie.items import TopmovieItem
 
 
 class Douban(CrawlSpider):
-    name = 'douban'
-    redis_key = 'douban:start_urls'
-    start_urls = ['https://movie.douban.com/top250']
-    url = 'https://movie.douban.com/top250'
+    name = 'topmovie'
+    redis_key = 'topmovie:start_urls'
+    start_urls = ['http://movie.douban.com/top250']
+    url = 'http://movie.douban.com/top250'
 
     def parse(self, response):
         item = TopmovieItem()
@@ -23,7 +23,7 @@ class Douban(CrawlSpider):
             for each in title:
                 fullTitle += each
 
-            MovieInfo = eachMovie.xpath('div[@class="bd"/p/text()]').extract()
+            MovieInfo = eachMovie.xpath('div[@class="bd"]/p/text()').extract()
             star = eachMovie.xpath('div[@class="bd"]/div[@class="star"]/span[@class="rating_num"]/text()').extract()[0]
             quote = eachMovie.xpath('div[@class="bd"]/p[@class="quote"]/span/text()').extract()
 
@@ -34,7 +34,9 @@ class Douban(CrawlSpider):
                 quote = ''
 
             item['title'] = fullTitle
-            item['movieInfo'] = '/'.join(MovieInfo)
+            info1 = MovieInfo[0].split()
+            info2 = MovieInfo[0].split()
+            item['movieInfo'] = MovieInfo[0] + '\n' + MovieInfo[1]
             item['star'] = star
             item['quote'] = quote
             yield item
