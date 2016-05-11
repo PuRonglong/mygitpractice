@@ -48,7 +48,7 @@ class JiKeXueYuan:
 
     # 存储课程信息
     def save_course_info(self, course_info, i):
-        f = open('info.txt', 'w+')
+        f = open('8-jikexueyuan.txt', 'w+')
 
         for each_course in course_info:
             f.write('课程: ' + str(i) + '\n')
