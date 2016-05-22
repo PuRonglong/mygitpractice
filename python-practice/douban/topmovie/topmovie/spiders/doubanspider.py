@@ -45,5 +45,5 @@ class Douban(CrawlSpider):
             nextLink = nextLink[0]
             print nextLink
 
-            #获取新的链接，再次调用此函数
+            # 获取新的链接，再次调用此函数
             yield Request(self.url + nextLink, callback=self.parse)
