@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML,CSS</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <script type="text/javascript">
+        </script>
+        <style>
+            .white{
+                background: white;
+                text-align: center;
+                margin-top: 100px;
+            }
+            a {
+                text-decoration:none;
+            }
+            .btn {
+                color: #262D28;
+                border: 2px solid #0AA944;
+                padding: 1.2rem 3rem;
+                margin-top: 100px;
+                position: relative;
+            }
+            .btn i{
+                opacity: 0;
+                transition: all .3s ease-out;
+                position: absolute;
+                left: 120%;
+            }
+            .btn span{
+                position: relative;
+                transition: all .3s ease-out;
+                left: 0;
+            }
+            .btn:hover i{
+                opacity: 1;
+                left: 80%;
+            }
+            .btn:hover span{
+                left: -20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="white">
+            <a href="javascript:;" class="btn">
+                <span>read more</span>
+                <i>→</i>
+            </a>
+        </div>
+    </body>
+</html>
