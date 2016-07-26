@@ -14,7 +14,15 @@
                     left: 'prev, next, today',
                     center: 'title',
                     right: 'month, agendaWeek, agendaDay'
-                }
+                },
+                editable: false, //定义事件不可编辑
+                eventLimit: true, //定义事件过多是否显示more
+                events: [
+                    {
+                        title: '1',
+                        start: '2016-7-26'
+                    }
+                ]
             })
         });
     </script>
