@@ -11,19 +11,59 @@
             $('#calendar').fullCalendar({
                 weekends: true, //隐藏周末选项
                 header:{
-                    left: 'prev, next, today',
+                    left: 'prev,next,today',
                     center: 'title',
-                    right: 'month, agendaWeek, agendaDay'
+                    right: 'month,agendaWeek,agendaDay'
                 },
-                editable: false, //定义事件不可编辑
+                editable: true, //定义事件是否可编辑
                 eventLimit: true, //定义事件过多是否显示more
+                selectable: false, //鼠标点击或拖拽是否高亮当前日期
                 events: [
                     {
+                        title: '3',
+                        start: '2016-07-26'
+                    },
+                    {
+                        title: '2',
+                        start: '2016-07-25'
+                    },
+                    {
+                        title: '4',
+                        start: '2016-07-25'
+                    },
+                    {
+                        title: '5',
+                        start: '2016-07-25'
+                    },
+                    {
                         title: '1',
-                        start: '2016-7-26'
+                        start: '2016-07-24'
                     }
-                ]
-            })
+                ],
+                eventClick: function(event, jsEvent, view) {// 事件的click事件
+
+                    alert('Event: ' + event.title);
+                    alert('View: ' + view.name);
+
+                    // change the border color just for fun
+                    // $(this).css('border-color', 'red');
+                }
+                // dayClick: function(date, allDay, jsEvent, view) {// 日期的click事件
+
+                //     if (allDay) {
+                //         alert('Clicked on the entire day: ' + date);
+                //     }else{
+                //         alert('Clicked on the slot: ' + date);
+                //     }
+
+                //     alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+
+                //     alert('Current view: ' + view.name);
+
+                //     // change the day's background color just for fun
+                //     $(this).css('background-color', 'red');
+                // }
+            });
         });
     </script>
     <style>
