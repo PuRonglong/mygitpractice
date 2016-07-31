@@ -1,85 +1,75 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <meta charset='utf-8' />
-    <link rel="stylesheet" href="css/fullcalendar.css">
-    <script src='js/lib/moment.min.js'></script>
-    <script src='js/lib/jquery.min.js'></script>
-    <script src='js/fullcalendar.js'></script>
-    <script>
-        $(document).ready(function(){
-            $('#calendar').fullCalendar({
-                weekends: true, //隐藏周末选项
-                header:{
-                    left: 'prev,next,today',
-                    center: 'title',
-                    right: 'month,agendaWeek,agendaDay'
-                },
-                editable: true, //定义事件是否可编辑
-                eventLimit: true, //定义事件过多是否显示more
-                selectable: false, //鼠标点击或拖拽是否高亮当前日期
-                events: [
-                    {
-                        title: '3',
-                        start: '2016-07-26'
+        <meta charset='utf-8' />
+        <link rel="stylesheet" href="css/lib/fullcalendar.min.css">
+        <link rel="stylesheet" href="css/index.css">
+        <title>my schedule</title>
+        <script src='js/lib/moment.min.js'></script>
+        <script src='js/lib/jquery.min.js'></script>
+        <script src='js/lib/fullcalendar.min.js'></script>
+        <script src='js/index.js'></script>
+        <script>
+            $(document).ready(function(){
+                $('#calendar').fullCalendar({
+                    weekends: true, //隐藏周末选项
+                    header:{
+                        left: 'prev,next,today',
+                        center: 'title',
+                        right: 'month,agendaWeek,agendaDay'
                     },
-                    {
-                        title: '2',
-                        start: '2016-07-25'
-                    },
-                    {
-                        title: '4',
-                        start: '2016-07-25'
-                    },
-                    {
-                        title: '5',
-                        start: '2016-07-25'
-                    },
-                    {
-                        title: '1',
-                        start: '2016-07-24'
+                    editable: true, //定义事件是否可编辑
+                    eventLimit: true, //定义事件过多是否显示more
+                    selectable: false, //鼠标点击或拖拽是否高亮当前日期
+                    events: [
+                        {
+                            title: '3',
+                            start: '2016-07-26'
+                        },
+                        {
+                            title: '2',
+                            start: '2016-07-25'
+                        },
+                        {
+                            title: '4',
+                            start: '2016-07-25'
+                        },
+                        {
+                            title: '5',
+                            start: '2016-07-25'
+                        },
+                        {
+                            title: '1',
+                            start: '2016-07-24'
+                        }
+                    ],
+                    eventClick: function(event, jsEvent, view) {// 事件的click事件
+
+                        alert('Event: ' + event.title);
+                        alert('View: ' + view.name);
+
+                        // change the border color just for fun
+                        // $(this).css('border-color', 'red');
                     }
-                ],
-                eventClick: function(event, jsEvent, view) {// 事件的click事件
+                    // dayClick: function(date, allDay, jsEvent, view) {// 日期的click事件
 
-                    alert('Event: ' + event.title);
-                    alert('View: ' + view.name);
+                    //     if (allDay) {
+                    //         alert('Clicked on the entire day: ' + date);
+                    //     }else{
+                    //         alert('Clicked on the slot: ' + date);
+                    //     }
 
-                    // change the border color just for fun
-                    // $(this).css('border-color', 'red');
-                }
-                // dayClick: function(date, allDay, jsEvent, view) {// 日期的click事件
+                    //     alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
 
-                //     if (allDay) {
-                //         alert('Clicked on the entire day: ' + date);
-                //     }else{
-                //         alert('Clicked on the slot: ' + date);
-                //     }
+                    //     alert('Current view: ' + view.name);
 
-                //     alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
-
-                //     alert('Current view: ' + view.name);
-
-                //     // change the day's background color just for fun
-                //     $(this).css('background-color', 'red');
-                // }
+                    //     // change the day's background color just for fun
+                    //     $(this).css('background-color', 'red');
+                    // }
+                });
             });
-        });
-    </script>
-    <style>
-        body {
-            margin: 40px 10px;
-            padding: 0;
-            font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
-            font-size: 14px;
-        }
-
-        #calendar {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-    </style>
-</head>
+        </script>
+    </head>
     <body>
         <div id='calendar'></div>
     </body>
