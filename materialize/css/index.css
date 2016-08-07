@@ -3,7 +3,12 @@ html, body{
 	height: 100%;
 }
 
+#menu{
+	display: none;
+}
+
 .menu {
+	display: block !important;
 	z-index: 9999;
 	position: absolute;
 	left: 50%;
@@ -14,7 +19,6 @@ html, body{
 	width: 440px;
 	height: 120px;
 	border-radius: 12px;
-	animation: bounce 3s;
 }
 
 .menu-title{
@@ -67,55 +71,4 @@ html, body{
 	margin-top: -50px;
 	cursor: pointer;
 	right: 0;
-}
-
-@keyframes bounce {
-	0% {
-		transform:translateY(-300%);
-		opacity: 0;
-	}
-	5% {
-		transform:translateY(-300%);
-		opacity: 0;
-	}
-    15% {
-        transform:translateY(0);
-        padding-bottom: 5px;
-    }
-    30% {
-        transform:translateY(-200%);
-    }
-	40% {
-		transform:translateY(0%);
-		padding-bottom: 6px;
-	}
-    50% {
-        transform:translateY(-100%);
-    }
-	70% {
-		transform:translateY(0%);
-		padding-bottom: 7px;
-	}
-	80% {
-		transform:translateY(-15%);
-	}
-	90% {
-		transform:translateY(0%);
-		padding-bottom: 8px;
-	}
-	95% {
-		transform:translateY(-7%);
-	}
-	97% {
-		transform:translateY(0%);
-		padding-bottom: 9px;
-	}
-	99% {
-		transform:translateY(-3%);
-	}
-	100% {
-		transform:translateY(0);
-		padding-bottom: 9px;
-		opacity: 1;
-	}
 }
